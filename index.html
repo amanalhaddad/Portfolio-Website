@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Abdul Rahman Al-Haddad | AI & Data Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: rgba(23, 32, 54, 0.7);
+      --card-border: rgba(56, 189, 248, 0.15);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.25);
+      --emerald: #10b981;
+      --purple: #818cf8;
+      --gold: #f59e0b;
+      --code-font: 'Fira Code', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(129, 140, 248, 0.08) 0%, transparent 45%);
+    }
+
+    /* Top Navigation Full-Bleed */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(11, 15, 25, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+      font-family: var(--code-font);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5.5rem 0 3.5rem;
+    }
+
+    .hero-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3.5rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .profile-frame {
+      width: 250px;
+      height: 250px;
+      border-radius: 24px;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 50%, transparent 100%);
+      box-shadow: 0 12px 35px var(--accent-glow);
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%; /* adjusts focal point so your head isn't cut off */
+      border-radius: 20px;
+      display: block;
+      background: #172036;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-family: var(--code-font);
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--emerald);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      color: #fff;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0b0f19;
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #7dd3fc;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Key Metrics Strip */
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 3.5rem 0 2rem;
+    }
+
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      position: relative;
+    }
+
+    .metric-card .val {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: var(--code-font);
+    }
+
+    .metric-card .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .project-badge {
+      font-size: 0.72rem;
+      font-family: var(--code-font);
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(129, 140, 248, 0.15);
+      color: var(--purple);
+      border: 1px solid rgba(129, 140, 248, 0.3);
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .project-bullets {
+      list-style: none;
+      margin-bottom: 1.4rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .project-bullets li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+    }
+
+    .project-bullets li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .tag {
+      font-family: var(--code-font);
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+    }
+
+    /* Skills Grid */
+    .skills-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .skill-category h4 {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-family: var(--code-font);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-item {
+      font-size: 0.82rem;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 5px 11px;
+      border-radius: 6px;
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* Achievements & Leadership */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .achievement-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .award-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .achievement-detail h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .achievement-detail p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+      .hero-layout {
+        flex-direction: column-reverse;
+        text-align: left;
+        gap: 2rem;
+      }
+      .profile-frame {
+        width: 180px;
+        height: 180px;
+      }
+      .nav-links { display: none; }
+      .hero { padding: 3.5rem 0 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span>aman.ai//</span> Syed Abdul Rahman
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Tech Stack</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Honors</a></li>
+        <li><a href="https://github.com/amanalhaddad" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="hero" id="about">
+      <div class="hero-layout">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="status-dot"></span> AI & Data Engineer · Computer Science Graduate
+          </div>
+          <h1>Building Resilient Data Pipelines & Scaled AI Systems</h1>
+          <p>
+            Computer Science graduate from IIUM (Data Science & Computational Intelligence) and former AI & Data Engineering Intern at Khazanah Nasional Berhad. Experienced in architecting PySpark lakehouse pipelines, deploying vector search engines, and benchmark-testing frontier LLMs for production systems.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="https://github.com/amanalhaddad" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:aman.alhaddad@gmail.com" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Profile Image Component -->
+        <div class="hero-image-wrapper">
+          <div class="profile-frame">
+            <img src="AmanImage.jpg" alt="Syed Abdul Rahman Al-Haddad" class="profile-img" onerror="this.src='https://via.placeholder.com/250/172036/38bdf8?text=Syed+Abdul+Rahman'" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="metrics-strip">
+        <div class="metric-card">
+          <div class="val">Top 5</div>
+          <div class="label">Nationwide Top Coders Competition 2024</div>
+        </div>
+        <div class="metric-card">
+          <div class="val">3.56 / 4.00</div>
+          <div class="label">Bachelor of CS CGPA (5x Dean's List)</div>
+        </div>
+        <div class="metric-card">
+          <div class="val">2nd Place</div>
+          <div class="label">Best Commercialization (SmartShopper AI)</div>
+        </div>
+        <div class="metric-card">
+          <div class="val">20+ Years</div>
+          <div class="label">Historical Lakehouse Ingestion & Chunking</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Flagship Projects Section -->
+    <section id="projects">
+      <div class="section-title">Featured Projects</div>
+      <div class="section-subtitle">Real-world AI systems, lakehouse architectures, and machine learning models.</div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterProjects('all')">All Work</button>
+        <button class="filter-btn" onclick="filterProjects('ai')">AI & NLP</button>
+        <button class="filter-btn" onclick="filterProjects('de')">Data Engineering</button>
+        <button class="filter-btn" onclick="filterProjects('ml')">Predictive ML</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: SmartShopper -->
+        <div class="project-card" data-cat="ai">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Final Year Project</span>
+              <span style="color: var(--gold); font-size: 0.8rem; font-weight: 600;">★ 2nd Place Award</span>
+            </div>
+            <h3>SmartShopper: AI Personal Shopper Extension</h3>
+            <p>
+              Dual-platform browser extension unifying Shopee & Lazada product listings into a single live interface using stealth scraping algorithms and hybrid intent extraction.
+            </p>
+            <ul class="project-bullets">
+              <li>Engineered hybrid RAG architecture combining GTR-T5 semantic vector search with Gemini 2.5 Flash Lite for real-time recommendations.</li>
+              <li>Developed complete production-grade FastAPI + MongoDB backend with sub-3.0s total response latency (2.4s backend) and 0.88 accuracy score.</li>
+              <li>Integrated continuous user profiling and automated "True Value" ranking against verified cross-platform products.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Gemini Flash Lite</span>
+            <span class="tag">GTR-T5</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Chrome Extension</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Stratos FactSet Transcripts -->
+        <div class="project-card" data-cat="de">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Khazanah Nasional · Data Engineering</span>
+            </div>
+            <h3>Financial Transcripts Medallion Lakehouse Pipeline</h3>
+            <p>
+              Resilient PySpark and Python ingestion pipelines in Microsoft Fabric processing large-scale corporate filings and transcripts for quantitative analysis.
+            </p>
+            <ul class="project-bullets">
+              <li>Constructed fault-tolerant ingestion pipelines handling API rate limits, back-off retries, state checkpointing, and recovering delisted ticker edge cases.</li>
+              <li>Implemented Medallion Lakehouse Architecture: Bronze (raw XML/JSON parsing) to Silver (deduplicated, FinBERT-tokenized chunks with spaCy sentence boundaries).</li>
+              <li>Formulated canonical Event Transcript Taxonomy to categorize and filter thousands of non-standard corporate call titles.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">Microsoft Fabric</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">OneLake</span>
+            <span class="tag">Python</span>
+            <span class="tag">spaCy</span>
+            <span class="tag">FinBERT</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Risk Clustering & LLM Benchmarking -->
+        <div class="project-card" data-cat="ai">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Khazanah Nasional · Applied AI</span>
+            </div>
+            <h3>SEC Risk Factors Clustering & LLM Benchmarking</h3>
+            <p>
+              Automated topic-labeling pipeline for emerging financial risk clusters derived from SEC Item 1A Risk Factors disclosures.
+            </p>
+            <ul class="project-bullets">
+              <li>Generated high-dimensional text embeddings via text-embedding-3-large, clustering enterprise risk factors with HDBSCAN.</li>
+              <li>Designed LLM-as-a-judge benchmarking suite evaluating frontier LLMs on topic-labeling fidelity, speed, and API inference costs.</li>
+              <li>Automated document review workflows for investment analysts, drastically reducing manual thematic discovery time.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">HDBSCAN</span>
+            <span class="tag">Vector Embeddings</span>
+            <span class="tag">LLM Benchmarking</span>
+            <span class="tag">Python</span>
+            <span class="tag">PySpark</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Lung Cancer Classification -->
+        <div class="project-card" data-cat="ml">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Academic ML Research · Jan 2025</span>
+            </div>
+            <h3>Hybrid Evolutionary ML for Lung Cancer Diagnosis</h3>
+            <p>
+              Ensemble machine learning framework optimized using metaheuristic evolutionary algorithms for early-stage oncology detection.
+            </p>
+            <ul class="project-bullets">
+              <li>Formulated a hybrid ensemble architecture combining Random Forest and XGBoost classifiers.</li>
+              <li>Applied Genetic Algorithm (GA) and Particle Swarm Optimization (PSO) for hyperparameter search.</li>
+              <li>Reached 94% predictive diagnostic accuracy, outperforming all baseline standalone classifiers tested.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">XGBoost</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Genetic Algorithms</span>
+            <span class="tag">PSO</span>
+            <span class="tag">Scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Supply Chain Predictive Analysis -->
+        <div class="project-card" data-cat="ml">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Analytics Project · July 2025</span>
+            </div>
+            <h3>Diagnostic & Predictive Supply Chain Analytics</h3>
+            <p>
+              Multi-model benchmarking on complex retail and logistics datasets to identify operational bottlenecks and delivery profit risks.
+            </p>
+            <ul class="project-bullets">
+              <li>Engineered feature extraction pipelines across delivery timelines, regional profitability, and order characteristics.</li>
+              <li>Trained and benchmarked LightGBM, Gradient Boosting, XGBoost, Random Forest, and SVM models to forecast order profits.</li>
+              <li>Produced actionable diagnostic frameworks supporting data-driven supply chain decision-making.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">LightGBM</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+
+        <!-- Project 6: STR Ticketing Frontend Redesign -->
+        <div class="project-card" data-cat="de">
+          <div>
+            <div class="project-header">
+              <span class="project-badge">Khazanah Internal Systems</span>
+            </div>
+            <h3>STR Ticketing Modernization & Design Standards</h3>
+            <p>
+              Modernized enterprise ticketing interface for BSAS and Carcosa Seri Negara cash-aid beneficiaries, following institutional design frameworks.
+            </p>
+            <ul class="project-bullets">
+              <li>Rebuilt Microsoft Power Apps frontend with responsive voucher forms, live reporting totals, and simplified lookup actions.</li>
+              <li>Formulated and presented company-wide UI/UX Design Standards (8pt Grid, 5-Second Rule, Trust-by-Design) to department leadership.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">Power Apps</span>
+            <span class="tag">UI/UX Systems</span>
+            <span class="tag">Enterprise Architecture</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Arsenal / Skills Section -->
+    <section id="skills">
+      <div class="section-title">Technical Arsenal</div>
+      <div class="section-subtitle">Proficiencies across data engineering, applied AI, and production toolstacks.</div>
+
+      <div class="skills-wrapper">
+        <div class="skill-category">
+          <h4>// Core Languages</h4>
+          <div class="skill-list">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">PySpark</span>
+            <span class="skill-item">R</span>
+            <span class="skill-item">Java</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>// AI, NLP & ML</h4>
+          <div class="skill-list">
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">TensorFlow</span>
+            <span class="skill-item">Scikit-learn</span>
+            <span class="skill-item">FinBERT / RoBERTa</span>
+            <span class="skill-item">spaCy</span>
+            <span class="skill-item">OpenCV</span>
+            <span class="skill-item">NLTK</span>
+            <span class="skill-item">Azure AI Foundry</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>// Data Eng & Cloud</h4>
+          <div class="skill-list">
+            <span class="skill-item">Microsoft Fabric</span>
+            <span class="skill-item">OneLake Lakehouse</span>
+            <span class="skill-item">Snowflake</span>
+            <span class="skill-item">BigQuery</span>
+            <span class="skill-item">Oracle Cloud (OCI)</span>
+            <span class="skill-item">Medallion Patterns</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>// Databases & Vector Stores</h4>
+          <div class="skill-list">
+            <span class="skill-item">MongoDB</span>
+            <span class="skill-item">FAISS</span>
+            <span class="skill-item">ChromaDB</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">IPFS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>// Web, APIs & Tools</h4>
+          <div class="skill-list">
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">Power Apps</span>
+            <span class="skill-item">React.js</span>
+            <span class="skill-item">Git / GitHub</span>
+            <span class="skill-item">Power BI</span>
+            <span class="skill-item">Tableau</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>// Verified Credentials</h4>
+          <div class="skill-list">
+            <span class="skill-item">CompTIA Data+ (2025)</span>
+            <span class="skill-item">OCI Generative AI Pro (2025)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Khazanah) -->
+    <section id="experience">
+      <div class="section-title">Professional Experience</div>
+      <div class="section-subtitle">Enterprise engineering and technical delivery at Malaysia's sovereign wealth fund.</div>
+
+      <div class="project-card" style="margin-bottom: 1.5rem;">
+        <div class="project-header">
+          <div>
+            <h3 style="margin-bottom: 2px;">Khazanah Nasional Berhad</h3>
+            <span style="color: var(--accent); font-size: 0.9rem; font-weight: 600;">AI & Data Engineering Intern (Investments / D&T)</span>
+          </div>
+          <span class="project-badge">March 2026 – September 2026</span>
+        </div>
+        <p>Embedded in the Business Technology (Investments) team under the Digital & Technology division, directly enabling quantitative investment research teams with scalable lakehouse pipelines and NLP solutions:</p>
+        <ul class="project-bullets">
+          <li>Built resilient API ingestion pipelines in Python using back-off retries, state checkpointing, and exception handling to prevent pipeline failures from corrupted symbols and delisted firms.</li>
+          <li>Architected a Medallion lakehouse pattern (Bronze/Silver/Gold) in Microsoft Fabric with PySpark to clean raw filings and structure analytical datasets for downstream ML workflows.</li>
+          <li>Developed a corporate sentiment scoring pipeline using FinBERT and spaCy to turn unstructured reports into quantitative metrics for investment stakeholders.</li>
+          <li>Clustered emerging financial risks by applying HDBSCAN to document embeddings generated with text-embedding-3-large.</li>
+          <li>Benchmarked frontier LLMs to automate topic labeling for HDBSCAN risk clusters, cutting down manual document reviews for investment analysts.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Honors, Leadership & Academics -->
+    <section id="achievements">
+      <div class="section-title">Honors & Technical Leadership</div>
+      <div class="section-subtitle">Competitive programming, leadership, and degree credentials.</div>
+
+      <div class="grid-2col">
+        <div class="achievement-card">
+          <div class="award-icon">🏆</div>
+          <div class="achievement-detail">
+            <h4>Top 5 Finalist · Nationwide Top Coders 2024</h4>
+            <p>Secured national top 5 standing in algorithmic problem-solving and competitive programming.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="award-icon">🥈</div>
+          <div class="achievement-detail">
+            <h4>2nd Place · Top Coders IIUM Competition 2024</h4>
+            <p>Ranked 2nd place among competitive algorithmic programmers university-wide.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="award-icon">🎖️</div>
+          <div class="achievement-detail">
+            <h4>2nd Place (Best Commercialization) · FYP Exhibition</h4>
+            <p>Recognized for SmartShopper's production readiness, hybrid RAG engine, and dual-platform utility.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="award-icon">🎓</div>
+          <div class="achievement-detail">
+            <h4>Bachelor of Computer Science · IIUM</h4>
+            <p>Data Science & Computational Intelligence (Oct 2022 – Sept 2026). CGPA: 3.56 / 4.00 (Dean's List for 4 semesters).</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="award-icon">⚡</div>
+          <div class="achievement-detail">
+            <h4>Deputy Director · I-Hax Innovation Hackathon 2024</h4>
+            <p>Co-directed nationwide hackathon for 100+ participants; helped secure over RM 15,000 in industry funding.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card">
+          <div class="award-icon">💼</div>
+          <div class="achievement-detail">
+            <h4>Head Officer · ICT Student Society (ICTSS)</h4>
+            <p>Spearheaded KICTFEST 2023 Food Truck Event (RM 9,000 profit) and project managed the 2nd Annual Keyboard Meetup (185+ participants).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="text-align: center; padding: 4.5rem 0 3rem;">
+      <div class="section-title">Connect & Collaborate</div>
+      <p style="color: var(--muted); max-width: 520px; margin: 0 auto 2rem;">
+        Open to junior roles in AI Engineering, Data Engineering, and Data Science. Feel free to reach out directly:
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://github.com/amanalhaddad" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          github.com/amanalhaddad
+        </a>
+        <a href="mailto:aman.alhaddad@gmail.com" class="btn btn-secondary">aman.alhaddad@gmail.com</a>
+        <a href="tel:+60194004221" class="btn btn-secondary">+6019 400 4221</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Syed Abdul Rahman Al-Haddad · AI & Data Engineering Portfolio</p>
+    </footer>
+  </div>
+
+  <script>
+    // Dynamic Filter
+    function filterProjects(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
