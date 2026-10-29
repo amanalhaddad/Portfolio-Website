@@ -106,12 +106,6 @@ components:
   filter-hover:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
-  marquee-toggle:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.pill}"
-    padding: "8px 12px"
   navigation-link:
     textColor: "{colors.ink}"
     typography: "{typography.label}"
@@ -242,7 +236,7 @@ Most surfaces are flat and distinguished by color, spacing, and type. The suspen
 
 ## Shapes
 
-Primary actions, project filters, and the rail control use pill rounding. Project records, section fields, screenshots, certificates, and the biography portrait remain square. The pass uses its own rounded shell and inset portrait corners; the phone shell and portrait use the smaller corresponding tokens. This difference distinguishes an object that can be picked up from the surrounding reading surfaces. The metal clip has local rounded cutouts, rather than becoming a general container shape.
+Primary actions and project filters use pill rounding. Project records, section fields, screenshots, certificates, and the biography portrait remain square. The pass uses its own rounded shell and inset portrait corners; the phone shell and portrait use the smaller corresponding tokens. This difference distinguishes an object that can be picked up from the surrounding reading surfaces. The metal clip has local rounded cutouts, rather than becoming a general container shape.
 
 ## Components
 
@@ -250,7 +244,7 @@ Primary actions, project filters, and the rail control use pill rounding. Projec
 
 The primary action is a coral pill with paper text, an inline arrow, the recorded padding, and a minimum height (54px). Fine-pointer hover changes it to deep ocean ink; press changes it to ocean. Supporting links are underlined, have an icon gap (12px), and keep a minimum target height (44px). Global SVG icons are (22px) with rounded strokes (1.7); the source supplies inline symbol paths rather than glyph icons.
 
-Navigation is text-led, with a coral underline for the current section. All actionable links, buttons, and summaries use a visible outline (`3px solid currentColor`, offset `6px`). Fine-pointer hover adds or thickens underlining where implemented. Links, menu, filters, and rail control give immediate press opacity (0.8); the primary action retains full opacity and changes color. When motion is allowed, primary/menu/filter press feedback scales to (0.97).
+Navigation is text-led, with a coral underline for the current section. All actionable links, buttons, and summaries use a visible outline (`3px solid currentColor`, offset `6px`). Fine-pointer hover adds or thickens underlining where implemented. Links, menu, and filters give immediate press opacity (0.8); the primary action retains full opacity and changes color. When motion is allowed, primary/menu/filter press feedback scales to (0.97).
 
 ### Filters and project records
 
@@ -272,7 +266,7 @@ The shallow hero scroll offset is bounded (-4px to 20px). Rendering and spring w
 
 Genuine brand marks are served locally with visible text labels. The skills list uses compact marks (26px; 24px on phones); the rail uses larger marks (32px; 28px on phones). Label text supplies the accessible name and adjacent logo images use empty alternative text. The duplicate rail group is hidden from assistive technology.
 
-The enhanced rail travels right to left over (42s), linearly and continuously. Hover, keyboard focus, an explicit pause/resume toggle, offscreen state, and document visibility pause it. Reduced motion and no JavaScript show the wrapping collection and hide the motion control.
+The enhanced rail travels right to left over (42s), linearly and continuously. Hover pauses it and pointer leave resumes it; the owner removed the visible pause/resume control. Offscreen state and document visibility also suspend animation work automatically. Reduced motion and no JavaScript show the wrapping collection.
 
 Use the existing owner portrait, owner-supplied Khazanah pass and certificate photographs, actual SmartShopper screens rendered from the supplied poster, the real Gaffaly capture, and the authored investment-lakehouse diagram. `assets/media/sources.json` records media origin, treatment, and hashes; `assets/logos/sources.json` and the accompanying license record the Simple Icons collection (16.36.0) and individual sources. `assets/README.md` records portrait, diagram, font, and runtime provenance. No generated portrait or invented application screen is part of this system.
 
@@ -298,4 +292,4 @@ Content is visible before enhancement. Optional name entries last (800ms), with 
 - **Don't** turn functional dates, captions, or table headers into an invented decorative label system.
 - **Don't** treat generated color ramps, a separate Taste draw, or unavailable Impeccable checks as approved palette or seed authority.
 
-Documentation evidence: the finish review found no material UI corrections; its final ship disposition covers the resolved provenance wording. Browser evidence covers five viewport sizes and 18 interaction groups; no actual-phone hardware test is claimed. Impeccable concept-seed and detector attempts exited 127 because the protected cache could not initialize; formal seed verification remains unavailable. These limits are not new design rules or canonized UI defects.
+Documentation evidence: the initial redesign's finish review found no material UI corrections; its final ship disposition covers the resolved provenance wording. That build's browser evidence covers five viewport sizes and 18 interaction groups. The subsequent owner-requested pause-button removal passed production build, JavaScript syntax, and source/reference checks; its browser rerun was blocked by local-server and Chromium sandbox permissions. No actual-phone hardware test is claimed. Impeccable concept-seed and detector attempts exited 127 because the protected cache could not initialize; formal seed verification remains unavailable. These limits are not new design rules or canonized UI defects.

@@ -15,7 +15,7 @@ npm run build
 npm run test:visual -- --production
 ```
 
-The build copies public assets into `dist/`. Browser checks cover 1440, 1280, 768, 390, and 320px layouts; first-screen résumé access; project disclosures and filters; badge dragging, release, re-grabbing, and keyboard flipping; the logo rail's direction and pause controls; keyboard navigation; the mobile menu; reduced motion; 200% root text size; no-JavaScript reading; direct local-file use; and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
+The build copies public assets into `dist/`. Browser checks cover 1440, 1280, 768, 390, and 320px layouts; first-screen résumé access; project disclosures and filters; badge dragging, release, re-grabbing, and keyboard flipping; the logo rail's direction and hover-to-pause behavior; keyboard navigation; the mobile menu; reduced motion; 200% root text size; no-JavaScript reading; direct local-file use; and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
 
 `CHROME_PATH` can select an existing Chromium executable. The checked-in `.npmrc` disables executable symlinks for compatibility with Windows-mounted workspaces.
 
@@ -31,7 +31,7 @@ SmartShopper links to its owner-supplied backend repository. Gaffaly links to th
 
 Drag the portrait pass and release it to let it settle. Tap it or use Enter/Space to reveal the reverse face; Escape returns to the front. On touch screens, the pass handles horizontal dragging while vertical gestures retain native page scrolling.
 
-The tool rail moves from right to left, pauses on hover and keyboard focus, and has a persistent pause/resume button. Reduced motion shows a static wrapping collection and removes spring settling, scrolling travel, and reveal movement. Essential content, links, and native disclosures remain available without JavaScript.
+The tool rail moves from right to left and pauses while the pointer hovers over it, then resumes when the pointer leaves. There is no pause/resume button. Reduced motion shows a static wrapping collection and removes spring settling, scrolling travel, and reveal movement. Essential content, links, and native disclosures remain available without JavaScript.
 
 ## Deployment
 

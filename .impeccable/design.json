@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T16:18:03.493Z",
+  "generatedAt": "2026-10-29T17:13:47.639233+00:00",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
@@ -277,7 +277,7 @@
       {
         "name": "tools-drift",
         "value": "42s linear infinite",
-        "purpose": "Right-to-left translateX(-50%) of duplicated track. Pause on hover, focus, explicit control, offscreen, and hidden document. Static wrapping collection for reduced motion/no JavaScript."
+        "purpose": "Right-to-left translateX(-50%) of duplicated track. Hover pauses it; pointer leave resumes it. No manual pause control. Suspend automatically offscreen and in hidden documents. Static wrapping collection for reduced motion/no JavaScript."
       }
     ],
     "breakpoints": [
@@ -325,9 +325,10 @@
         "script.js"
       ],
       "review": ".impeccable/review/lanyard-finish-review.md",
-      "browserReport": ".impeccable/review/browser-report.json",
-      "scope": "Full browser evidence covers 1440, 1280, 768, 390, and 320px viewports plus 18 interaction groups. Final ship disposition covers the corrected provenance wording; it is not seed or detector validation.",
-      "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. The separate Taste draw has no Impeccable seed authority."
+      "browserReport": "output/playwright/report.json",
+      "scope": "Initial redesign browser evidence covers 1440, 1280, 768, 390, and 320px viewports plus 18 interaction groups. The initial ship disposition covers the corrected provenance wording. The subsequent owner-requested pause-button removal passed production build, JavaScript syntax, and source/reference checks; its browser rerun was blocked by local-server and Chromium sandbox permissions.",
+      "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. The separate Taste draw has no Impeccable seed authority.",
+      "followUpVerification": "output/playwright/hover-only-verification.json"
     }
   },
   "components": [
@@ -354,14 +355,6 @@
       "description": "The explicit ocean/paper selected category state.",
       "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All projects</button>",
       "css": ".ds-filter { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 999px; background: var(--ground, #f6f9fb); color: var(--ink, #163844); font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)), background-color 160ms ease; } .ds-filter[aria-pressed='true'] { background: var(--accent, #075d78); color: var(--paper, #ffffff); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-filter:not([aria-pressed='true']):hover { background: var(--surface, #e7f0f4); } } @media (prefers-reduced-motion:no-preference) { .ds-filter:active { transform: scale(.97); } } @media (max-width:700px) { .ds-filter { padding-inline: 12px; } }"
-    },
-    {
-      "name": "Logo Rail Control",
-      "kind": "button",
-      "refersTo": "marquee-toggle",
-      "description": "Pause control for the moving logo rail. The source script supplies pause/resume state; reduced motion hides the control.",
-      "html": "<button class=\"ds-marquee-toggle\" type=\"button\" aria-pressed=\"false\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 5v14M15 5v14\"/></svg><span>Pause logos</span></button>",
-      "css": ".ds-marquee-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 0; background: transparent; color: var(--ink, #163844); font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; border-radius: 999px; white-space: nowrap; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-marquee-toggle .ds-icon { width: 16px; height: 16px; flex: 0 0 16px; } .ds-marquee-toggle:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-marquee-toggle:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-marquee-toggle:hover { background: var(--paper, #ffffff); } } @media (max-width:700px) { .ds-marquee-toggle { font-size: .8125rem; padding-inline: 8px; } } @media (prefers-reduced-motion:reduce) { .ds-marquee-toggle { display: none; } }"
     },
     {
       "name": "Section Navigation",

@@ -173,6 +173,7 @@ try {
     assert.equal(await badge.getAttribute('aria-pressed'), 'false');
     report.checks.push('Keyboard-accessible badge profile and Escape');
     const rail = motionPage.locator('.tools-marquee');
+    assert.equal(await rail.getByRole('button').count(), 0, 'The logo rail should not have a pause button');
     await rail.scrollIntoViewIfNeeded();
     await motionPage.locator('#work-title').hover();
     await motionPage.waitForFunction(() => getComputedStyle(document.querySelector('.logo-track')).animationPlayState === 'running');
@@ -185,16 +186,13 @@ try {
     const pausedX = await readRailX();
     await motionPage.waitForTimeout(180);
     assert.ok(Math.abs(await readRailX() - pausedX) < 1, 'Hovering should freeze the rail');
-    await motionPage.getByRole('button', { name: 'Pause logos', exact: true }).click();
-    await motionPage.locator('#work-title').hover();
-    assert.equal(await motionPage.locator('.logo-track').evaluate(el => getComputedStyle(el).animationPlayState), 'paused');
     await motionPage.screenshot({ path: resolve(output, 'logos-paused.png') });
-    await motionPage.getByRole('button', { name: 'Resume logos', exact: true }).click();
     await motionPage.locator('#work-title').hover();
-    assert.equal(await motionPage.locator('.logo-track').evaluate(el => getComputedStyle(el).animationPlayState), 'paused', 'Keyboard focus should pause the moving content');
-    await motionPage.evaluate(() => document.activeElement.blur());
     await motionPage.waitForFunction(() => getComputedStyle(document.querySelector('.logo-track')).animationPlayState === 'running');
-    report.checks.push('Authentic logo rail travels left, pauses on hover/focus, and supports explicit pause/resume');
+    const resumedX = await readRailX();
+    await motionPage.waitForTimeout(180);
+    assert.ok(await readRailX() < resumedX - 1, 'The logo track should resume after the pointer leaves');
+    report.checks.push('Logo rail travels left, pauses only on hover, resumes on pointer leave, and has no pause button');
     await motionPage.locator('#skills').scrollIntoViewIfNeeded();
     await motionPage.waitForTimeout(700);
     await motionPage.screenshot({ path: resolve(output, 'toolkit.png') });
@@ -234,7 +232,6 @@ try {
     await reduced.goto(baseURL);
     assert.equal(await reduced.evaluate(() => document.getAnimations().filter(animation => animation.playState === 'running').length), 0);
     assert.equal(await reduced.locator('.logo-track').evaluate(el => getComputedStyle(el).animationName), 'none');
-    assert.equal(await reduced.locator('.marquee-toggle').isVisible(), false);
     const reducedAction = reduced.locator('.hero .button');
     const actionBox = await reducedAction.boundingBox();
     await reduced.mouse.move(actionBox.x + actionBox.width / 2, actionBox.y + actionBox.height / 2);

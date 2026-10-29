@@ -20,7 +20,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 - Badge: pointer capture, grab-offset preservation, bounded travel, spring release, re-grab during movement, and a keyboard-accessible alternate face. Spring mass 1, stiffness 100, damping 10. Stop work when offscreen or the document is hidden.
 - Scroll: once-only heading/copy/media reveals and shallow hero movement; preserve native scrolling. Content starts visible and survives enhancement failure.
-- Tools: owner-requested right-to-left logo rail, linear travel, paused on hover/focus, with an explicit pause/resume control. Reduced motion and no JavaScript show a static wrapping collection.
+- Tools: owner-requested right-to-left logo rail with linear travel. The owner explicitly removed the pause/resume button; hover pauses the rail, and pointer leave resumes it. Reduced motion and no JavaScript show a static wrapping collection.
 - Controls: immediate feedback, native disclosures, and visible focus. Reduced motion removes travel and spring settling while preserving readable states.
 
 ## Product constraints

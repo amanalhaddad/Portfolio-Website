@@ -114,15 +114,6 @@
   }
 
   const rail = document.querySelector('.tools-marquee');
-  const railToggle = rail.querySelector('.marquee-toggle');
-  function setRailPaused(paused) {
-    rail.dataset.paused = String(paused);
-    railToggle.setAttribute('aria-pressed', String(paused));
-    railToggle.querySelector('span').textContent = paused ? 'Resume logos' : 'Pause logos';
-    railToggle.querySelector('use').setAttribute('href', paused ? '#icon-play' : '#icon-pause');
-  }
-  railToggle.hidden = reducedMotion.matches;
-  railToggle.addEventListener('click', () => setRailPaused(rail.dataset.paused !== 'true'));
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => { rail.dataset.inView = String(entries[0].isIntersecting); }).observe(rail);
   }
@@ -264,7 +255,6 @@
   const resetBadge = setupBadge();
   document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('page-hidden', document.hidden));
   reducedMotion.addEventListener('change', () => {
-    railToggle.hidden = reducedMotion.matches;
     if (!reducedMotion.matches) return;
     document.getAnimations().forEach(animation => animation.cancel());
     document.querySelectorAll('.is-entering').forEach(element => element.classList.remove('is-entering'));

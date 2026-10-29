@@ -32,6 +32,7 @@ Primary audience inferred from the résumé: recruiters and engineering teams hi
 
 - Six expandable project summaries, category filtering, experience, biography, education, technical skills, certifications, awards, leadership, contact links, and résumé download.
 - The owner requested a more expressive redesign with a draggable portrait lanyard, scroll animation, real tool logos, and a right-to-left logo rail that pauses on hover. Confirmed colour choice: soft white, ocean blue, and coral. The current portrait is approved for the pass.
+- The owner subsequently removed the visible pause/resume button; hovering is the rail's only manual pause interaction, and pointer leave resumes it.
 - SmartShopper starts expanded; other disclosures remain the reader's choice. The hero includes a secondary résumé action and five Dean's List semesters. Large text reflows. Reduced motion keeps static disclosure/profile states and a wrapping, non-moving logo collection.
 - Essential content and native project expansion work without JavaScript. Filtering progressively enhances the static list.
 - No invented benchmarks, customer claims, private company screenshots, or live application URLs.
