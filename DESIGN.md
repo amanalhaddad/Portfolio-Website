@@ -1,102 +1,156 @@
 ---
-name: "Syed Abdul Rahman Al-Haddad Portfolio"
-description: "A typographic portfolio for AI and data engineering work."
+name: Syed Abdul Rahman Al-Haddad Portfolio
+description: Soft-white engineering portfolio with ocean-blue fields, coral actions, and a physical portrait pass.
 colors:
-  ink: "#062b8a"
-  soft-ink: "#304e91"
-  ground: "#e6dbc7"
-  surface: "#ddd0b9"
-  paper: "#e9e7e1"
+  ground: "#f6f9fb"
+  surface: "#e7f0f4"
+  paper: "#ffffff"
+  ink: "#163844"
+  soft-ink: "#466673"
+  accent: "#075d78"
+  coral: "#c05241"
+  inverse-ink: "#f6f9fb"
+  project-press: "#d9e8ee"
 typography:
   display:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(4.75rem, 0.75rem + 14vw, 16.25rem)"
-    fontWeight: 850
-    lineHeight: 0.88
-    letterSpacing: "-0.025em"
+    fontSize: "clamp(3rem, 2rem + 5vw, 7.25rem)"
+    fontWeight: 650
+    lineHeight: 0.96
+    letterSpacing: "-0.04em"
   headline:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(2.625rem, 1rem + 4.8vw, 5.5rem)"
-    fontWeight: 650
-    lineHeight: 1
+    fontSize: "clamp(2.5rem, 1rem + 4.1vw, 5rem)"
+    fontWeight: 600
+    lineHeight: 1.05
     letterSpacing: "-0.035em"
   title:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(1.75rem, 0.9rem + 2.3vw, 3.25rem)"
+    fontSize: "clamp(1.5rem, 1rem + 1.4vw, 2.5rem)"
     fontWeight: 600
-    lineHeight: 1.08
-    letterSpacing: "-0.025em"
+    lineHeight: 1.12
+    letterSpacing: "-0.03em"
   lead:
     fontFamily: "Archivo, sans-serif"
     fontSize: "clamp(1.375rem, 1rem + 1vw, 2rem)"
-    fontWeight: 400
-    lineHeight: 1.3
+    fontWeight: 420
+    lineHeight: 1.4
     letterSpacing: "-0.02em"
   body:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(1rem, 0.96rem + 0.16vw, 1.125rem)"
-    fontWeight: 400
-    lineHeight: 1.55
+    fontSize: "clamp(1rem, .96rem + .16vw, 1.125rem)"
+    fontWeight: 420
+    lineHeight: 1.6
+  action:
+    fontFamily: "Archivo, sans-serif"
+    fontSize: "clamp(1rem, .96rem + .16vw, 1.125rem)"
+    fontWeight: 550
+    lineHeight: 1.6
   label:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: 1.55
+    fontSize: ".875rem"
+    fontWeight: 420
+    lineHeight: 1.6
   contact-display:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(42px, 9.8vw, 155px)"
+    fontSize: "clamp(2.5rem,7.8vw,7rem)"
     fontWeight: 500
-    lineHeight: 0.98
+    lineHeight: 1.04
     letterSpacing: "-0.035em"
 rounded:
   square: "0"
+  pill: "999px"
+  pass: "18px"
+  pass-mobile: "14px"
+  portrait: "10px"
+  portrait-mobile: "6px"
 spacing:
-  gutter: "clamp(20px, 2.25vw, 40px)"
-  section: "clamp(88px, 10.4vw, 160px)"
+  gutter: "clamp(20px, 4.4vw, 72px)"
+  section: "clamp(80px, 9vw, 144px)"
   compact: "8px"
   icon-gap: "12px"
+  inset: "18px"
   inline: "20px"
   block: "24px"
   content: "28px"
-  grid: "32px"
+  group: "32px"
   wide: "36px"
+  gallery: "40px"
   major: "64px"
+  subsection: "80px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.ground}"
-    typography: "{typography.body}"
-    rounded: "{rounded.square}"
-    padding: "14px 20px"
+    backgroundColor: "{colors.coral}"
+    textColor: "{colors.paper}"
+    typography: "{typography.action}"
+    rounded: "{rounded.pill}"
+    padding: "14px 22px"
   button-primary-hover:
-    backgroundColor: "{colors.soft-ink}"
-    textColor: "{colors.ground}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.paper}"
+  button-primary-active:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.paper}"
   filter:
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "10px 16px"
+  filter-selected:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.paper}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "10px 16px"
+  filter-hover:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+  marquee-toggle:
     backgroundColor: "transparent"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    padding: "10px 14px"
-  filter-selected:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.ground}"
-  filter-hover:
-    backgroundColor: "{colors.paper}"
+    rounded: "{rounded.pill}"
+    padding: "8px 12px"
+  navigation-link:
     textColor: "{colors.ink}"
+    typography: "{typography.label}"
+  project-record:
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.square}"
   project-summary:
     backgroundColor: "{colors.ground}"
     textColor: "{colors.ink}"
     typography: "{typography.title}"
     rounded: "{rounded.square}"
-    padding: "30px 28px"
-  project-summary-alternate:
-    backgroundColor: "{colors.paper}"
+    padding: "30px"
+  project-record-alternate:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+  project-summary-active:
+    backgroundColor: "{colors.project-press}"
     textColor: "{colors.ink}"
   text-link:
     textColor: "inherit"
+    typography: "{typography.action}"
+  tool-item:
+    textColor: "{colors.ink}"
     typography: "{typography.body}"
+  portrait-pass:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pass}"
+    padding: "18px"
+    width: "min(300px, 80%)"
+  portrait-pass-back:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.paper}"
+    rounded: "{rounded.pass}"
+    padding: "18px"
   contact-email:
-    textColor: "{colors.ground}"
+    textColor: "{colors.paper}"
     typography: "{typography.contact-display}"
 ---
 
@@ -104,142 +158,144 @@ components:
 
 ## Overview
 
-**Creative North Star: "Type and nothing else"**
+**Creative North Star: "The portrait pass"**
 
-The recorded direction is expressed through Archivo variable type, cobalt ink, warm sand fields, and square controls. Oversized identity and contact type frame an engineering portfolio whose project index opens into specific results and architecture diagrams. The title is the direction label already recorded in the surface brief; no additional qualitative preference or comp approval is implied.
+Soft-white space, ocean-blue fields, and coral actions frame a substantial Archivo voice. The existing portrait becomes a suspended pass with a real tether, direct manipulation, and a reversible face. This descriptive label records the implemented, owner-requested lanyard; it does not imply a new metaphor workshop or approved image comp.
 
-The implemented system is spacious at the section level and more compact within project records. Color inversion separates experience and contact; tonal changes organize the other fields. The existing portrait and three original architecture diagrams provide the visual evidence. This document describes the shipped rules observed in `styles.css`, `index.html`, `script.js`, and browser captures, with product facts maintained separately in `PRODUCT.md`.
+The surrounding page stays open and readable. Rounded controls act within flat, square records; actual project screens, an authored architecture diagram, owner photographs, and genuine tool logos provide the visual evidence. This document records the finished implementation in `styles.css`, `index.html`, and `script.js`; product facts remain in `PRODUCT.md`.
 
 **Key Characteristics:**
 
-- One variable sans-serif family with strong changes in size, weight, and width.
-- Cobalt text and controls across sand and chalk surfaces.
-- Flat, square fields with hierarchy created by type, spacing, and tone.
-- Native project disclosures, explicit filters, and progressive enhancement.
-- Short state feedback and restrained, optional one-time entrances.
+- Soft-white and paper-white reading surfaces with ocean text and coral action accents.
+- One locally hosted variable typeface with fluid display and body roles.
+- A physical portrait pass whose shadow, tether, and spring express suspension.
+- Pill controls alongside square, independently expandable project records.
+- Genuine local imagery and brand logos, with static and reduced-motion reading paths.
 
 ## Colors
 
-Warm neutral fields support a single cobalt ink family; the frontmatter preserves the source CSS color values.
+The frontmatter preserves the source CSS palette; ocean and coral have distinct jobs within cool, pale reading surfaces.
 
 ### Primary
 
-- **Cobalt ink** (`ink`): body copy, headings, icons, primary actions, selected filters, and the inverted experience/contact backgrounds. The source aliases `accent` to this same color.
-- **Soft cobalt** (`soft-ink`): technical-stack copy and the primary action's pointer-hover background.
+- **Ocean blue** (`accent`): experience/contact backgrounds, selected filters, pass reverse, front cord, and selection background. It also marks project results and title hover.
+
+### Secondary
+
+- **Coral** (`coral`): the primary work action, current-navigation underline, and the pass front's identity details and lower edge.
 
 ### Neutral
 
-- **Sand ground** (`ground`): the default page and project surface, and text on cobalt. The source aliases `inverse-ink` to this same color.
-- **Deeper sand** (`surface`): the work field and alternating recognition rows.
-- **Chalk** (`paper`): the skills field, alternating project records, and unselected filter hover.
+- **Soft white** (`ground`): page ground, hero, biography, recognition, unselected filters, and the first project record.
+- **Cool surface** (`surface`): logo rail, toolkit, alternate project records, alternating award rows, and unselected filter hover.
+- **Paper white** (`paper`): work field, pass front, and text/icons on ocean fields. Screen text selection pairs paper with ocean.
+- **Deep ocean ink** (`ink`): default text, headings, icons, and the primary action's pointer-hover state.
+- **Muted ocean ink** (`soft-ink`): supporting descriptions, dates, technical stacks, and image captions on pale fields.
+- **Inverse alias** (`inverse-ink`): retained source custom property, currently equal to the ground; implemented ocean fields explicitly use paper text.
+- **Pressed record** (`project-press`): immediate project-summary press feedback.
 
-**The Inverted Field Rule.** On the cobalt experience and contact fields, text, links, icons, and focus outlines inherit sand; selection reverses that pair.
+**The Ocean Field Rule.** Experience and contact pair ocean backgrounds with paper text, icons, and inherited focus outlines; selection reverses that pair.
 
-The sidecar's eight-step color strips are generated reference ramps, not additional approved UI colors. Print explicitly substitutes white, near-black, and light gray for the screen palette.
+The pass hardware adds the source's dark cord back, stitched seam, and metal clip locally; these material details are not a general accent palette. The sidecar's synthesized eight-step ramps are swatch references, not additional screen colors. Print substitutes white, near-black, and light gray.
 
 ## Typography
 
 **Display Font:** Archivo, with sans-serif fallback.
 **Body Font:** Archivo, with sans-serif fallback.
 
-One self-hosted Latin variable font supplies weight and width variation. Its declaration supports weights (100–900) and stretch (62%–125%) with `font-display: swap`. The scale is fluid and role-based rather than a fixed modular ratio; frontmatter roles record defaults, with component-specific weights and line heights below.
+The Latin variable font is served from `assets/fonts/archivo-latin-variable.woff2` with `font-display: swap`, supported weights (100–900), and supported stretch (62%–125%). The roles are fluid rather than a fixed modular ratio. The frontmatter records observed default roles; components adjust weight, line height, and width as described below.
 
 ### Hierarchy
 
-- **Display:** two-line name, compressed to (82%) width. Each line is a block with clipping and small vertical padding (0.025em). The fluid size combines root-relative and viewport units. At the mobile breakpoint, size becomes `calc(0.76rem + 12vw)` and tracking becomes (-0.02em). Text may wrap onto additional lines when a reader increases the text size.
-- **Headline:** section headings use the headline role, balanced wrapping, and a tight single-line-height rhythm.
-- **Title:** project names use the title role and compressed width (85%). On mobile they use the mobile lead size.
-- **Lead:** hero introduction, results, section subheadings, role names, skill categories, and recognition titles. At the mobile breakpoint the size is (1.375rem). Results increase weight to (600) and use line height (1.25); role and tertiary section headings use weight (550). The about introduction uses line height (1.35).
-- **Body:** running copy inherits the body role. Project, experience, biography, and skill detail columns generally cap at (65ch); tablet project copy can reach (70ch).
-- **Label:** dates, metadata, technical stacks, figure captions, file notes, table column headings, and footer copy use the label role. Navigation uses this size until mobile, where it becomes (1rem). Numeric counts and years use tabular figures where coded.
-- **Contact display:** the email starts on two lines and uses expanded width (105%). On mobile it takes the headline size and compressed width (82%). Optional breaks after periods and overflow wrapping preserve the complete address at larger text sizes. Its inline arrow scales with the type (0.68em).
+- **Display:** two name lines use the display role and slightly condensed width (93%). Each line clips its optional entry movement with vertical breathing room (0.035em). At the tablet breakpoint its size is `clamp(3rem, 1.5rem + 5vw, 6rem)`; at the phone breakpoint it is `clamp(2.75rem, 1.6rem + 7vw, 4.5rem)`. Text can wrap further when enlarged.
+- **Headline:** section headings use the headline role with balanced wrapping. The smaller logo-rail heading uses the lead size, medium weight (500), and line height (1.3).
+- **Title:** project names use the title role; phone records use the mobile lead size. Pass identity is smaller (1.375rem, weight 650, line height 1.15), becoming (1.0625rem) on phones.
+- **Lead:** introduction and biography use the lead role. Role, toolkit, education, and recognition headings share its size with their observed weights (420–600) and line heights (1.2–1.4). Phone lead size is fixed (1.375rem).
+- **Body:** running text uses the body role. Story, biography, and experience copy stay within a reading measure (65ch).
+- **Action:** primary and underlined supporting actions use the body size with a stronger weight (550).
+- **Label:** dates, captions, stack summaries, filters, and footer use the label role. Navigation becomes (1rem) on phones; compact résumé/pass notes use (0.8125rem).
+- **Contact display:** the email uses the contact role with two block lines and word-break opportunities. At the phone breakpoint it uses the headline size and narrower width (90%).
 
-**The One Family Rule.** Use Archivo's observed weight and width axes for hierarchy; retain the existing sans-serif fallback and browser text semantics.
-
-Heading text uses balanced wrapping and paragraphs use pretty wrapping. Text can wrap within long words when needed to prevent overflow. Ordinary links have underline thickness (1.5px) and offset (5px). Real recognition-table headers are functional labels; they do not establish a decorative eyebrow component.
+**The One Family Rule.** Use the locally hosted Archivo weight and width axes for hierarchy, retaining the sans-serif fallback and native text semantics.
 
 ## Layout
 
-The viewport-wide layout uses the fluid gutter and section padding in frontmatter. At widths of (1800px) and above, major field padding also enforces a centered content region of (1720px). There is no general narrow card-grid container. The header includes safe-area horizontal padding and the contact field includes bottom safe-area padding.
+Fluid side gutters and section padding come from the `gutter` and `section` tokens. Section fields span the document. At wide screens (1800px and above), the main padded regions center their content within an observed maximum span (1660px). Header side padding also respects safe-area insets; contact bottom padding respects the bottom inset.
 
-The recurring two-column arrangement uses proportions (1.2fr / 0.8fr) for section headings, hero support, experience, and contact. Gaps vary by context: heading pairs use (32px); hero and experience use (64px). The biography uses (0.75fr / 1.25fr) with a fluid gap. Education, certifications, and leadership share a three-column arrangement (0.7fr / 1.3fr / 1fr) with a (36px) gap. Skill rows use (1.2fr / 1.8fr) with a (44px) gap.
+The opening grid pairs introduction and actions with the suspended pass (1.1fr / 1fr). Its minimum height follows the viewport through `min(760px, calc(100svh - 92px))`. Section headings and the contact lead use a wider title column (1.25fr / 0.75fr); project bodies use a media/story grid (1fr / 0.85fr). Education and leadership use three columns, certificates use two, and biography pairs portrait/copy (0.8fr / 1.2fr). Project records are separated by a compact gap (12px), while subsections share the larger spacing token.
 
-The hero has its own vertical rhythm: header minimum height (88px); hero top/bottom padding (46px / 56px); internal gap (64px); and minimum height `min(820px, calc(100svh - 88px))`. This minimum is removed at the tablet breakpoint.
+- **Tablet and narrower (1000px):** keep the two-column hero, reduce the pass, stack media-based project bodies, and use two columns for education/leadership. The project summary's metadata column narrows (155px).
+- **Phone and narrower (700px):** introduction/actions precede a compact pass; section, biography, experience, toolkit, certificate, and contact grids stack. Enhanced navigation opens below the header through a menu button; without JavaScript the links remain visible. Project metadata sits below its title with a separate indicator column (44px). Award rows become year/title/result grids while preserving table semantics.
+- **Large text:** running text wraps, pass height grows with its content, the stage is remeasured, and contact spans permit additional breaks. The default document does not depend on clipped overflow to hide page width.
 
-- **Tablet, max-width (1000px):** project visual/story columns stack, except text-only project bodies; diagrams cap at (640px). Main heading, experience, and contact pairs become equal columns. Education, certifications, and leadership become two columns with their heading spanning both.
-- **Mobile, max-width (600px):** header minimum height becomes (80px), navigation expands below the wordmark, primary content grids become single-column, and project controls stack. Filters wrap with a (6px) gap and horizontal padding (12px). The portrait occupies (76%) width and caps at (390px) height. Education, certification, and leadership groups use top spacing (56px).
-- **Recognition on mobile:** the semantic table remains a table in HTML, while rows render as a two-column grid (3.25rem / remaining width). The year column scales with text size, overrides the desktop percentage width, and keeps its four digits together. Column headings remain accessible but visually clipped; result copy occupies the second column.
-
-Project graphics retain an aspect ratio of (16 / 11). The portrait uses (3 / 4), object fit `cover`, and focal position (50% 24%). At desktop it caps at (580px) height.
-
-Print hides navigation, filter controls, and project expansion controls; it prints summaries with smaller headings and simplified spacing.
+The logo collection wraps statically by default. Only JavaScript plus a no-preference motion setting turns it into a repeated horizontal track. Portraits preserve their observed crops; project images retain their actual source proportions or the source's documented media frame.
 
 ## Elevation & Depth
 
-The interface uses no box shadows, gradients, translucent panels, or blur. Tonal fields, alternating project/recognition surfaces, and type scale establish grouping. Hover changes color or underline weight; it does not lift a surface. The focus outline is functional state feedback rather than elevation.
+Most surfaces are flat and distinguished by color, spacing, and type. The suspended portrait pass alone carries a material shadow; its rotation, clip, stitched cord, and reversible face explain its depth. The stage uses perspective (1100px) and an isolated stacking context. Project records, controls, certificates, and content fields carry no shadows.
 
-**The Flat Field Rule.** Continue the observed tonal hierarchy and square surfaces when adding a related section.
+### Shadow Vocabulary
+
+- **Suspended pass:** `box-shadow: 0 24px 48px rgba(22,56,68,.18)` belongs to the draggable object.
+
+**The Suspended Depth Rule.** Keep material shadow on the suspended pass; related reading surfaces use the implemented flat tonal hierarchy.
 
 ## Shapes
 
-Controls and content fields use square corners. Native button borders are removed; the project index and recognition rows are separated by background tone and spacing. Regular icons are inline SVG strokes (22px square), with stroke width (1.7), rounded caps, and rounded joins. The email arrow uses a finer stroke (1.1). Graphic artwork has its own internal geometry and does not define new UI radii.
+Primary actions, project filters, and the rail control use pill rounding. Project records, section fields, screenshots, certificates, and the biography portrait remain square. The pass uses its own rounded shell and inset portrait corners; the phone shell and portrait use the smaller corresponding tokens. This difference distinguishes an object that can be picked up from the surrounding reading surfaces. The metal clip has local rounded cutouts, rather than becoming a general container shape.
 
 ## Components
 
-### Primary action
+### Actions and navigation
 
-A solid, square link button carries the hero action. It uses the primary component tokens, body-size type at weight (550), minimum height (52px), and an icon gap (42px), reduced to (32px) on mobile. Fine-pointer hover uses soft cobalt. All links acknowledge active press with opacity (0.76); the primary action also scales to (0.97) when motion is allowed. Transform transitions use (160ms) with the shared ease-out curve; background transitions use (160ms ease). A secondary résumé download sits in the same wrapping action group, with visible PDF type and size. The introduction also carries the owner's five Dean's List semesters.
+The primary action is a coral pill with paper text, an inline arrow, the recorded padding, and a minimum height (54px). Fine-pointer hover changes it to deep ocean ink; press changes it to ocean. Supporting links are underlined, have an icon gap (12px), and keep a minimum target height (44px). Global SVG icons are (22px) with rounded strokes (1.7); the source supplies inline symbol paths rather than glyph icons.
 
-### Filter controls
+Navigation is text-led, with a coral underline for the current section. All actionable links, buttons, and summaries use a visible outline (`3px solid currentColor`, offset `6px`). Fine-pointer hover adds or thickens underlining where implemented. Links, menu, filters, and rail control give immediate press opacity (0.8); the primary action retains full opacity and changes color. When motion is allowed, primary/menu/filter press feedback scales to (0.97).
 
-Square buttons form a labelled group. Each has minimum height (44px); selection is exposed through `aria-pressed` and shown with cobalt fill and sand text. Unselected fine-pointer hover uses chalk; active press uses opacity (0.76) and scales to (0.97) only when motion is allowed. The live count uses `role="status"`, polite announcements, atomic updates, and tabular numbers. Filters are initially hidden and become available with JavaScript; native project content remains available without it.
+### Filters and project records
 
-### Project disclosure index
+Filters are pale pills with an explicit ocean/paper selected state, `aria-pressed`, and a live result count. They appear only after enhancement; without JavaScript the full project list is available. Filters have a minimum height (44px), the frontmatter padding, and narrower phone side padding (12px).
 
-Each project is native `details`/`summary`, with title, description, metadata, and explicit Show details/Hide details states paired with a chevron. Only SmartShopper starts open; readers may open others independently, and resizing preserves their choices. Its commercialization award appears in the summary, before the diagram. Desktop summaries use columns (remaining width / 210px / auto), a (28px) gap, and the summary token padding. Tablet columns become (remaining width / 175px / auto) with (20px) gaps and padding (28px 22px). Mobile summaries use (remaining width / 44px), padding (24px 18px), metadata below the title, and the chevron spanning those rows. The text state labels stay accessible but are visually clipped on mobile.
+Six native disclosures expand independently; the first begins open. Summary records alternate ground and cool-surface fills, show an ocean title on hover, and use the dedicated pressed-record fill. Desktop summaries use a title, metadata, and indicator grid with the frontmatter padding. Tablet padding becomes (26px 22px); phone padding becomes (24px 18px). Project bodies use (8px 30px 40px) on desktop and (0 18px 28px) on phones. Disclosure labels remain accessible when the compact layout visually hides them.
 
-Open bodies use columns (1fr / 0.85fr), padding (8px 28px 36px), and a fluid gap (28px–64px). Mobile bodies use padding (0 18px 28px). Alternate records use chalk. Fine-pointer hover underlines the title (2px thick, 7px offset). Pressing a summary immediately changes its background to deeper sand. The chevron rotates over (160ms) when motion is allowed, and switches immediately for keyboard focus or reduced motion. Expansion uses native behavior without a height animation. Deep links reveal the target and reset a filter that would conceal it. SmartShopper and the fragrance platform include the owner's supplied source repository links.
+Pointer-triggered disclosure height is enhanced for (200ms) with the source ease-out curve; reversals start from the current height. Keyboard activation and reduced motion retain immediate native expansion. The chevron rotates with the open state, with its transition removed for keyboard focus.
 
-### Text links
+### Portrait pass
 
-Inline links with SVG arrows or download marks have minimum height (44px), gap (12px), and weight (550). Pointer hover increases underline thickness to (3px). Download file metadata wraps onto its own line. External links preserve their new-tab announcement and `rel` attributes.
+The pass starts as a readable, disabled static front; enhancement enables its button and interaction hint only after the locally hosted Motion runtime is available. The default shell width is the recorded `portrait-pass` width, with minimum height `calc(224px + 12.5rem)`, top position (142px), and resting rotation (-5deg). Tablet uses width `min(270px,88%)`, top (122px), and minimum height `calc(196px + 12.5rem)`; phones use width (210px), top (58px), and minimum height `calc(104px + 12.5rem)`. Text growth remains possible.
 
-### Navigation
+Dragging preserves the grab offset, uses pointer capture, updates the attached cord, resists boundary overshoot, carries release velocity, and permits re-grabbing while settling. The source spring uses mass (1), stiffness (100), and damping (10). Vertical touch intent keeps native page scrolling; touch dragging moves the pass horizontally. Clicking/tapping flips the face, keyboard activation resets its position before flipping, and Escape restores the portrait. The nonvisible face is hidden from assistive technology. The optional flip lasts (500ms) with the source ease-in-out curve; keyboard focus makes the face change immediate.
 
-The wordmark pairs an (800) weight abbreviation with a (500) weight surname label. Header links have minimum height (44px), a desktop gap (32px), and an underline for both fine-pointer hover and `aria-current="location"`. Returning to the hero clears the current section state.
+The shallow hero scroll offset is bounded (-4px to 20px). Rendering and spring work stop when the pass is offscreen or the document is hidden. Reduced motion removes the initial settling movement, scroll travel, release spring, and animated flip while preserving direct interaction and readable states. Without JavaScript, the pass stays in normal flow as a static portrait with a static name hint.
 
-At mobile width the menu toggle occupies (44px square), displays an inline SVG menu/close icon, and manages `aria-expanded`. The navigation opens in document flow. Choosing a link closes it; Escape closes it and returns focus to the toggle; changing across the mobile breakpoint resets it. Without JavaScript, the navigation links stay visible.
+### Tools and imagery
 
-### Recognition table
+Genuine brand marks are served locally with visible text labels. The skills list uses compact marks (26px; 24px on phones); the rail uses larger marks (32px; 28px on phones). Label text supplies the accessible name and adjacent logo images use empty alternative text. The duplicate rail group is hidden from assistive technology.
 
-A semantic caption, scoped column headers, and scoped row headers preserve relationships. Column header padding is (14px 24px); body cells use (28px 24px). Odd body rows use deeper sand. The year column uses tabular figures, and award titles use lead typography. Mobile layout changes are described in Layout; the table labels remain real data headers.
+The enhanced rail travels right to left over (42s), linearly and continuously. Hover, keyboard focus, an explicit pause/resume toggle, offscreen state, and document visibility pause it. Reduced motion and no JavaScript show the wrapping collection and hide the motion control.
 
-### Contact field
+Use the existing owner portrait, owner-supplied Khazanah pass and certificate photographs, actual SmartShopper screens rendered from the supplied poster, the real Gaffaly capture, and the authored investment-lakehouse diagram. `assets/media/sources.json` records media origin, treatment, and hashes; `assets/logos/sources.json` and the accompanying license record the Simple Icons collection (16.36.0) and individual sources. `assets/README.md` records portrait, diagram, font, and runtime provenance. No generated portrait or invented application screen is part of this system.
 
-Sand email text starts on two lines on cobalt and reflows when larger text needs more space. Link content includes an explicit full-address accessible label. Its arrow is inline, with a fluid left margin (12px–36px); it moves (5px right, 5px up) on fine-pointer hover only when motion is allowed, with a (200ms) ease-out transform. Supplemental links wrap on desktop and stack on mobile; the footer remains within this closing field.
+### Entrances and contact
 
-### Focus and motion
-
-All links, buttons, and summaries use a `:focus-visible` outline (3px solid current color, 6px offset). The skip link moves into view on focus, and its target main region accepts programmatic focus. Touch actions use `manipulation`; hover decoration is restricted to `(hover: hover) and (pointer: fine)`.
-
-The shared easing is `cubic-bezier(0.23, 1, 0.32, 1)`. With no reduced-motion preference, the two name lines arrive from (75%) vertical translation over (800ms), with a (100ms) delay on the second. One-time diagram/email entrances take (480ms) with (12px) vertical movement; experience detail takes (420ms) with (10px) horizontal movement; the portrait takes (520ms) from scale (1.015). Content entrances start at opacity (0.9). They are observed at an intersection threshold (0.12), skipped during keyboard navigation, and leave content visible before JavaScript runs. Reduced motion suppresses those entrances, smooth scrolling, press scaling, and arrow travel; a changed preference cancels running animations. Immediate opacity/background feedback and static disclosure indicators remain available.
+Content is visible before enhancement. Optional name entries last (800ms), with a second-line delay (80ms); observed content, media, and portrait entries last (600ms). Copy rises and fades, project media reveals its lower clip while rising, and the biography portrait gently scales/rotates to rest. Intersection-triggered entries run once, and keyboard navigation or reduced motion skips them. Contact keeps an oversized wrapping email, inherited focus, and an optional fine-pointer arrow movement (5px right, 5px up; 200ms).
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** keep cobalt and sand as the primary text/surface pair and use the recorded inverse pairing on cobalt fields.
-- **Do** use Archivo's established type roles, square controls, and fluid section gutters.
-- **Do** preserve native disclosure behavior, visible keyboard focus, accessible labels, and useful content without JavaScript.
-- **Do** use actual project diagrams and the existing portrait with their source aspect ratios and descriptive alternative text.
-- **Do** keep motion optional, brief, and limited to the observed state feedback and one-time entrances.
+- **Do** preserve the soft-white, ocean-blue, and coral roles recorded in the frontmatter.
+- **Do** use locally hosted Archivo, pill actions, square project records, and the fluid gutter and section tokens.
+- **Do** reserve the material shadow for the physical pass and keep its tether, keyboard face state, and native touch-scroll intent intact.
+- **Do** keep content visible by default, independent native disclosures, explicit filter states, visible focus, and static/reduced-motion alternatives.
+- **Do** use genuine owner/project imagery and locally hosted brand marks with their recorded provenance and descriptive text.
 
 ### Don't:
 
-- **Don't** turn the functional table headers into a decorative eyebrow pattern.
-- **Don't** introduce rounded cards, shadows, or blur as default treatments for these flat content fields.
-- **Don't** hide essential project copy behind JavaScript-only rendering or animate disclosure height.
-- **Don't** treat generated tonal ramps as an expanded approved palette.
-- **Don't** describe the unavailable Impeccable engine, FORM gate, or detector as a successful check or a user-approved comp.
+- **Don't** carry the obsolete cobalt/sand palette or square action controls into new surfaces for this redesign.
+- **Don't** turn the pass's shadow and rounded shell into a default treatment for reading surfaces.
+- **Don't** make essential content depend on motion, JavaScript-only rendering, dragging, or a moving rail.
+- **Don't** turn functional dates, captions, or table headers into an invented decorative label system.
+- **Don't** treat generated color ramps, a separate Taste draw, or unavailable Impeccable checks as approved palette or seed authority.
 
-Documentation limitation: the Impeccable engine/cache could not initialize, so no successful FORM roll, detector result, or comp/seed approval exists. This scan records observed implementation rather than asserting those approvals. No known craft-floor defect is promoted into a reusable token; table headers are documented as functional semantics only.
+Documentation evidence: the finish review found no material UI corrections; its final ship disposition covers the resolved provenance wording. Browser evidence covers five viewport sizes and 18 interaction groups; no actual-phone hardware test is claimed. Impeccable concept-seed and detector attempts exited 127 because the protected cache could not initialize; formal seed verification remains unavailable. These limits are not new design rules or canonized UI defects.

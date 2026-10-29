@@ -1,6 +1,6 @@
 # Syed Abdul Rahman Al-Haddad — Portfolio
 
-A static portfolio for AI and data engineering work. Built with HTML, CSS, and JavaScript, with locally hosted Archivo fonts and no runtime dependencies.
+A portfolio for AI and data engineering work, built with static HTML, CSS, and JavaScript. Archivo, the Motion 14.7.1 browser bundle, all tool logos, and every image are served locally. The production build requires no dependency installation.
 
 ## Preview
 
@@ -15,17 +15,23 @@ npm run build
 npm run test:visual -- --production
 ```
 
-The build copies public assets into `dist/`. The browser check exercises 1440, 768, 390, and 320px layouts, first-screen résumé access, category filtering, independent project disclosures, keyboard navigation, the mobile menu, reduced-motion press/hover feedback, 200% root text sizing, no-JavaScript behavior, direct local-file use, and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
+The build copies public assets into `dist/`. Browser checks cover 1440, 1280, 768, 390, and 320px layouts; first-screen résumé access; project disclosures and filters; badge dragging, release, re-grabbing, and keyboard flipping; the logo rail's direction and pause controls; keyboard navigation; the mobile menu; reduced motion; 200% root text size; no-JavaScript reading; direct local-file use; and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
 
 `CHROME_PATH` can select an existing Chromium executable. The checked-in `.npmrc` disables executable symlinks for compatibility with Windows-mounted workspaces.
 
 ## Content
 
-The supplied `SAR_Resume_V6.pdf` informs the project, experience, skills, and education content. The portfolio uses the owner’s later correction of **five Dean’s List semesters**; the downloadable PDF is the original supplied V6 document.
+The latest supplied `Syed_Abdul_Rahman_Alhaddad_CV.pdf` informs the experience, skills, and education content and is the current download. It confirms **five Dean’s List semesters**, ChromaDB, and 88% semantic retrieval accuracy for SmartShopper. The additional FYP poster informs the project description and screenshots. Accuracy and timing figures are explicitly scoped to the project evaluation.
 
-The three architecture graphics illustrate documented project flows. The portrait is the original project asset. Font licensing is included under `assets/fonts/`.
+The portrait is the original project asset. The owner supplied the Khazanah pass photograph and two certificate images. SmartShopper's real extension screens are rendered from the supplied poster, and Gaffaly's scent-advisor image is a capture of its live site. One authored lakehouse diagram remains. Sources and hashes are recorded under `assets/media/`; font, Motion, and Simple Icons licenses are included alongside their local files.
 
-SmartShopper and the fragrance platform link to the source repositories supplied by the owner. Only SmartShopper is expanded on arrival; opening further projects and resizing the page preserve the reader's choices.
+SmartShopper links to its owner-supplied backend repository. Gaffaly links to the owner-selected live storefront. Only SmartShopper is expanded on arrival; opening further projects and resizing preserve the reader's choices.
+
+## Interactions
+
+Drag the portrait pass and release it to let it settle. Tap it or use Enter/Space to reveal the reverse face; Escape returns to the front. On touch screens, the pass handles horizontal dragging while vertical gestures retain native page scrolling.
+
+The tool rail moves from right to left, pauses on hover and keyboard focus, and has a persistent pause/resume button. Reduced motion shows a static wrapping collection and removes spring settling, scrolling travel, and reveal movement. Essential content, links, and native disclosures remain available without JavaScript.
 
 ## Deployment
 

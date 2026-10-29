@@ -1,0 +1,32 @@
+{
+  "khazanah-pass.jpg": {
+    "source": "Owner-supplied Khazanah.jpeg",
+    "kind": "photograph",
+    "treatment": "Copied without visual modification",
+    "sha256": "8a12319d2130f9a74791382579ffff50fb42bb937346711e812b32d2c69c1dc6"
+  },
+  "oracle-generative-ai-certificate.jpg": {
+    "source": "Owner-supplied Oracle OCI Generative AI Professional certificate image",
+    "kind": "certificate",
+    "treatment": "Copied without visual modification",
+    "sha256": "860edc2ea1c30043bd20c40ae6b836a079f9144deb4f1608f60a6ac19b71d259"
+  },
+  "comptia-data-certificate.jpg": {
+    "source": "Owner-supplied CompTIA Data+ certificate image",
+    "kind": "certificate",
+    "treatment": "Copied without visual modification",
+    "sha256": "b3a58449c5467ec0484a2ab4357ccb0039036c44a87b0c28d92bf0059374fb68"
+  },
+  "smartshopper-extension.png": {
+    "source": "Owner-supplied FYP2 Poster 1563 D.pdf, page 1",
+    "kind": "PDF region rendering",
+    "treatment": "PDF.js render of the three Chrome extension screenshots; normalized page region x=.014, y=.7125, width=.364, height=.124. No interface content fabricated.",
+    "sha256": "b48b1263c244f993455026926330034e2413a70cfaf7cf04db3a618343be72fe"
+  },
+  "gaffaly-live.png": {
+    "source": "https://gaffaly-my.vercel.app/ via its Scent advisor link",
+    "kind": "browser capture",
+    "treatment": "Playwright screenshot at 1440x1000, captured 2026-10-29; no form submitted",
+    "sha256": "6329656d2768bd3bbec35795216f1bd0b352ba4cd416f0d6dabe8c1ac2eaf2db"
+  }
+}

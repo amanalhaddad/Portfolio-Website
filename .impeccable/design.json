@@ -1,167 +1,289 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T14:01:10.054120Z",
+  "generatedAt": "2026-10-29T16:18:03.493Z",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
-      "ink": {
-        "role": "primary",
-        "displayName": "Cobalt ink",
-        "canonical": "#062b8a",
-        "tonalRamp": [
-          "oklch(15% 0.16207 263.547)",
-          "oklch(26% 0.16207 263.547)",
-          "oklch(38% 0.16207 263.547)",
-          "oklch(49% 0.16207 263.547)",
-          "oklch(61% 0.16207 263.547)",
-          "oklch(72% 0.16207 263.547)",
-          "oklch(84% 0.16207 263.547)",
-          "oklch(95% 0.16207 263.547)"
-        ]
-      },
-      "soft-ink": {
-        "role": "primary",
-        "displayName": "Soft cobalt",
-        "canonical": "#304e91",
-        "tonalRamp": [
-          "oklch(15% 0.11604 264.060)",
-          "oklch(26% 0.11604 264.060)",
-          "oklch(38% 0.11604 264.060)",
-          "oklch(49% 0.11604 264.060)",
-          "oklch(61% 0.11604 264.060)",
-          "oklch(72% 0.11604 264.060)",
-          "oklch(84% 0.11604 264.060)",
-          "oklch(95% 0.11604 264.060)"
-        ]
-      },
       "ground": {
         "role": "neutral",
-        "displayName": "Sand ground",
-        "canonical": "#e6dbc7",
+        "displayName": "Soft white",
+        "canonical": "#f6f9fb",
         "tonalRamp": [
-          "oklch(15% 0.02938 82.592)",
-          "oklch(26% 0.02938 82.592)",
-          "oklch(38% 0.02938 82.592)",
-          "oklch(49% 0.02938 82.592)",
-          "oklch(61% 0.02938 82.592)",
-          "oklch(72% 0.02938 82.592)",
-          "oklch(84% 0.02938 82.592)",
-          "oklch(95% 0.02938 82.592)"
-        ]
+          "oklch(15.00% 0.00417 236.50)",
+          "oklch(26.43% 0.00417 236.50)",
+          "oklch(37.86% 0.00417 236.50)",
+          "oklch(49.29% 0.00417 236.50)",
+          "oklch(60.71% 0.00417 236.50)",
+          "oklch(72.14% 0.00417 236.50)",
+          "oklch(83.57% 0.00417 236.50)",
+          "oklch(95.00% 0.00417 236.50)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Deeper sand",
-        "canonical": "#ddd0b9",
+        "displayName": "Cool surface",
+        "canonical": "#e7f0f4",
         "tonalRamp": [
-          "oklch(15% 0.03417 81.972)",
-          "oklch(26% 0.03417 81.972)",
-          "oklch(38% 0.03417 81.972)",
-          "oklch(49% 0.03417 81.972)",
-          "oklch(61% 0.03417 81.972)",
-          "oklch(72% 0.03417 81.972)",
-          "oklch(84% 0.03417 81.972)",
-          "oklch(95% 0.03417 81.972)"
-        ]
+          "oklch(15.00% 0.01103 225.98)",
+          "oklch(26.43% 0.01103 225.98)",
+          "oklch(37.86% 0.01103 225.98)",
+          "oklch(49.29% 0.01103 225.98)",
+          "oklch(60.71% 0.01103 225.98)",
+          "oklch(72.14% 0.01103 225.98)",
+          "oklch(83.57% 0.01103 225.98)",
+          "oklch(95.00% 0.01103 225.98)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
       },
       "paper": {
         "role": "neutral",
-        "displayName": "Chalk",
-        "canonical": "#e9e7e1",
+        "displayName": "Paper white",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "oklch(15% 0.00832 91.487)",
-          "oklch(26% 0.00832 91.487)",
-          "oklch(38% 0.00832 91.487)",
-          "oklch(49% 0.00832 91.487)",
-          "oklch(61% 0.00832 91.487)",
-          "oklch(72% 0.00832 91.487)",
-          "oklch(84% 0.00832 91.487)",
-          "oklch(95% 0.00832 91.487)"
-        ]
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep ocean ink",
+        "canonical": "#163844",
+        "tonalRamp": [
+          "oklch(15.00% 0.04459 224.02)",
+          "oklch(26.43% 0.04459 224.02)",
+          "oklch(37.86% 0.04459 224.02)",
+          "oklch(49.29% 0.04459 224.02)",
+          "oklch(60.71% 0.04459 224.02)",
+          "oklch(72.14% 0.04459 224.02)",
+          "oklch(83.57% 0.04459 224.02)",
+          "oklch(95.00% 0.04459 224.02)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "soft-ink": {
+        "role": "neutral",
+        "displayName": "Muted ocean ink",
+        "canonical": "#466673",
+        "tonalRamp": [
+          "oklch(15.00% 0.04254 225.22)",
+          "oklch(26.43% 0.04254 225.22)",
+          "oklch(37.86% 0.04254 225.22)",
+          "oklch(49.29% 0.04254 225.22)",
+          "oklch(60.71% 0.04254 225.22)",
+          "oklch(72.14% 0.04254 225.22)",
+          "oklch(83.57% 0.04254 225.22)",
+          "oklch(95.00% 0.04254 225.22)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Ocean blue",
+        "canonical": "#075d78",
+        "tonalRamp": [
+          "oklch(15.00% 0.08377 226.81)",
+          "oklch(26.43% 0.08377 226.81)",
+          "oklch(37.86% 0.08377 226.81)",
+          "oklch(49.29% 0.08377 226.81)",
+          "oklch(60.71% 0.08377 226.81)",
+          "oklch(72.14% 0.08377 226.81)",
+          "oklch(83.57% 0.08377 226.81)",
+          "oklch(95.00% 0.08377 226.81)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "coral": {
+        "role": "secondary",
+        "displayName": "Coral",
+        "canonical": "#c05241",
+        "tonalRamp": [
+          "oklch(15.00% 0.14520 30.87)",
+          "oklch(26.43% 0.14520 30.87)",
+          "oklch(37.86% 0.14520 30.87)",
+          "oklch(49.29% 0.14520 30.87)",
+          "oklch(60.71% 0.14520 30.87)",
+          "oklch(72.14% 0.14520 30.87)",
+          "oklch(83.57% 0.14520 30.87)",
+          "oklch(95.00% 0.14520 30.87)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "inverse-ink": {
+        "role": "neutral",
+        "displayName": "Inverse alias",
+        "canonical": "#f6f9fb",
+        "tonalRamp": [
+          "oklch(15.00% 0.00417 236.50)",
+          "oklch(26.43% 0.00417 236.50)",
+          "oklch(37.86% 0.00417 236.50)",
+          "oklch(49.29% 0.00417 236.50)",
+          "oklch(60.71% 0.00417 236.50)",
+          "oklch(72.14% 0.00417 236.50)",
+          "oklch(83.57% 0.00417 236.50)",
+          "oklch(95.00% 0.00417 236.50)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
+      },
+      "project-press": {
+        "role": "neutral",
+        "displayName": "Pressed record",
+        "canonical": "#d9e8ee",
+        "tonalRamp": [
+          "oklch(15.00% 0.01799 223.61)",
+          "oklch(26.43% 0.01799 223.61)",
+          "oklch(37.86% 0.01799 223.61)",
+          "oklch(49.29% 0.01799 223.61)",
+          "oklch(60.71% 0.01799 223.61)",
+          "oklch(72.14% 0.01799 223.61)",
+          "oklch(83.57% 0.01799 223.61)",
+          "oklch(95.00% 0.01799 223.61)"
+        ],
+        "rampPurpose": "Synthesized OKLCH swatch reference only; not an expanded screen palette."
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Name Display",
-        "purpose": "Compressed name lines with root-relative and viewport sizing; 82% width, calc(0.76rem + 12vw) on mobile, wrapping at larger text sizes."
+        "displayName": "Name display",
+        "purpose": "Two-line hero name; 93% stretch, tablet and phone size changes described in DESIGN.md."
       },
       "headline": {
-        "displayName": "Section Headline",
-        "purpose": "Section headings and the mobile email scale."
+        "displayName": "Section headline",
+        "purpose": "Section headings; also the phone email size."
       },
       "title": {
-        "displayName": "Project Title",
-        "purpose": "Project disclosure names; 85% width, mobile lead size."
+        "displayName": "Project title",
+        "purpose": "Disclosure project names; phone size uses the mobile lead."
       },
       "lead": {
-        "displayName": "Lead Copy",
-        "purpose": "Introductions, results, roles, skill groups, and recognition titles; mobile size 1.375rem, component weights vary."
+        "displayName": "Lead copy",
+        "purpose": "Hero and biography default. Related headings adjust weights and line heights; phone size 1.375rem."
       },
       "body": {
-        "displayName": "Body Copy",
-        "purpose": "Running copy with a common 65ch measure cap in detail columns."
+        "displayName": "Body copy",
+        "purpose": "Running copy at weight 420 and line height 1.6; story columns cap at 65ch."
+      },
+      "action": {
+        "displayName": "Action copy",
+        "purpose": "Primary and supporting actions at weight 550."
       },
       "label": {
         "displayName": "Metadata",
-        "purpose": "Dates, captions, table column headings, technical stacks, and footer; functional labels only."
+        "purpose": "Dates, filters, captions, stacks, and footer; functional labels."
       },
       "contact-display": {
-        "displayName": "Email Display",
-        "purpose": "Email begins on two lines and wraps at larger text sizes; 105% width on desktop and 82% on mobile."
+        "displayName": "Contact email",
+        "purpose": "Two wrapping email spans; phone uses headline size and 90% stretch."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "suspended-pass",
+        "value": "0 24px 48px rgba(22,56,68,.18)",
+        "purpose": "Only the suspended draggable portrait pass. Reading surfaces remain flat."
+      }
+    ],
+    "focus": [
+      {
+        "name": "action-focus",
+        "value": "3px solid currentColor",
+        "offset": "6px",
+        "purpose": "Links, buttons, and native summaries. Focused pass flips and disclosure chevrons change immediately."
+      }
+    ],
     "motion": [
       {
         "name": "ease-out",
-        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
-        "purpose": "Shared transform easing from the source custom property."
+        "value": "cubic-bezier(.23, 1, .32, 1)",
+        "purpose": "Source curve for control transforms, entrances, disclosure indicator, and email arrow."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(.77, 0, .175, 1)",
+        "purpose": "Pass flip and project-media reveal."
       },
       {
         "name": "control-state",
         "value": "160ms",
-        "purpose": "Button/filter transform and background-color feedback; scaling only with no reduced-motion preference. Press opacity and summary background feedback remain immediate."
+        "purpose": "Primary/filter transform and background-color feedback; optional 0.97 press scale."
+      },
+      {
+        "name": "pass-spring",
+        "value": "mass 1; stiffness 100; damping 10",
+        "purpose": "Motion spring release with inherited velocity; x velocity clamped to -1800..1800 and y to -1200..1200. Stops offscreen/hidden; reduced motion jumps to rest."
+      },
+      {
+        "name": "pass-flip",
+        "value": "500ms",
+        "purpose": "rotateY(180deg) with ease-in-out; immediate on keyboard focus and reduced motion."
+      },
+      {
+        "name": "face-visibility",
+        "value": "0s linear 250ms",
+        "purpose": "Hide departing pass face halfway through flip; arriving face has 0s delay. No transition for keyboard focus."
+      },
+      {
+        "name": "hero-scroll",
+        "value": "scroll offset × 0.035; clamp(-4px, 20px)",
+        "purpose": "Shallow pass movement during native scrolling; skipped for reduced motion and offscreen state."
       },
       {
         "name": "name-arrive",
         "value": "800ms",
-        "purpose": "Name lines translate from 75% vertically to zero; no-preference media query only."
+        "purpose": "Name translates from 100% to rest; second line delayed 80ms. JavaScript and no-preference only."
       },
       {
         "name": "second-name-delay",
-        "value": "100ms",
-        "purpose": "Delay on the second masked name line."
+        "value": "80ms",
+        "purpose": "Observed delay on the second name line."
       },
       {
         "name": "content-arrive",
-        "value": "480ms",
-        "purpose": "Project diagrams/email move from translateY(12px), opacity 0.9 to rest; once, skipped for keyboard and reduced motion."
+        "value": "600ms",
+        "purpose": "Once-only opacity .8 to 1 and translateY(22px) to rest. Keyboard and reduced motion skip."
       },
       {
-        "name": "detail-arrive",
-        "value": "420ms",
-        "purpose": "Experience detail moves from translateX(10px), opacity 0.9 to rest; once, skipped for keyboard and reduced motion."
+        "name": "media-arrive",
+        "value": "600ms",
+        "purpose": "Once-only project-media clip inset(0 0 20% 0) and translateY(16px) to rest, with ease-in-out."
       },
       {
         "name": "portrait-arrive",
-        "value": "520ms",
-        "purpose": "Portrait moves from scale(1.015), opacity 0.9 to rest; once, skipped for keyboard and reduced motion."
+        "value": "600ms",
+        "purpose": "Once-only opacity .85, scale(.96), rotate(-2deg) to rest, with ease-out."
       },
       {
-        "name": "contact-arrow-hover",
+        "name": "pointer-disclosure",
         "value": "200ms",
-        "purpose": "Fine-pointer hover translates the email arrow by 5px right and 5px up only when motion is allowed."
+        "purpose": "Reversible height animation using cubic-bezier(0.23, 1, 0.32, 1); native immediate behavior for keyboard/reduced motion."
       },
       {
         "name": "disclosure-chevron",
         "value": "160ms",
-        "purpose": "Reversible disclosure indicator rotation when motion is allowed; immediate for keyboard focus and reduced motion."
+        "purpose": "Rotation with ease-out; immediate for keyboard focus/reduced motion."
+      },
+      {
+        "name": "contact-arrow",
+        "value": "200ms",
+        "purpose": "Fine-pointer hover translates 5px right and 5px up with ease-out; no-preference only."
+      },
+      {
+        "name": "tools-drift",
+        "value": "42s linear infinite",
+        "purpose": "Right-to-left translateX(-50%) of duplicated track. Pause on hover, focus, explicit control, offscreen, and hidden document. Static wrapping collection for reduced motion/no JavaScript."
       }
     ],
     "breakpoints": [
       {
-        "name": "mobile-max",
-        "value": "600px"
+        "name": "phone-max",
+        "value": "700px"
       },
       {
         "name": "tablet-max",
@@ -171,105 +293,165 @@
         "name": "wide-min",
         "value": "1800px"
       }
-    ]
+    ],
+    "assets": {
+      "portrait": {
+        "path": "AmanImage.jpg",
+        "provenance": "Existing owner-approved portrait, preserved unchanged."
+      },
+      "mediaManifest": "assets/media/sources.json",
+      "mediaPolicy": "Owner-supplied pass/certificates, actual poster-rendered extension screens, actual Gaffaly browser capture; authored investment-lakehouse diagram recorded in assets/README.md.",
+      "logos": {
+        "path": "assets/logos/",
+        "collection": "Simple Icons",
+        "version": "16.36.0",
+        "manifest": "assets/logos/sources.json",
+        "license": "assets/logos/LICENSE.txt"
+      },
+      "font": {
+        "path": "assets/fonts/archivo-latin-variable.woff2",
+        "source": "@fontsource-variable/archivo",
+        "license": "assets/fonts/OFL.txt"
+      },
+      "runtime": {
+        "path": "assets/vendor/motion-14.7.1.js",
+        "license": "assets/vendor/Motion-LICENSE.txt"
+      }
+    },
+    "evidence": {
+      "source": [
+        "styles.css",
+        "index.html",
+        "script.js"
+      ],
+      "review": ".impeccable/review/lanyard-finish-review.md",
+      "browserReport": ".impeccable/review/browser-report.json",
+      "scope": "Full browser evidence covers 1440, 1280, 768, 390, and 320px viewports plus 18 interaction groups. Final ship disposition covers the corrected provenance wording; it is not seed or detector validation.",
+      "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. The separate Taste draw has no Impeccable seed authority."
+    }
   },
   "components": [
     {
       "name": "Primary Action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The square hero link with an inline SVG arrow; pointer-hover and press states match the page.",
-      "html": "<a class=\"ds-button\" href=\"#projects\">Explore my work <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
-      "css": ".ds-button { display: inline-flex; min-height: 52px; align-items: center; justify-content: space-between; gap: 42px; padding: 14px 20px; background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); text-decoration: none; font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; border: 0; border-radius: 0; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), background-color 160ms ease; } .ds-button .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-button:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-button:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-button:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-button:hover { background: var(--soft-ink, #304e91); } } @media (max-width: 600px) { .ds-button { gap: 32px; } }"
+      "description": "Coral work pill with its actual ink hover, ocean press, focus, and optional press scale.",
+      "html": "<a class=\"ds-button\" href=\"#projects\">View my work <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
+      "css": ".ds-button { display: inline-flex; min-height: 54px; align-items: center; justify-content: space-between; gap: 26px; padding: 14px 22px; background: var(--coral, #c05241); color: var(--paper, #ffffff); border: 0; border-radius: 999px; text-decoration: none; font: 550 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)), background-color 160ms ease; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-button:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-button:active, .ds-button:hover:active { opacity: 1; background: var(--accent, #075d78); } @media (hover:hover) and (pointer:fine) { .ds-button:hover { background: var(--ink, #163844); } } @media (prefers-reduced-motion:no-preference) { .ds-button:active { transform: scale(.97); } } @media (max-width:700px) { .ds-button { gap: 20px; padding-inline: 18px; } }"
     },
     {
       "name": "Unselected Filter",
       "kind": "button",
       "refersTo": "filter",
-      "description": "An unselected project-discipline button; the page script manages its pressed state and live result count.",
+      "description": "Pale category pill; the page script supplies filtering and updates aria-pressed.",
       "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">AI &amp; machine learning</button>",
-      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-filter:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
+      "css": ".ds-filter { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 999px; background: var(--ground, #f6f9fb); color: var(--ink, #163844); font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)), background-color 160ms ease; } .ds-filter[aria-pressed='true'] { background: var(--accent, #075d78); color: var(--paper, #ffffff); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-filter:not([aria-pressed='true']):hover { background: var(--surface, #e7f0f4); } } @media (prefers-reduced-motion:no-preference) { .ds-filter:active { transform: scale(.97); } } @media (max-width:700px) { .ds-filter { padding-inline: 12px; } }"
     },
     {
       "name": "Selected Filter",
       "kind": "button",
       "refersTo": "filter-selected",
-      "description": "The explicit selected state of the same project filter.",
+      "description": "The explicit ocean/paper selected category state.",
       "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All projects</button>",
-      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-filter:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
+      "css": ".ds-filter { min-height: 44px; padding: 10px 16px; border: 0; border-radius: 999px; background: var(--ground, #f6f9fb); color: var(--ink, #163844); font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)), background-color 160ms ease; } .ds-filter[aria-pressed='true'] { background: var(--accent, #075d78); color: var(--paper, #ffffff); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-filter:not([aria-pressed='true']):hover { background: var(--surface, #e7f0f4); } } @media (prefers-reduced-motion:no-preference) { .ds-filter:active { transform: scale(.97); } } @media (max-width:700px) { .ds-filter { padding-inline: 12px; } }"
+    },
+    {
+      "name": "Logo Rail Control",
+      "kind": "button",
+      "refersTo": "marquee-toggle",
+      "description": "Pause control for the moving logo rail. The source script supplies pause/resume state; reduced motion hides the control.",
+      "html": "<button class=\"ds-marquee-toggle\" type=\"button\" aria-pressed=\"false\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 5v14M15 5v14\"/></svg><span>Pause logos</span></button>",
+      "css": ".ds-marquee-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 0; background: transparent; color: var(--ink, #163844); font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; border-radius: 999px; white-space: nowrap; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-marquee-toggle .ds-icon { width: 16px; height: 16px; flex: 0 0 16px; } .ds-marquee-toggle:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-marquee-toggle:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-marquee-toggle:hover { background: var(--paper, #ffffff); } } @media (max-width:700px) { .ds-marquee-toggle { font-size: .8125rem; padding-inline: 8px; } } @media (prefers-reduced-motion:reduce) { .ds-marquee-toggle { display: none; } }"
     },
     {
       "name": "Section Navigation",
       "kind": "nav",
-      "description": "In-page navigation showing the current location underline; menu behavior remains in the page script.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#projects\" aria-current=\"location\">Work</a><a href=\"#experience\">Experience</a><a href=\"#about\">About</a><a class=\"ds-nav-contact\" href=\"#contact\">Contact <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a></nav>",
-      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; color: var(--ink, #062b8a); } .ds-nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; text-decoration: none; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-nav a[aria-current=\"location\"] { text-decoration: underline; } .ds-nav .ds-nav-contact { font-weight: 650; } .ds-nav .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-nav a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-nav a:hover { text-decoration: underline; } } @media (max-width: 600px) { .ds-nav { gap: 8px 16px; justify-content: space-between; } .ds-nav a { font-size: 1rem; } } .ds-nav a:active { opacity: 0.76; }"
+      "refersTo": "navigation-link",
+      "description": "Text navigation with a coral current-location underline. The site script supplies mobile menu visibility and section tracking.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#projects\" aria-current=\"location\">Work</a><a href=\"#experience\">Experience</a><a href=\"#about\">About</a><a href=\"#skills\">Toolkit</a><a class=\"ds-nav-contact\" href=\"#contact\">Contact <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a></nav>",
+      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: clamp(18px, 2vw, 32px); align-items: center; color: var(--ink, #163844); } .ds-nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; text-decoration: none; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-nav a[aria-current='location'] { text-decoration: underline; text-decoration-color: var(--coral, #c05241); text-decoration-thickness: 3px; } .ds-nav .ds-nav-contact { font-weight: 650; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-nav a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-nav a:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-nav a:hover { text-decoration: underline; } } @media (max-width:700px) { .ds-nav { width: 100%; justify-content: space-between; gap: 8px 16px; padding-top: 18px; } .ds-nav a { font-size: 1rem; } }"
     },
     {
-      "name": "Project Disclosure",
-      "kind": "custom",
-      "refersTo": "project-summary",
-      "description": "Native independently expandable project record with immediate press feedback and a state chevron; only SmartShopper starts open on the page.",
-      "html": "<details class=\"ds-project\" open><summary><div class=\"ds-project-name\"><h3>SmartShopper</h3><p>AI-powered personal shopper</p><p class=\"ds-project-highlight\">2nd Place, Best Commercialization</p></div><p class=\"ds-project-meta\">Final year project<span>January 2026</span></p><span class=\"ds-project-toggle\"><span class=\"ds-when-closed\">Show details</span><span class=\"ds-when-open\">Hide details</span><svg class=\"ds-disclosure-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ds-project-body\">A Chrome extension that recommends products directly on Shopee and Lazada product pages.</div></details>",
-      "css": ".ds-project { background: var(--ground, #e6dbc7); color: var(--ink, #062b8a); font: 400 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; } .ds-project > summary { display: grid; grid-template-columns: minmax(0, 1fr) 210px auto; gap: 28px; align-items: center; padding: 30px 28px; list-style: none; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-project > summary::-webkit-details-marker { display: none; } .ds-project > summary:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-project h3 { margin: 0; font-size: clamp(1.75rem, 0.9rem + 2.3vw, 3.25rem); font-stretch: 85%; font-weight: 600; letter-spacing: -0.025em; line-height: 1.08; text-wrap: balance; } .ds-project-name p { margin: 10px 0 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta { margin: 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta span { display: block; margin-top: 3px; } .ds-project-toggle { display: inline-flex; min-height: 44px; align-items: center; justify-content: end; gap: 8px; font-size: var(--text-small, 0.875rem); white-space: nowrap; } .ds-project-toggle .ds-when-open, .ds-project[open] .ds-when-closed { display: none; } .ds-project[open] .ds-when-open { display: inline; } .ds-project-body { padding: 8px 28px 36px; max-width: 65ch; } .ds-project:not([open]) > .ds-project-body { display: none; } @media (hover: hover) and (pointer: fine) { .ds-project > summary:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; } } @media (max-width: 1000px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 175px auto; gap: 20px; padding: 28px 22px; } .ds-project-body { padding-inline: 22px; } } @media (max-width: 600px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; padding: 24px 18px; } .ds-project h3 { font-size: 1.375rem; } .ds-project-meta { grid-column: 1; } .ds-project-meta span { display: inline; margin-left: 10px; } .ds-project-toggle { grid-column: 2; grid-row: 1 / 3; width: 44px; justify-content: center; } .ds-project-body { padding: 0 18px 28px; } } .ds-project { overflow-wrap: anywhere; } .ds-project > summary:active { background: var(--surface, #ddd0b9); } .ds-project .ds-project-highlight { font-weight: 650; } .ds-disclosure-icon { width: 18px; height: 18px; flex: 0 0 18px; } .ds-project[open] .ds-disclosure-icon { transform: rotate(180deg); } @media (prefers-reduced-motion: no-preference) { .ds-disclosure-icon { transition: transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-project > summary:focus-visible .ds-disclosure-icon { transition: none; } } @media (max-width: 600px) { .ds-project-toggle .ds-when-closed, .ds-project-toggle .ds-when-open { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }"
+      "name": "Project Record",
+      "kind": "card",
+      "refersTo": "project-record",
+      "description": "A real native details/summary record. This isolated specimen uses native expansion; the page adds reversible 200ms pointer-only height animation.",
+      "html": "<details class=\"ds-project\" open><summary><div class=\"ds-project-name\"><h3>SmartShopper</h3><p>AI-powered personal shopper</p><p class=\"ds-project-highlight\">2nd Place, Best Commercialization</p></div><p class=\"ds-project-meta\">Final year project<span>January 2026</span></p><span class=\"ds-project-toggle\"><span class=\"ds-when-closed\">Show details</span><span class=\"ds-when-open\">Hide details</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ds-project-body\"><p>Co-developed a Chrome extension that brings live Shopee and Lazada product comparisons, shopping chat, and personalized recommendations into one interface.</p></div></details>",
+      "css": ".ds-project { background: var(--ground, #f6f9fb); color: var(--ink, #163844); border-radius: 0; font: 420 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; overflow-wrap: anywhere; } .ds-project + .ds-project { margin-top: 12px; } .ds-project:nth-child(even) { background: var(--surface, #e7f0f4); } .ds-project > summary { display: grid; grid-template-columns: minmax(0,1fr) 210px auto; gap: 28px; align-items: center; padding: 30px; list-style: none; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-project > summary::-webkit-details-marker { display: none; } .ds-project > summary:active { background: #d9e8ee; } .ds-project > summary:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-project-name h3 { margin: 0; font-size: clamp(1.5rem, 1rem + 1.4vw, 2.5rem); line-height: 1.12; font-weight: 600; letter-spacing: -.03em; text-wrap: balance; } .ds-project-name p { font-size: var(--text-small, .875rem); margin: 9px 0 0; } .ds-project-name .ds-project-highlight { font-weight: 650; color: var(--accent, #075d78); } .ds-project-meta { margin: 0; font-size: var(--text-small, .875rem); color: var(--soft-ink, #466673); } .ds-project-meta span { display: block; margin-top: 3px; } .ds-project-toggle { display: inline-flex; align-items: center; justify-content: end; gap: 8px; min-height: 44px; font-size: var(--text-small, .875rem); white-space: nowrap; } .ds-project-toggle .ds-icon { width: 18px; height: 18px; flex: 0 0 18px; } .ds-project[open] .ds-project-toggle .ds-icon { transform: rotate(180deg); } .ds-project-toggle .ds-when-open, .ds-project[open] .ds-when-closed { display: none; } .ds-project[open] .ds-when-open { display: inline; } .ds-project:not([open]) > .ds-project-body { display: none; } .ds-project-body { padding: 8px 30px 40px; } .ds-project-body p { margin: 0; max-width: 65ch; } @media (hover:hover) and (pointer:fine) { .ds-project > summary:hover h3 { color: var(--accent, #075d78); } } @media (prefers-reduced-motion:no-preference) { .ds-project-toggle .ds-icon { transition: transform 160ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)); } .ds-project > summary:focus-visible .ds-icon { transition: none; } } @media (max-width:1000px) { .ds-project > summary { grid-template-columns: minmax(0,1fr) 155px auto; gap: 20px; padding: 26px 22px; } .ds-project-body { padding-inline: 22px; } } @media (max-width:700px) { .ds-project > summary { grid-template-columns: minmax(0,1fr) 44px; gap: 12px; padding: 24px 18px; position: relative; } .ds-project h3 { font-size: 1.375rem; } .ds-project-meta { grid-column: 1; } .ds-project-meta span { display: inline; margin-left: 10px; } .ds-project-toggle { grid-column: 2; grid-row: 1/3; width: 44px; justify-content: center; } .ds-project-toggle .ds-when-closed, .ds-project-toggle .ds-when-open { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } .ds-project-body { padding: 0 18px 28px; } }"
     },
     {
-      "name": "Text Link",
+      "name": "Supporting Text Link",
       "kind": "custom",
       "refersTo": "text-link",
-      "description": "An underlined supporting link with its outgoing inline SVG icon.",
+      "description": "Underlined supporting action with an outgoing inline SVG, inherited color, and a generous target height.",
       "html": "<a class=\"ds-text-link\" href=\"https://github.com/amanalhaddad\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Find me on GitHub, opens in a new tab\">Find me on GitHub <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
-      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink, #062b8a); font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-text-link .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-text-link:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-text-link:hover { text-decoration-thickness: 3px; } } .ds-text-link:active { opacity: 0.76; }"
+      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: inherit; font: 550 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-text-link:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-text-link:active { opacity: .8; } @media (hover:hover) and (pointer:fine) { .ds-text-link:hover { text-decoration-thickness: 3px; } }"
+    },
+    {
+      "name": "Toolkit Item",
+      "kind": "custom",
+      "refersTo": "tool-item",
+      "description": "A static labeled tool from the actual skills list, with the genuine local brand SVG inlined for the specimen.",
+      "html": "<span class=\"ds-tool-item\"><svg class=\"ds-tool-logo\" aria-hidden=\"true\" focusable=\"false\" fill=\"#3776AB\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z\"/></svg><span>Python</span></span>",
+      "css": ".ds-tool-item { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--ink, #163844); font: 420 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; } .ds-tool-logo { width: 26px; height: 26px; flex: 0 0 26px; } @media (max-width:700px) { .ds-tool-item { font-size: var(--text-small, .875rem); } .ds-tool-logo { width: 24px; height: 24px; flex-basis: 24px; } }"
+    },
+    {
+      "name": "Portrait Pass",
+      "kind": "custom",
+      "refersTo": "portrait-pass",
+      "description": "Static front-face specimen using the source no-JavaScript positioning. The page runtime supplies the attached cord, drag/release spring, face toggle, and keyboard state; this snippet does not simulate that runtime.",
+      "html": "<div class=\"ds-pass-stage\"><button class=\"ds-pass\" type=\"button\" aria-label=\"Syed’s portrait pass, front face\"><span class=\"ds-pass-clip\" aria-hidden=\"true\"></span><span class=\"ds-pass-face\"><span class=\"ds-pass-head\"><span>SAR</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span><img class=\"ds-pass-portrait\" src=\"/AmanImage.jpg\" width=\"682\" height=\"1024\" alt=\"Syed Abdul Rahman Al-Haddad\" draggable=\"false\"><span class=\"ds-pass-name\">Syed Abdul<br>Rahman Al-Haddad</span><span class=\"ds-pass-role\">AI &amp; data engineering</span></span></button></div>",
+      "css": ".ds-pass-stage { padding-top: 142px; padding-bottom: 56px; perspective: 1100px; isolation: isolate; } .ds-pass { position: relative; display: block; margin-inline: auto; width: min(300px, 80%); min-height: calc(224px + 12.5rem); padding: 0; border: 0; border-radius: 18px; background: transparent; color: var(--ink, #163844); font: 420 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; transform: rotate(-5deg); transform-origin: 50% 0; box-shadow: 0 24px 48px rgba(22,56,68,.18); cursor: grab; touch-action: pan-y; user-select: none; -webkit-touch-callout: none; } .ds-pass.is-dragging { cursor: grabbing; } .ds-pass:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-pass-clip { position: absolute; top: -32px; left: calc(50% - 17px); width: 34px; height: 52px; border-radius: 9px; background: #b2c5cd; } .ds-pass-clip::after { content: ''; position: absolute; inset: 7px 7px 13px; border-radius: 5px; background: var(--ground, #f6f9fb); } .ds-pass-face { display: flex; flex-direction: column; position: relative; min-height: inherit; border-radius: 18px; padding: 18px; overflow: hidden; text-align: left; background: var(--paper, #ffffff); } .ds-pass-face::after { content: ''; position: absolute; bottom: 0; inset-inline: 0; height: 6px; background: var(--coral, #c05241); } .ds-pass-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; color: var(--coral, #c05241); font-size: 1rem; font-weight: 650; } .ds-pass-head > span:first-child { font-weight: 750; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-pass-portrait { display: block; width: 100%; height: 242px; object-fit: cover; object-position: 50% 25%; border-radius: 10px; pointer-events: none; } .ds-pass-name { margin-top: 18px; font-size: 1.375rem; line-height: 1.15; font-weight: 650; letter-spacing: -.025em; } .ds-pass-role { margin-top: 8px; font-size: var(--text-small, .875rem); color: var(--soft-ink, #466673); } @media (max-width:1000px) { .ds-pass-stage { padding-top: 122px; } .ds-pass { width: min(270px,88%); min-height: calc(196px + 12.5rem); } .ds-pass-portrait { height: 216px; } } @media (max-width:700px) { .ds-pass-stage { padding-top: 58px; } .ds-pass { width: 210px; min-height: calc(104px + 12.5rem); } .ds-pass-face { padding: 14px; border-radius: 14px; } .ds-pass-head { margin-bottom: 10px; font-size: .875rem; } .ds-pass-head .ds-icon { width: 18px; height: 18px; flex-basis: 18px; } .ds-pass-portrait { height: 154px; border-radius: 6px; } .ds-pass-name { font-size: 1.0625rem; margin-top: 12px; } .ds-pass-role { font-size: .8125rem; margin-top: 6px; } }"
     },
     {
       "name": "Contact Email",
       "kind": "custom",
       "refersTo": "contact-email",
-      "description": "Oversized email that reflows at larger text sizes, with an inline arrow and optional fine-pointer hover movement.",
-      "html": "<div class=\"ds-contact\"><a class=\"ds-email\" href=\"mailto:aman.alhaddad@gmail.com\" aria-label=\"Email aman.alhaddad@gmail.com\"><span>aman.<wbr>alhaddad</span><span>@gmail.<wbr>com<svg class=\"ds-contact-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span></a></div>",
-      "css": ".ds-contact { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); padding: 88px var(--gutter, clamp(20px, 2.25vw, 40px)) max(24px, env(safe-area-inset-bottom)); } .ds-email { display: block; color: inherit; font: 500 clamp(42px, 9.8vw, 155px)/0.98 Archivo, sans-serif; font-stretch: 105%; letter-spacing: -0.035em; text-decoration: none; touch-action: manipulation; } .ds-email > span { display: block; overflow-wrap: anywhere; } .ds-email .ds-contact-arrow { display: inline-block; width: 0.68em; height: 0.68em; margin-inline-start: clamp(12px, 2.5vw, 36px); stroke-width: 1.1; } .ds-email:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) { .ds-email .ds-contact-arrow { transition: transform 200ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-email:hover .ds-contact-arrow { transform: translate(5px, -5px); } } @media (max-width: 600px) { .ds-contact { padding-top: 72px; } .ds-email { font-size: clamp(2.625rem, 1rem + 4.8vw, 5.5rem); font-stretch: 82%; } } .ds-email:active { opacity: 0.76; }"
+      "description": "The ocean-field email with two wrapping spans, visible focus, and optional arrow feedback.",
+      "html": "<div class=\"ds-contact\"><a class=\"ds-email\" href=\"mailto:aman.alhaddad@gmail.com\" aria-label=\"Email aman.alhaddad@gmail.com\"><span>aman.<wbr>alhaddad</span><span>@gmail.<wbr>com<svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span></a></div>",
+      "css": ".ds-contact { background: var(--accent, #075d78); color: var(--paper, #ffffff); padding: 96px var(--gutter, clamp(20px, 4.4vw, 72px)) max(24px,env(safe-area-inset-bottom)); } .ds-email { display: block; margin: clamp(64px,8vw,120px) 0 48px; color: inherit; font: 500 clamp(2.5rem,7.8vw,7rem)/1.04 Archivo, sans-serif; letter-spacing: -.035em; text-decoration: none; touch-action: manipulation; } .ds-email > span { display: block; overflow-wrap: anywhere; } .ds-email .ds-icon { display: inline-block; width: .68em; height: .68em; margin-inline-start: clamp(12px,2.5vw,36px); stroke-width: 1.1; } .ds-email:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-email:active { opacity: .8; } @media (prefers-reduced-motion:no-preference) { .ds-email .ds-icon { transition: transform 200ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)); } @media (hover:hover) and (pointer:fine) { .ds-email:hover .ds-icon { transform: translate(5px,-5px); } } } @media (max-width:700px) { .ds-contact { padding-top: 72px; } .ds-email { font-size: var(--text-heading, clamp(2.5rem, 1rem + 4.1vw, 5rem)); font-stretch: 90%; margin-top: 56px; margin-bottom: 36px; } }"
     }
   ],
   "narrative": {
-    "northStar": "Type and nothing else",
-    "overview": "The recorded direction is expressed through Archivo variable type, cobalt ink, warm sand fields, and square controls. Oversized identity and contact type frame an engineering portfolio whose project index opens into specific results and architecture diagrams. The title is the direction label already recorded in the surface brief; no additional qualitative preference or comp approval is implied.\n\nThe implemented system is spacious at the section level and more compact within project records. Color inversion separates experience and contact; tonal changes organize the other fields. The existing portrait and three original architecture diagrams provide the visual evidence. This document describes the shipped rules observed in `styles.css`, `index.html`, `script.js`, and browser captures, with product facts maintained separately in `PRODUCT.md`.",
+    "northStar": "The portrait pass",
+    "overview": "Soft-white space, ocean-blue fields, and coral actions frame a substantial Archivo voice. The existing portrait becomes a suspended pass with a real tether, direct manipulation, and a reversible face. This descriptive label records the implemented, owner-requested lanyard; it does not imply a new metaphor workshop or approved image comp.\n\nThe surrounding page stays open and readable. Rounded controls act within flat, square records; actual project screens, an authored architecture diagram, owner photographs, and genuine tool logos provide the visual evidence. This document records the finished implementation in `styles.css`, `index.html`, and `script.js`; product facts remain in `PRODUCT.md`.",
     "keyCharacteristics": [
-      "One variable sans-serif family with strong changes in size, weight, and width.",
-      "Cobalt text and controls across sand and chalk surfaces.",
-      "Flat, square fields with hierarchy created by type, spacing, and tone.",
-      "Native project disclosures, explicit filters, and progressive enhancement.",
-      "Short state feedback and restrained, optional one-time entrances."
+      "Soft-white and paper-white reading surfaces with ocean text and coral action accents.",
+      "One locally hosted variable typeface with fluid display and body roles.",
+      "A physical portrait pass whose shadow, tether, and spring express suspension.",
+      "Pill controls alongside square, independently expandable project records.",
+      "Genuine local imagery and brand logos, with static and reduced-motion reading paths."
     ],
     "rules": [
       {
-        "name": "The Inverted Field Rule",
-        "body": "On the cobalt experience and contact fields, text, links, icons, and focus outlines inherit sand; selection reverses that pair.",
+        "name": "The Ocean Field Rule",
+        "body": "Experience and contact pair ocean backgrounds with paper text, icons, and inherited focus outlines; selection reverses that pair.",
         "section": "colors"
       },
       {
         "name": "The One Family Rule",
-        "body": "Use Archivo's observed weight and width axes for hierarchy; retain the existing sans-serif fallback and browser text semantics.",
+        "body": "Use the locally hosted Archivo weight and width axes for hierarchy, retaining the sans-serif fallback and native text semantics.",
         "section": "typography"
       },
       {
-        "name": "The Flat Field Rule",
-        "body": "Continue the observed tonal hierarchy and square surfaces when adding a related section.",
+        "name": "The Suspended Depth Rule",
+        "body": "Keep material shadow on the suspended pass; related reading surfaces use the implemented flat tonal hierarchy.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** keep cobalt and sand as the primary text/surface pair and use the recorded inverse pairing on cobalt fields.",
-      "**Do** use Archivo's established type roles, square controls, and fluid section gutters.",
-      "**Do** preserve native disclosure behavior, visible keyboard focus, accessible labels, and useful content without JavaScript.",
-      "**Do** use actual project diagrams and the existing portrait with their source aspect ratios and descriptive alternative text.",
-      "**Do** keep motion optional, brief, and limited to the observed state feedback and one-time entrances."
+      "**Do** preserve the soft-white, ocean-blue, and coral roles recorded in the frontmatter.",
+      "**Do** use locally hosted Archivo, pill actions, square project records, and the fluid gutter and section tokens.",
+      "**Do** reserve the material shadow for the physical pass and keep its tether, keyboard face state, and native touch-scroll intent intact.",
+      "**Do** keep content visible by default, independent native disclosures, explicit filter states, visible focus, and static/reduced-motion alternatives.",
+      "**Do** use genuine owner/project imagery and locally hosted brand marks with their recorded provenance and descriptive text."
     ],
     "donts": [
-      "**Don't** turn the functional table headers into a decorative eyebrow pattern.",
-      "**Don't** introduce rounded cards, shadows, or blur as default treatments for these flat content fields.",
-      "**Don't** hide essential project copy behind JavaScript-only rendering or animate disclosure height.",
-      "**Don't** treat generated tonal ramps as an expanded approved palette.",
-      "**Don't** describe the unavailable Impeccable engine, FORM gate, or detector as a successful check or a user-approved comp."
+      "**Don't** carry the obsolete cobalt/sand palette or square action controls into new surfaces for this redesign.",
+      "**Don't** turn the pass's shadow and rounded shell into a default treatment for reading surfaces.",
+      "**Don't** make essential content depend on motion, JavaScript-only rendering, dragging, or a moving rail.",
+      "**Don't** turn functional dates, captions, or table headers into an invented decorative label system.",
+      "**Don't** treat generated color ramps, a separate Taste draw, or unavailable Impeccable checks as approved palette or seed authority."
     ]
   }
 }

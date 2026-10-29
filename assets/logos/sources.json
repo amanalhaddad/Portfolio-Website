@@ -1,0 +1,344 @@
+[
+  {
+    "label": "Python",
+    "slug": "python",
+    "title": "Python",
+    "source": "https://www.python.org/community/logos/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "TypeScript",
+    "slug": "typescript",
+    "title": "TypeScript",
+    "source": "https://www.typescriptlang.org/branding",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "JavaScript",
+    "slug": "javascript",
+    "title": "JavaScript",
+    "source": "https://github.com/voodootikigod/logo.js/blob/1544bdeed6d618a6cfe4f0650d04ab8d9cfa76d9/js.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": {
+      "type": "MIT",
+      "url": "https://spdx.org/licenses/MIT"
+    }
+  },
+  {
+    "label": "R",
+    "slug": "r",
+    "title": "R",
+    "source": "https://www.r-project.org/logo/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": {
+      "type": "CC-BY-SA-4.0",
+      "url": "https://spdx.org/licenses/CC-BY-SA-4.0"
+    }
+  },
+  {
+    "label": "C++",
+    "slug": "cplusplus",
+    "title": "C++",
+    "source": "https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Scikit-learn",
+    "slug": "scikitlearn",
+    "title": "scikit-learn",
+    "source": "https://github.com/scikit-learn/scikit-learn/blob/c5ef2e985c13119001aa697e446ebb3dbcb326e5/doc/logos/scikit-learn-logo.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "TensorFlow",
+    "slug": "tensorflow",
+    "title": "TensorFlow",
+    "source": "https://www.tensorflow.org",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "PyTorch",
+    "slug": "pytorch",
+    "title": "PyTorch",
+    "source": "https://github.com/pytorch/pytorch.github.io/blob/8f083bd12192ca12d5e1c1f3d236f4831d823d8f/assets/images/logo.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "spaCy",
+    "slug": "spacy",
+    "title": "spaCy",
+    "source": "https://github.com/explosion/spaCy/blob/c17980e535a8009b14ee4d1f818db207d9c07e55/website/src/images/logo.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "OpenCV",
+    "slug": "opencv",
+    "title": "OpenCV",
+    "source": "https://opencv.org/resources/media-kit/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Pandas",
+    "slug": "pandas",
+    "title": "pandas",
+    "source": "https://pandas.pydata.org/about/citing.html",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "NumPy",
+    "slug": "numpy",
+    "title": "NumPy",
+    "source": "https://numpy.org/press-kit/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Snowflake",
+    "slug": "snowflake",
+    "title": "Snowflake",
+    "source": "https://www.snowflake.com/brand-guidelines/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "BigQuery",
+    "slug": "googlebigquery",
+    "title": "Google BigQuery",
+    "source": "https://cloud.google.com/icons",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Next.js",
+    "slug": "nextdotjs",
+    "title": "Next.js",
+    "source": "https://vercel.com/design/brands#next-js",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "React",
+    "slug": "react",
+    "title": "React",
+    "source": "https://github.com/facebook/create-react-app/blob/282c03f9525fdf8061ffa1ec50dce89296d916bd/test/fixtures/relative-paths/src/logo.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Node.js",
+    "slug": "nodedotjs",
+    "title": "Node.js",
+    "source": "https://nodejs.org/en/about/branding",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "FastAPI",
+    "slug": "fastapi",
+    "title": "FastAPI",
+    "source": "https://github.com/tiangolo/fastapi/blob/ffb4f77a11f83132b521ba0aac6c95792c19e797/docs/en/docs/img/icon-white.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Tailwind CSS",
+    "slug": "tailwindcss",
+    "title": "Tailwind CSS",
+    "source": "https://tailwindcss.com/brand",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Prisma",
+    "slug": "prisma",
+    "title": "Prisma",
+    "source": "https://github.com/prisma/presskit/tree/4bcb64181f266723439d955d60afa1c55fefa715",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "HTML",
+    "slug": "html5",
+    "title": "HTML5",
+    "source": "https://www.w3.org/html/logo/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "CSS",
+    "slug": "css",
+    "title": "CSS",
+    "source": "https://github.com/CSS-Next/logo.css/blob/bacc20878227204b283c68a6b935f8279e06b0cd/css.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "PostgreSQL",
+    "slug": "postgresql",
+    "title": "PostgreSQL",
+    "source": "https://wiki.postgresql.org/wiki/Logo",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "MongoDB",
+    "slug": "mongodb",
+    "title": "MongoDB",
+    "source": "https://www.mongodb.com/pressroom",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "MySQL",
+    "slug": "mysql",
+    "title": "MySQL",
+    "source": "https://www.mysql.com/about/legal/logos.html",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Neon",
+    "slug": "neon",
+    "title": "Neon",
+    "source": "https://neon.com/brand",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Vercel",
+    "slug": "vercel",
+    "title": "Vercel",
+    "source": "https://vercel.com/geist/brands",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Docker",
+    "slug": "docker",
+    "title": "Docker",
+    "source": "https://www.docker.com/company/newsroom/media-resources",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Vitest",
+    "slug": "vitest",
+    "title": "Vitest",
+    "source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vitest/vitest-icon-color-bracketless.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Git",
+    "slug": "git",
+    "title": "Git",
+    "source": "https://git-scm.com/community/logos",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": {
+      "type": "CC-BY-3.0",
+      "url": "https://spdx.org/licenses/CC-BY-3.0"
+    }
+  },
+  {
+    "label": "GitHub",
+    "slug": "github",
+    "title": "GitHub",
+    "source": "https://github.com/logos",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Linux/WSL",
+    "slug": "linux",
+    "title": "Linux",
+    "source": "https://www.linuxfoundation.org/the-linux-mark/",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Jupyter",
+    "slug": "jupyter",
+    "title": "Jupyter",
+    "source": "https://github.com/jupyter/design/blob/80716ee75dd7b2a6ec6abcd89922d020483589b1/logos/Logo%20Mark/logomark-whitebody-whitemoons/logomark-whitebody-whitemoons.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Gemini",
+    "slug": "googlegemini",
+    "title": "Google Gemini",
+    "source": "https://gemini.google.com",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Anthropic",
+    "slug": "anthropic",
+    "title": "Anthropic",
+    "source": "https://www.anthropic.com",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "Selenium",
+    "slug": "selenium",
+    "title": "Selenium",
+    "source": "https://github.com/SeleniumHQ/heroku-selenium/blob/2f66891ba030d3aa1f36ab1748c52ba4fb4e057d/selenium-green.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  },
+  {
+    "label": "C",
+    "slug": "c",
+    "title": "C",
+    "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg",
+    "collection": "Simple Icons",
+    "version": "16.36.0",
+    "license": "CC0-1.0 collection; brand rights remain with their owners"
+  }
+]

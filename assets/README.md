@@ -1,7 +1,13 @@
 # Assets
 
-- `SAR_Resume_V6.pdf`: user-supplied résumé, copied unchanged from the local document specified in the request.
+- `Syed_Abdul_Rahman_Alhaddad_CV.pdf`: user-supplied résumé, copied unchanged from the local document specified in the request.
 - `../AmanImage.jpg`: existing user portrait, preserved unchanged.
-- `smartshopper.png`, `fragrance-platform.png`, `investment-lakehouse.png`: original, code-drawn architecture graphics based on the supplied résumé. These depict system flows, not application screenshots. No third-party imagery or AI-generated image assets were used.
+- `investment-lakehouse.png`: original, code-drawn architecture graphic based on the supplied résumé.
+- `media/khazanah-pass.jpg`: owner-supplied internship-pass photograph, copied unchanged.
+- `media/comptia-data-certificate.jpg` and `media/oracle-generative-ai-certificate.jpg`: owner-supplied certificate images, copied unchanged.
+- `media/smartshopper-extension.png`: the actual extension screens rendered from page 1 of the supplied FYP poster. The page region and source hash are recorded in `media/sources.json`; the poster's student IDs are outside the rendered region.
+- `media/gaffaly-live.png`: a capture of the real Gaffaly scent-advisor page, reached through the owner's supplied live URL. No conversation was submitted.
+- `logos/`: 37 brand SVGs from Simple Icons 16.36.0, with each icon's source in `logos/sources.json` and the collection license in `logos/LICENSE.txt`. Brand rights remain with their owners.
+- `vendor/motion-14.7.1.js`: locally hosted Motion browser distribution, with its MIT license in `vendor/Motion-LICENSE.txt`.
 - `fonts/archivo-latin-variable.woff2`: Archivo variable, Latin subset, sourced from `@fontsource-variable/archivo`. SIL Open Font License is included in `fonts/OFL.txt`.
 - `favicon.svg`: original letterform mark in the portfolio palette.

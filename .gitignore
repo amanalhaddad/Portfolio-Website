@@ -7,3 +7,5 @@ dist/
 .impeccable/review/
 output/
 .playwright/
+# Owner-supplied originals; selected publishable copies live under assets/media/.
+/images that u can use/
