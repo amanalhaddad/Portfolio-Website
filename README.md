@@ -21,9 +21,9 @@ The build copies public assets into `dist/`. Browser checks cover 1440, 1280, 76
 
 ## Content
 
-The latest supplied `Syed_Abdul_Rahman_Alhaddad_CV.pdf` informs the experience, skills, and education content and is the current download. It confirms **five Dean’s List semesters**, ChromaDB, and 88% semantic retrieval accuracy for SmartShopper. The additional FYP poster informs the project description and screenshots. Accuracy and timing figures are explicitly scoped to the project evaluation.
+The latest supplied `Syed_Abdul_Rahman_Alhaddad_CV.pdf` informs the experience, skills, and education content and is the current download. It confirms **five Dean’s List semesters**, ChromaDB, and 88% semantic retrieval accuracy for SmartShopper. The additional FYP poster informs the project description. The owner supplied the three original extension screenshots separately. Accuracy and timing figures are explicitly scoped to the project evaluation.
 
-The portrait is the original project asset. The owner supplied the Khazanah pass photograph and two certificate images. SmartShopper's real extension screens are rendered from the supplied poster, and Gaffaly's scent-advisor image is a capture of its live site. One authored lakehouse diagram remains. Sources and hashes are recorded under `assets/media/`; font, Motion, and Simple Icons licenses are included alongside their local files.
+The portrait is the original project asset. The owner supplied the Khazanah pass photograph, two certificate images, and three original SmartShopper screenshots. The screenshots are displayed at their native proportions, side by side on larger screens and stacked on phones; each opens at full size. Gaffaly's scent-advisor image is a capture of its live site. One authored lakehouse diagram remains. Sources and hashes are recorded under `assets/media/`; font, Motion, and Simple Icons licenses are included alongside their local files.
 
 SmartShopper links to its owner-supplied backend repository. Gaffaly links to the owner-selected live storefront. Only SmartShopper is expanded on arrival; opening further projects and resizing preserve the reader's choices.
 

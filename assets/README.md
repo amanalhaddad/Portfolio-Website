@@ -5,7 +5,7 @@
 - `investment-lakehouse.png`: original, code-drawn architecture graphic based on the supplied résumé.
 - `media/khazanah-pass.jpg`: owner-supplied internship-pass photograph, copied unchanged.
 - `media/comptia-data-certificate.jpg` and `media/oracle-generative-ai-certificate.jpg`: owner-supplied certificate images, copied unchanged.
-- `media/smartshopper-extension.png`: the actual extension screens rendered from page 1 of the supplied FYP poster. The page region and source hash are recorded in `media/sources.json`; the poster's student IDs are outside the rendered region.
+- `media/smartshopper-page-insights.png`, `media/smartshopper-shopping-chat.png`, and `media/smartshopper-recommendations.png`: the three original extension screenshots supplied by the owner, copied unchanged. Individual sources, dimensions, and file hashes are recorded in `media/sources.json`. They replace the lower-resolution poster crop.
 - `media/gaffaly-live.png`: a capture of the real Gaffaly scent-advisor page, reached through the owner's supplied live URL. No conversation was submitted.
 - `logos/`: 37 brand SVGs from Simple Icons 16.36.0, with each icon's source in `logos/sources.json` and the collection license in `logos/LICENSE.txt`. Brand rights remain with their owners.
 - `vendor/motion-14.7.1.js`: locally hosted Motion browser distribution, with its MIT license in `vendor/Motion-LICENSE.txt`.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T18:03:46.057010+00:00",
+  "generatedAt": "2026-10-29T18:35:33.259968+00:00",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
@@ -320,7 +320,7 @@
         "provenance": "Existing owner-approved portrait, preserved unchanged."
       },
       "mediaManifest": "assets/media/sources.json",
-      "mediaPolicy": "Owner-supplied pass/certificates, actual poster-rendered extension screens, actual Gaffaly browser capture; authored investment-lakehouse diagram recorded in assets/README.md.",
+      "mediaPolicy": "Owner-supplied pass/certificates and three original SmartShopper screenshots, actual Gaffaly browser capture; authored investment-lakehouse diagram recorded in assets/README.md. Screenshots keep native proportions, use a responsive three-column/one-column gallery, and link to their unchanged full-size files.",
       "logos": {
         "path": "assets/logos/",
         "collection": "Simple Icons",

@@ -8,7 +8,7 @@ THESIS: Meet the engineer through a work pass you can pick up. The portrait lany
 
 OWN-WORLD: Owner-selected soft white, ocean blue, and coral. Archivo remains the self-hosted voice. Paper-white content, deep ocean text, open spacing, authentic brand logos, and a tangible portrait pass; depth belongs to the suspended badge.
 
-STORY: Meet Syed, explore the pass, inspect six projects with the SmartShopper backend source and Gaffaly's live destination, read the Khazanah experience and academic foundation, recognize the tools, then download the résumé or get in touch. Use the owner's Khazanah pass and certificate photographs, actual extension screens from the supplied poster, and the live Gaffaly capture.
+STORY: Meet Syed, explore the pass, inspect six projects with the SmartShopper backend source and Gaffaly's live destination, read the Khazanah experience and academic foundation, recognize the tools, then download the résumé or get in touch. Use the owner's Khazanah pass and certificate photographs, the owner's three original extension screenshots, and the live Gaffaly capture.
 
 FIRST VIEWPORT: A two-line personal name and clear AI/data role at left, with work and résumé actions. A large suspended portrait pass occupies the right half, with a real tether, drag response, release momentum, and a reversible profile face. On mobile the introduction and actions precede a compact, usable pass. The current portrait is owner-approved.
 

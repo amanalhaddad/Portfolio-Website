@@ -26,7 +26,7 @@ Primary audience inferred from the résumé: recruiters and engineering teams hi
 - Existing public contact information and GitHub profile in the original page.
 - Owner-supplied SmartShopper backend repository: `amanalhaddad/Ai-Powered-Personal-Shopper-Backenda`. The owner selected `https://gaffaly-my.vercel.app/` as the fragrance platform destination instead of its repository. The academic projects are not on GitHub.
 - The supplied FYP poster documents SmartShopper's live marketplace analysis, GTR-T5/Gemini hybrid retrieval, shopping chat, and saved sessions. The owner explicitly confirmed Chroma for vector storage, superseding FAISS in the earlier résumé-based project description. The poster's reported response time and processing latency remain qualified as project-evaluation results.
-- Owner-supplied Khazanah pass photograph and CompTIA/Oracle certificates; actual SmartShopper screens rendered from the poster; a capture of the live Gaffaly scent-advisor page; one authored investment-lakehouse diagram.
+- Owner-supplied Khazanah pass photograph, CompTIA/Oracle certificates, and three original SmartShopper extension screenshots; a capture of the live Gaffaly scent-advisor page; one authored investment-lakehouse diagram. The original screenshots replace the earlier poster crop and can each be opened at full size.
 
 ## Capabilities and Constraints
 

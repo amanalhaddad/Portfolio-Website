@@ -17,16 +17,34 @@
     "treatment": "Copied without visual modification",
     "sha256": "b3a58449c5467ec0484a2ab4357ccb0039036c44a87b0c28d92bf0059374fb68"
   },
-  "smartshopper-extension.png": {
-    "source": "Owner-supplied FYP2 Poster 1563 D.pdf, page 1",
-    "kind": "PDF region rendering",
-    "treatment": "PDF.js render of the three Chrome extension screenshots; normalized page region x=.014, y=.7125, width=.364, height=.124. No interface content fabricated.",
-    "sha256": "b48b1263c244f993455026926330034e2413a70cfaf7cf04db3a618343be72fe"
-  },
   "gaffaly-live.png": {
     "source": "https://gaffaly-my.vercel.app/ via its Scent advisor link",
     "kind": "browser capture",
     "treatment": "Playwright screenshot at 1440x1000, captured 2026-10-29; no form submitted",
     "sha256": "6329656d2768bd3bbec35795216f1bd0b352ba4cd416f0d6dabe8c1ac2eaf2db"
+  },
+  "smartshopper-page-insights.png": {
+    "source": "Owner-supplied Screenshot 2025-12-30 214021.png",
+    "kind": "Original application screenshot",
+    "treatment": "Copied byte-for-byte without visual modification; displayed at native proportions",
+    "width": 360,
+    "height": 550,
+    "sha256": "bb9ef2eceb6a574fdaad945c0177f96d9a05ba69e7c7cbb72643de083e46636b"
+  },
+  "smartshopper-shopping-chat.png": {
+    "source": "Owner-supplied Screenshot 2025-12-30 214933.png",
+    "kind": "Original application screenshot",
+    "treatment": "Copied byte-for-byte without visual modification; displayed at native proportions",
+    "width": 358,
+    "height": 545,
+    "sha256": "765b2c5a8c4e20eb94354a76459369cae0aaf6c41255f884d905d085061011ac"
+  },
+  "smartshopper-recommendations.png": {
+    "source": "Owner-supplied Screenshot 2025-12-30 215011.png",
+    "kind": "Original application screenshot",
+    "treatment": "Copied byte-for-byte without visual modification; displayed at native proportions",
+    "width": 359,
+    "height": 548,
+    "sha256": "86ea9f369eaa27a89260a73ec16e852393ef6355c17923e4a64b0a5820c50d31"
   }
 }

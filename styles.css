@@ -137,7 +137,10 @@ h2 { font-size: var(--text-heading); line-height: 1.05; font-weight: 600; letter
 .project:not([open]) > .project-body { display: none; }
 .project-body { display: grid; grid-template-columns: 1fr .85fr; align-items: start; gap: clamp(28px,4vw,64px); padding: 8px 30px 40px; }
 .project-visual img { width: 100%; aspect-ratio: 16/11; object-fit: cover; }
-#project-shopper .project-visual img { aspect-ratio: 1600/771; object-fit: contain; }
+.project-screenshots { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; align-items: start; }
+.project-screenshots a { display: block; min-width: 0; color: var(--accent); }
+.project-screenshots img { aspect-ratio: auto; object-fit: contain; }
+.screenshot-label { display: block; margin-top: 8px; font-size: var(--text-small); }
 figcaption { margin-top: 12px; color: var(--soft-ink); font-size: var(--text-small); }
 .project-story { padding-top: 2px; max-width: 65ch; }
 .project-story > p + p, .project-story > p + ul { margin-top: 22px; }
@@ -260,6 +263,7 @@ figcaption { margin-top: 12px; color: var(--soft-ink); font-size: var(--text-sma
   .skill-list > div { grid-template-columns: .7fr 1.3fr; gap: 28px; }
 }
 @media (max-width:700px) {
+  .project-screenshots { grid-template-columns: minmax(0,1fr); gap: 24px; max-width: 360px; margin-inline: auto; }
   html:not(.js) .lanyard-stage { padding-top: 58px; }
   :root { --text-lead: 1.375rem; }
   .site-header { min-height: 76px; padding-block: 16px; flex-wrap: wrap; gap: 0; }
