@@ -29,7 +29,9 @@ SmartShopper links to its owner-supplied backend repository. Gaffaly links to th
 
 ## Interactions
 
-Drag the portrait pass and release it to let it settle. Tap it or use Enter/Space to reveal the reverse face; Escape returns to the front. On touch screens, the pass handles horizontal dragging while vertical gestures retain native page scrolling.
+Pull the portrait pass downward and release it to download the résumé. The gesture arms after a 112px downward pull within a vertical intent cone; small, sideways, cancelled, and withdrawn pulls do not download. The progress indicator and release prompt show when it is armed. A successful trigger starts a 30-second countdown beside the résumé link and under the pass. The pass remains draggable and flippable during cooldown, and a new pull can download after the deadline. Background and offscreen time count toward the deadline.
+
+Tap the pass or use Enter/Space to reveal its reverse face; Escape returns to the front. The enabled pass accepts touch drags in both directions and retains pinch zoom; gestures outside it scroll the page normally. The hero link still downloads directly on click or Enter, and the biography/footer links stay available. Without JavaScript or Motion enhancement, the standard download label and static portrait remain.
 
 The tool rail moves from right to left and pauses while the pointer hovers over it, then resumes when the pointer leaves. There is no pause/resume button. Reduced motion shows a static wrapping collection and removes spring settling, scrolling travel, and reveal movement. Essential content, links, and native disclosures remain available without JavaScript.
 

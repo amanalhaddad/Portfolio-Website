@@ -69,7 +69,8 @@ li + li { margin-top: 12px; }
 .cord-back { stroke: #034359; stroke-width: 20px; }
 .cord-front { stroke: var(--accent); stroke-width: 18px; }
 .cord-seam { stroke: #8fb8c7; stroke-width: 2px; stroke-dasharray: 2 7; }
-.lanyard-card { position: absolute; top: 142px; left: 50%; width: min(300px, 80%); min-height: calc(224px + 12.5rem); padding: 0; border-radius: 18px; background: transparent; transform: translateX(-50%) rotate(-5deg); transform-origin: 50% 0; box-shadow: 0 24px 48px rgba(22,56,68,.18); /* taste-skill-ignore: shadow belongs to the suspended draggable pass. */ cursor: grab; touch-action: pan-y; -webkit-touch-callout: none; }
+.lanyard-card { position: absolute; top: 142px; left: 50%; width: min(300px, 80%); min-height: calc(224px + 12.5rem); padding: 0; border-radius: 18px; background: transparent; transform: translateX(-50%) rotate(-5deg); transform-origin: 50% 0; box-shadow: 0 24px 48px rgba(22,56,68,.18); /* taste-skill-ignore: shadow belongs to the suspended draggable pass. */ cursor: grab; -webkit-touch-callout: none; }
+.lanyard-card:not(:disabled) { touch-action: pinch-zoom; }
 .lanyard-card:disabled { cursor: default; opacity: 1; }
 .lanyard-card.is-dragging { cursor: grabbing; }
 .badge-clip { position: absolute; top: -32px; left: calc(50% - 17px); width: 34px; height: 52px; border-radius: 9px; background: #b2c5cd; }
@@ -90,7 +91,12 @@ li + li { margin-top: 12px; }
 .badge-back-copy { font-size: 1rem; line-height: 1.6; }
 .badge-back-sign { margin-top: auto; font-size: var(--text-small); }
 .lanyard-card[aria-pressed='true'] .badge-turn { transform: rotateY(180deg); }
-.badge-hint { position: absolute; bottom: -30px; width: 100%; text-align: center; font-size: var(--text-small); color: var(--soft-ink); }
+.badge-hint { position: absolute; bottom: 0; width: 100%; text-align: center; font-size: var(--text-small); color: var(--soft-ink); pointer-events: none; }
+.badge-pull-meter { display: block; width: 96px; height: 3px; margin: 8px auto 0; overflow: hidden; border-radius: 999px; background: var(--surface); }
+.badge-pull-fill { display: block; height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+.lanyard-stage[data-pull-state='armed'] .badge-pull-copy { color: var(--accent); font-weight: 650; }
+.lanyard-stage[data-pull-state='armed'] .cord-front { stroke: var(--coral); }
+.lanyard-stage[data-pull-state='armed'] .badge-pull-fill { background: var(--coral); }
 html:not(.js) .lanyard-stage { height: auto; min-height: 0; padding-top: 142px; padding-bottom: 56px; }
 html:not(.js) .lanyard-card { position: relative; left: auto; top: auto; display: block; margin-inline: auto; transform: rotate(-5deg); }
 .tools-marquee { padding-block: 32px 36px; background: var(--surface); }
@@ -263,7 +269,7 @@ figcaption { margin-top: 12px; color: var(--soft-ink); font-size: var(--text-sma
   .js .site-header nav { display: none; }
   .js .site-header nav.is-open { display: flex; }
   .site-header nav a { font-size: 1rem; }
-  .hero { grid-template-columns: minmax(0,1fr); padding-top: 20px; padding-bottom: 40px; gap: 12px; }
+  .hero { grid-template-columns: minmax(0,1fr); padding-top: 20px; padding-bottom: 128px; gap: 12px; }
   .hero-copy { padding-block: 8px 0; }
   .hero h1 { font-size: clamp(2.75rem, 1.6rem + 7vw, 4.5rem); line-height: .96; }
   .hero-intro { margin-top: 20px; }
@@ -284,7 +290,6 @@ figcaption { margin-top: 12px; color: var(--soft-ink); font-size: var(--text-sma
   .badge-back-title { font-size: 2rem; margin-block: 12px; }
   .badge-back-copy { font-size: .875rem; }
   .badge-back-sign { font-size: .8125rem; }
-  .badge-hint { bottom: -26px; }
   .tools-marquee { padding-block: 26px; }
   .marquee-heading h2 { font-size: 1.25rem; max-width: 16ch; }
   .logo-group li { font-size: 1.125rem; }

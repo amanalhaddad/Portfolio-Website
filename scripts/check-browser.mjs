@@ -6,6 +6,7 @@ import { pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 import { createPreviewServer } from './serve.mjs';
 import { spawn } from 'node:child_process';
+import { checkPullDownload } from './check-pull-download.mjs';
 
 const before = process.argv.includes('--before');
 const production = process.argv.includes('--production');
@@ -234,6 +235,7 @@ try {
     await motionPage.waitForTimeout(700);
     await motionPage.screenshot({ path: resolve(output, 'certificates.png') });
     await motionPage.close();
+    report.checks.push(...await checkPullDownload(browser, baseURL, output));
 
     const mobile = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
     await mobile.goto(baseURL);
@@ -333,6 +335,8 @@ try {
     assert.equal(await plain.locator('.project:visible').count(), 6);
     assert.equal(await plain.locator('#site-menu a:visible').count(), 5);
     assert.equal(await plain.locator('.hero a[download]').isVisible(), true);
+    assert.equal(await plain.locator('.resume-label').innerText(), 'Download résumé');
+    assert.equal(await plain.locator('.lanyard-card').evaluate(element => getComputedStyle(element).touchAction), 'manipulation', 'The static pass must retain native scrolling and zoom');
     await plain.locator('#project-fragrance summary').click();
     assert.equal(await plain.locator('#project-fragrance').getAttribute('open'), '');
     await plain.locator('#project-fragrance summary').click();

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T17:27:16.789835+00:00",
+  "generatedAt": "2026-10-29T18:03:46.057010+00:00",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
@@ -220,6 +220,26 @@
         "purpose": "Motion spring release with inherited velocity; x velocity clamped to -1800..1800 and y to -1200..1200. Stops offscreen/hidden; reduced motion jumps to rest."
       },
       {
+        "name": "pull-download",
+        "value": "112px; downward travel > 1.25 × abs(sideways travel)",
+        "purpose": "Raw travel from the pointer grab arms one native résumé download only on a noncancelled release. Eligibility is captured at pointerdown; retreat, small/sideways movement, cancellation, and a gesture begun during cooldown do not download. Click/Enter on the hero anchor remains a direct native download."
+      },
+      {
+        "name": "pull-feedback",
+        "value": "scaleX(progress); armed at 1",
+        "purpose": "The 96px × 3px pill meter uses the surface track and accent fill, with 8px top margin and a left transform origin. Raw pull progress is clamped to 0..1; armed feedback changes the front cord and meter fill to coral, and the hint copy to accent at weight 650. This visual meter is aria-hidden and not focusable."
+      },
+      {
+        "name": "pull-cooldown",
+        "value": "30,000ms; Date.now() deadline",
+        "purpose": "After a committed pull, show ceil(remaining / 1000) seconds in the pass hint and hero file note; scale the meter by remaining / 30,000. Keep the pass draggable/flippable and native links available. Updates run at min(1000ms, remaining), stop while the document is hidden, and synchronize on return; background/offscreen time still counts. Announce only download start and visible ready state."
+      },
+      {
+        "name": "pass-hint",
+        "value": "translate3d(0, max(0, y + scrollOffset)px, 0)",
+        "purpose": "The bottom-anchored hint follows downward rendered pass movement. ResizeObserver measures the stage, card, and natural hint height; stage min-height is card top + card height + 24px + hint height. The phone hero uses 128px bottom padding for release-rebound clearance."
+      },
+      {
         "name": "pass-flip",
         "value": "500ms",
         "purpose": "rotateY(180deg) with ease-in-out; immediate on keyboard focus and reduced motion."
@@ -324,11 +344,13 @@
         "index.html",
         "script.js"
       ],
-      "review": ".impeccable/review/lanyard-finish-review.md",
+      "review": ".impeccable/review/pull-download/finish-review.md",
       "browserReport": "output/playwright/report.json",
-      "scope": "Current production browser checks pass at 1440, 1280, 768, 390, and 320px across 19 interaction groups, including repeating reveals and hover-only logo pausing. Observer runtime checks cover edge stability, cleanup, and keyboard/wheel input. The initial finish-review ship disposition covers the corrected provenance wording; it is not seed or detector validation.",
-      "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. The separate Taste draw has no Impeccable seed authority.",
-      "followUpVerification": "output/playwright/replay-observer-check.json"
+      "scope": "The local pull-download extension has 21 passing interaction groups at 1440, 1280, 768, 390, and 320px in output/playwright/report.json. Coverage includes actual PDF download, the full 30-second cooldown under a virtual clock, re-arming, native keyboard fallback, Chromium CDP touch cancellation/pull/outside scrolling, 200% root text scaling, no JavaScript, direct file:// use, repeated reveals, and hover-only logo pausing. Observer runtime checks cover edge stability, cleanup, and keyboard/wheel input.",
+      "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. Phone gesture evidence is Chromium CDP touch emulation. The separate Taste draw has no Impeccable seed authority.",
+      "followUpVerification": "output/playwright/replay-observer-check.json",
+      "reviewStatus": "ship: the reviewer scored the sole mobile caption/meter containment fix resolved. This disposition covers that fix only. Both phone captures show complete feedback; 48 real rebound samples retain at least 31.10px clearance at 390px and 18.97px at 320px. No fix-batch regressions observed; no physical-phone test claimed.",
+      "pullClearanceVerification": "output/playwright/pull-clearance-check.json"
     }
   },
   "components": [
@@ -392,9 +414,17 @@
       "name": "Portrait Pass",
       "kind": "custom",
       "refersTo": "portrait-pass",
-      "description": "Static front-face specimen using the source no-JavaScript positioning. The page runtime supplies the attached cord, drag/release spring, face toggle, and keyboard state; this snippet does not simulate that runtime.",
-      "html": "<div class=\"ds-pass-stage\"><button class=\"ds-pass\" type=\"button\" aria-label=\"Syed’s portrait pass, front face\"><span class=\"ds-pass-clip\" aria-hidden=\"true\"></span><span class=\"ds-pass-face\"><span class=\"ds-pass-head\"><span>SAR</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span><img class=\"ds-pass-portrait\" src=\"/AmanImage.jpg\" width=\"682\" height=\"1024\" alt=\"Syed Abdul Rahman Al-Haddad\" draggable=\"false\"><span class=\"ds-pass-name\">Syed Abdul<br>Rahman Al-Haddad</span><span class=\"ds-pass-role\">AI &amp; data engineering</span></span></button></div>",
-      "css": ".ds-pass-stage { padding-top: 142px; padding-bottom: 56px; perspective: 1100px; isolation: isolate; } .ds-pass { position: relative; display: block; margin-inline: auto; width: min(300px, 80%); min-height: calc(224px + 12.5rem); padding: 0; border: 0; border-radius: 18px; background: transparent; color: var(--ink, #163844); font: 420 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; transform: rotate(-5deg); transform-origin: 50% 0; box-shadow: 0 24px 48px rgba(22,56,68,.18); cursor: grab; touch-action: pan-y; user-select: none; -webkit-touch-callout: none; } .ds-pass.is-dragging { cursor: grabbing; } .ds-pass:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-pass-clip { position: absolute; top: -32px; left: calc(50% - 17px); width: 34px; height: 52px; border-radius: 9px; background: #b2c5cd; } .ds-pass-clip::after { content: ''; position: absolute; inset: 7px 7px 13px; border-radius: 5px; background: var(--ground, #f6f9fb); } .ds-pass-face { display: flex; flex-direction: column; position: relative; min-height: inherit; border-radius: 18px; padding: 18px; overflow: hidden; text-align: left; background: var(--paper, #ffffff); } .ds-pass-face::after { content: ''; position: absolute; bottom: 0; inset-inline: 0; height: 6px; background: var(--coral, #c05241); } .ds-pass-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; color: var(--coral, #c05241); font-size: 1rem; font-weight: 650; } .ds-pass-head > span:first-child { font-weight: 750; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-pass-portrait { display: block; width: 100%; height: 242px; object-fit: cover; object-position: 50% 25%; border-radius: 10px; pointer-events: none; } .ds-pass-name { margin-top: 18px; font-size: 1.375rem; line-height: 1.15; font-weight: 650; letter-spacing: -.025em; } .ds-pass-role { margin-top: 8px; font-size: var(--text-small, .875rem); color: var(--soft-ink, #466673); } @media (max-width:1000px) { .ds-pass-stage { padding-top: 122px; } .ds-pass { width: min(270px,88%); min-height: calc(196px + 12.5rem); } .ds-pass-portrait { height: 216px; } } @media (max-width:700px) { .ds-pass-stage { padding-top: 58px; } .ds-pass { width: 210px; min-height: calc(104px + 12.5rem); } .ds-pass-face { padding: 14px; border-radius: 14px; } .ds-pass-head { margin-bottom: 10px; font-size: .875rem; } .ds-pass-head .ds-icon { width: 18px; height: 18px; flex-basis: 18px; } .ds-pass-portrait { height: 154px; border-radius: 6px; } .ds-pass-name { font-size: 1.0625rem; margin-top: 12px; } .ds-pass-role { font-size: .8125rem; margin-top: 6px; } }"
+      "description": "Disabled static front-face specimen using the source no-JavaScript positioning and native manipulation touch behavior. On the page, enhancement enables pinch-zoom touch handling, the attached cord, drag/release spring, face toggle, keyboard state, and release-only résumé download with a playable 30-second cooldown; this snippet does not simulate that runtime.",
+      "html": "<div class=\"ds-pass-stage\"><button class=\"ds-pass\" type=\"button\" disabled aria-label=\"Syed’s portrait pass, front face\"><span class=\"ds-pass-clip\" aria-hidden=\"true\"></span><span class=\"ds-pass-face\"><span class=\"ds-pass-head\"><span>SAR</span><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span><img class=\"ds-pass-portrait\" src=\"/AmanImage.jpg\" width=\"682\" height=\"1024\" alt=\"Syed Abdul Rahman Al-Haddad\" draggable=\"false\"><span class=\"ds-pass-name\">Syed Abdul<br>Rahman Al-Haddad</span><span class=\"ds-pass-role\">AI &amp; data engineering</span></span></button></div>",
+      "css": ".ds-pass-stage { padding-top: 142px; padding-bottom: 56px; perspective: 1100px; isolation: isolate; } .ds-pass { position: relative; display: block; margin-inline: auto; width: min(300px, 80%); min-height: calc(224px + 12.5rem); padding: 0; border: 0; border-radius: 18px; background: transparent; color: var(--ink, #163844); font: 420 var(--text-body, clamp(1rem, .96rem + .16vw, 1.125rem))/1.6 Archivo, sans-serif; transform: rotate(-5deg); transform-origin: 50% 0; box-shadow: 0 24px 48px rgba(22,56,68,.18); cursor: default; opacity: 1; touch-action: manipulation; user-select: none; -webkit-touch-callout: none; } .ds-pass:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-pass-clip { position: absolute; top: -32px; left: calc(50% - 17px); width: 34px; height: 52px; border-radius: 9px; background: #b2c5cd; } .ds-pass-clip::after { content: ''; position: absolute; inset: 7px 7px 13px; border-radius: 5px; background: var(--ground, #f6f9fb); } .ds-pass-face { display: flex; flex-direction: column; position: relative; min-height: inherit; border-radius: 18px; padding: 18px; overflow: hidden; text-align: left; background: var(--paper, #ffffff); } .ds-pass-face::after { content: ''; position: absolute; bottom: 0; inset-inline: 0; height: 6px; background: var(--coral, #c05241); } .ds-pass-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; color: var(--coral, #c05241); font-size: 1rem; font-weight: 650; } .ds-pass-head > span:first-child { font-weight: 750; } .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-pass-portrait { display: block; width: 100%; height: 242px; object-fit: cover; object-position: 50% 25%; border-radius: 10px; pointer-events: none; } .ds-pass-name { margin-top: 18px; font-size: 1.375rem; line-height: 1.15; font-weight: 650; letter-spacing: -.025em; } .ds-pass-role { margin-top: 8px; font-size: var(--text-small, .875rem); color: var(--soft-ink, #466673); } @media (max-width:1000px) { .ds-pass-stage { padding-top: 122px; } .ds-pass { width: min(270px,88%); min-height: calc(196px + 12.5rem); } .ds-pass-portrait { height: 216px; } } @media (max-width:700px) { .ds-pass-stage { padding-top: 58px; } .ds-pass { width: 210px; min-height: calc(104px + 12.5rem); } .ds-pass-face { padding: 14px; border-radius: 14px; } .ds-pass-head { margin-bottom: 10px; font-size: .875rem; } .ds-pass-head .ds-icon { width: 18px; height: 18px; flex-basis: 18px; } .ds-pass-portrait { height: 154px; border-radius: 6px; } .ds-pass-name { font-size: 1.0625rem; margin-top: 12px; } .ds-pass-role { font-size: .8125rem; margin-top: 6px; } }"
+    },
+    {
+      "name": "Pull Feedback",
+      "kind": "custom",
+      "refersTo": "portrait-pass",
+      "description": "Static cooldown hint at the start of the source 30-second deadline. The page runtime also shows ready, pulling, and armed copy, moves the hint with downward pass travel, and scales the meter by raw pull progress or remaining cooldown fraction. This noninteractive specimen does not start a download or timer.",
+      "html": "<p class=\"ds-pull-feedback\" data-pull-state=\"cooldown\"><span class=\"ds-pull-copy\">Pull again in 30s · tap to flip</span><span class=\"ds-pull-meter\" aria-hidden=\"true\"><span class=\"ds-pull-fill\"></span></span></p>",
+      "css": ".ds-pull-feedback { position: relative; width: 100%; margin: 0; text-align: center; font: 420 var(--text-small, .875rem)/1.6 Archivo, sans-serif; color: var(--soft-ink, #466673); pointer-events: none; } .ds-pull-meter { display: block; width: 96px; height: 3px; margin: 8px auto 0; overflow: hidden; border-radius: 999px; background: var(--surface, #e7f0f4); } .ds-pull-fill { display: block; height: 100%; background: var(--accent, #075d78); transform: scaleX(1); transform-origin: left; } .ds-pull-feedback[data-pull-state=\"ready\"] .ds-pull-fill { transform: scaleX(0); } .ds-pull-feedback[data-pull-state=\"armed\"] .ds-pull-copy { color: var(--accent, #075d78); font-weight: 650; } .ds-pull-feedback[data-pull-state=\"armed\"] .ds-pull-fill { background: var(--coral, #c05241); }"
     },
     {
       "name": "Contact Email",

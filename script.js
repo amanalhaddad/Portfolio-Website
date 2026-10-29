@@ -135,6 +135,15 @@
     const hero = document.querySelector('.hero');
     const motion = window.Motion;
     if (!motion?.motionValue || !motion?.animate) return () => {};
+    const resumeLink = document.querySelector('.hero-resume');
+    const resumeNote = resumeLink.querySelector('.file-note');
+    const fileNote = resumeNote.textContent;
+    const hint = document.querySelector('.badge-hint');
+    const pullCopy = hint.querySelector('.badge-pull-copy');
+    const pullFill = hint.querySelector('.badge-pull-fill');
+    const announcement = document.querySelector('.badge-announcement');
+    const pullDistance = 112, cooldownDuration = 30_000;
+    let cooldownUntil = 0, cooldownTimer = 0;
     const x = motion.motionValue(0);
     const y = motion.motionValue(0);
     let springX, springY, renderFrame = 0, pointer = null, suppressClick = false;
@@ -142,11 +151,30 @@
     const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
     const cords = [...stage.querySelectorAll('path')];
     const spring = { type: 'spring', mass: 1, stiffness: 100, damping: 10 };
+    function syncPullState() {
+      clearTimeout(cooldownTimer);
+      cooldownTimer = 0;
+      const remaining = Math.max(0, cooldownUntil - Date.now());
+      if (!remaining && cooldownUntil) {
+        cooldownUntil = 0;
+        if (visible && !document.hidden) announcement.textContent = 'You can pull the pass to download the résumé again.';
+      }
+      const progress = pointer?.pullProgress ?? 0;
+      const state = remaining ? 'cooldown' : progress >= 1 ? 'armed' : progress > 0 ? 'pulling' : 'ready';
+      if (stage.dataset.pullState !== state) stage.dataset.pullState = state;
+      const copy = remaining ? `Pull again in ${Math.ceil(remaining / 1000)}s · tap to flip` : state === 'armed' ? 'Release to download résumé' : state === 'pulling' ? 'Keep pulling to download' : 'Pull down and release. Tap to flip.';
+      if (pullCopy.textContent !== copy) pullCopy.textContent = copy;
+      const note = remaining ? `Pull again in ${Math.ceil(remaining / 1000)}s` : fileNote;
+      if (resumeNote.textContent !== note) resumeNote.textContent = note;
+      pullFill.style.transform = `scaleX(${remaining ? remaining / cooldownDuration : progress})`;
+      if (remaining && !document.hidden) cooldownTimer = setTimeout(syncPullState, Math.min(1000, remaining));
+    }
     function render() {
       renderFrame = 0;
       const dx = x.get(), dy = y.get() + scrollOffset;
       const angle = -5 + clamp(dx * .075, -16, 16);
       card.style.transform = `translate3d(calc(-50% + ${dx}px), ${dy}px, 0) rotate(${angle}deg)`;
+      hint.style.transform = `translate3d(0, ${Math.max(0, dy)}px, 0)`;
       const radians = angle * Math.PI / 180;
       const endX = geometry.width / 2 + dx + 20 * Math.sin(radians);
       const endY = geometry.top + dy - 20 * Math.cos(radians);
@@ -161,7 +189,7 @@
     y.on('change', scheduleRender);
     function measure() {
       geometry = { width: stage.clientWidth, height: stage.clientHeight, top: card.offsetTop, cardWidth: card.offsetWidth, cardHeight: card.offsetHeight };
-      const minimumHeight = `${geometry.top + geometry.cardHeight + 24}px`;
+      const minimumHeight = `${geometry.top + geometry.cardHeight + 24 + hint.offsetHeight}px`;
       if (stage.style.minHeight !== minimumHeight) requestAnimationFrame(() => { stage.style.minHeight = minimumHeight; });
       stage.querySelector('svg').setAttribute('viewBox', `0 0 ${geometry.width} ${geometry.height}`);
       scheduleRender();
@@ -169,6 +197,7 @@
     const badgeSize = new ResizeObserver(measure);
     badgeSize.observe(stage);
     badgeSize.observe(card);
+    badgeSize.observe(hint);
     measure();
     function stop() { springX?.stop(); springY?.stop(); }
     function settle(vx = 0, vy = 0) {
@@ -180,15 +209,24 @@
     function endPointer(event, cancelled = false) {
       if (!pointer || (event && event.pointerId !== pointer.id)) return;
       const current = pointer;
+      const download = !cancelled && current.dragging && current.canDownload && current.pullProgress >= 1 && Date.now() >= cooldownUntil;
       pointer = null;
       suppressClick = current.dragging;
       card.classList.remove('is-dragging');
       if (card.hasPointerCapture(current.id)) card.releasePointerCapture(current.id);
+      if (download) {
+        cooldownUntil = Date.now() + cooldownDuration;
+        announcement.textContent = 'Résumé download started. Pulling will be available again in 30 seconds.';
+      }
+      syncPullState();
+      if (download) resumeLink.click();
       settle(cancelled ? 0 : current.vx, cancelled ? 0 : current.vy);
     }
     card.disabled = false;
     document.querySelector('.badge-hint-js').hidden = false;
     document.querySelector('.badge-hint-static').hidden = true;
+    resumeLink.querySelector('.resume-label').textContent = 'Pull to download résumé';
+    syncPullState();
     card.addEventListener('pointerdown', event => {
       if (!event.isPrimary || event.button !== 0 || pointer) return;
       const presentation = new DOMMatrixReadOnly(getComputedStyle(card).transform);
@@ -196,30 +234,32 @@
       x.jump(presentation.m41 + geometry.cardWidth / 2);
       y.jump(presentation.m42 - scrollOffset);
       suppressClick = false;
-      pointer = { id: event.pointerId, startX: event.clientX, startY: event.clientY, x: x.get(), y: y.get(), lastX: event.clientX, lastY: event.clientY, time: performance.now(), vx: 0, vy: 0, dragging: false, touch: event.pointerType === 'touch' };
+      pointer = { id: event.pointerId, startX: event.clientX, startY: event.clientY, x: x.get(), y: y.get(), lastX: event.clientX, lastY: event.clientY, time: performance.now(), vx: 0, vy: 0, dragging: false, canDownload: Date.now() >= cooldownUntil, pullProgress: 0 };
       card.setPointerCapture(event.pointerId);
+      syncPullState();
     });
     card.addEventListener('pointermove', event => {
       if (!pointer || pointer.id !== event.pointerId) return;
       const dx = event.clientX - pointer.startX, dy = event.clientY - pointer.startY;
       if (!pointer.dragging && Math.hypot(dx, dy) < 6) return;
-      if (pointer.touch && !pointer.dragging && Math.abs(dy) > Math.abs(dx)) { endPointer(event, true); return; }
       pointer.dragging = true;
       card.classList.add('is-dragging');
       const elapsed = Math.max(8, performance.now() - pointer.time);
       pointer.vx = (event.clientX - pointer.lastX) / elapsed * 1000;
-      pointer.vy = pointer.touch ? 0 : (event.clientY - pointer.lastY) / elapsed * 1000;
+      pointer.vy = (event.clientY - pointer.lastY) / elapsed * 1000;
       pointer.lastX = event.clientX; pointer.lastY = event.clientY; pointer.time = performance.now();
       const maxX = Math.max(24, (geometry.width - geometry.cardWidth) / 2 - 8);
       const minY = Math.max(-80, 28 - geometry.top);
-      const maxY = Math.max(16, geometry.height - geometry.top - geometry.cardHeight - 24);
+      const maxY = Math.max(16, geometry.height - geometry.top - geometry.cardHeight - hint.offsetHeight - 24);
       const soften = (value, min, max, dimension) => {
         const bound = clamp(value, min, max), excess = value - bound;
         const resistance = Math.min(32, dimension * .08);
         return bound + excess * resistance * .55 / (resistance + .55 * Math.abs(excess));
       };
       x.set(soften(pointer.x + dx, -maxX, maxX, geometry.width));
-      y.set(pointer.touch ? 0 : soften(pointer.y + dy, minY, maxY, geometry.height));
+      y.set(soften(pointer.y + dy, minY, maxY, geometry.height));
+      pointer.pullProgress = pointer.canDownload && dy > Math.abs(dx) * 1.25 ? clamp(dy / pullDistance, 0, 1) : 0;
+      syncPullState();
     });
     card.addEventListener('pointerup', event => endPointer(event));
     card.addEventListener('pointercancel', event => endPointer(event, true));
@@ -254,11 +294,13 @@
         visible = entries[0].isIntersecting;
         if (!visible) { endPointer(null, true); stop(); x.jump(0); y.jump(0); }
         else scheduleRender();
+        syncPullState();
       }).observe(stage);
     }
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) { endPointer(null, true); stop(); x.jump(0); y.jump(0); }
       else scheduleRender();
+      syncPullState();
     });
     if (!reducedMotion.matches) { x.set(-28); y.set(-8); settle(); }
     return () => { endPointer(null, true); stop(); x.jump(0); y.jump(0); scrollOffset = 0; scheduleRender(); };
