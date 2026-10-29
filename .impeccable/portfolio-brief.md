@@ -10,9 +10,9 @@ Type and nothing else, selected from Taste’s three dealt options because the s
 
 On this page, Syed’s progression from investment pipelines to personalized recommendation products becomes a typographic project index that opens into the engineering behind each result.
 
-First viewport: the name on two bold lines, immediately supported by the actual AI/data engineering role, internship/education context, and one project action. No ornament or invented metrics.
+First viewport: the name on two bold lines, immediately supported by the actual AI/data engineering role, internship/education context, five Dean's List semesters, one primary project action, and a secondary résumé download. Text can reflow when the reader increases its size. No ornament or invented metrics.
 
-Signature interaction: native expandable project summaries with discipline filters, explicit selected states, live result count, keyboard support, and useful fallback without JavaScript. The first three project summaries start open, showing all three authored diagrams. One short masked name entrance and restrained one-time entrances for diagrams, portrait, experience detail, and contact. Reduced motion removes them; keyboard navigation skips the latter entrances. Content is visible by default.
+Signature interaction: native expandable project summaries with discipline filters, explicit selected states, live result count, keyboard support, and useful fallback without JavaScript. Only SmartShopper starts open; all six summaries are available and readers can expand others independently. Its award is visible before its diagram. Immediate press feedback and a state chevron acknowledge interaction. The owner-supplied SmartShopper backend and fragrance platform repositories are linked directly. One short masked name entrance and restrained one-time entrances for diagrams, portrait, experience detail, and contact. Reduced motion removes movement, including press/hover effects; keyboard navigation skips the latter entrances and chevron motion. Content is visible by default.
 
 Below: work, contrasting experience field, portrait and biography with education, technical capabilities, recognition table and leadership, oversized email close.
 
@@ -31,6 +31,8 @@ Below: work, contrasting experience field, portrait and biography with education
 Three section redraws: work’s 20–40 vertical book spines did not fit six projects, so use the big-name index; about’s image-free 110–160-word story did not carry the existing portrait, so use the portrait variant; contact’s building/address/hours rows had no factual source, so use the email variant. Contact and footer share one designed closing field to avoid repeating the same address twice.
 
 ## Constraints and verification
+
+For the Apple-design refinement, keep the shorter overview and restrained motion the owner accepted. Taste inspection needs narrow allowances for `few-pictures` and `still-page`: only the featured diagram and portrait render on arrival, while the other two diagrams remain available through native disclosures. The `icon-cards` heuristic detects the six disclosure chevrons on mobile; these are functional state indicators in a single-column project index, not icon-topped feature cards. The `eyebrow` allowance remains limited to real awards-table headers. These allowances do not waive overflow, keyboard, contrast, or larger-text checks.
 
 Static site and existing portrait preserved. No runtime library added. Native details avoid custom accordion failure modes. Check 1440, 768, 390, and 320 widths; categories cannot hide experience. Test menu, Escape, deep links, skip link, résumé download, reduced motion, and no-JavaScript behavior.
 

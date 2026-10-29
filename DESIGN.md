@@ -10,7 +10,7 @@ colors:
 typography:
   display:
     fontFamily: "Archivo, sans-serif"
-    fontSize: "clamp(76px, 16vw, 260px)"
+    fontSize: "clamp(4.75rem, 0.75rem + 14vw, 16.25rem)"
     fontWeight: 850
     lineHeight: 0.88
     letterSpacing: "-0.025em"
@@ -146,17 +146,17 @@ One self-hosted Latin variable font supplies weight and width variation. Its dec
 
 ### Hierarchy
 
-- **Display:** two-line name, compressed to (82%) width. Each line is a block with clipping and small vertical padding (0.025em). At the mobile breakpoint, size becomes (15.8vw) and tracking becomes (-0.02em).
+- **Display:** two-line name, compressed to (82%) width. Each line is a block with clipping and small vertical padding (0.025em). The fluid size combines root-relative and viewport units. At the mobile breakpoint, size becomes `calc(0.76rem + 12vw)` and tracking becomes (-0.02em). Text may wrap onto additional lines when a reader increases the text size.
 - **Headline:** section headings use the headline role, balanced wrapping, and a tight single-line-height rhythm.
 - **Title:** project names use the title role and compressed width (85%). On mobile they use the mobile lead size.
 - **Lead:** hero introduction, results, section subheadings, role names, skill categories, and recognition titles. At the mobile breakpoint the size is (1.375rem). Results increase weight to (600) and use line height (1.25); role and tertiary section headings use weight (550). The about introduction uses line height (1.35).
 - **Body:** running copy inherits the body role. Project, experience, biography, and skill detail columns generally cap at (65ch); tablet project copy can reach (70ch).
 - **Label:** dates, metadata, technical stacks, figure captions, file notes, table column headings, and footer copy use the label role. Navigation uses this size until mobile, where it becomes (1rem). Numeric counts and years use tabular figures where coded.
-- **Contact display:** the two-line email uses expanded width (105%). On mobile it takes the headline size and compressed width (82%). Its arrow scales with the type (0.68em).
+- **Contact display:** the email starts on two lines and uses expanded width (105%). On mobile it takes the headline size and compressed width (82%). Optional breaks after periods and overflow wrapping preserve the complete address at larger text sizes. Its inline arrow scales with the type (0.68em).
 
 **The One Family Rule.** Use Archivo's observed weight and width axes for hierarchy; retain the existing sans-serif fallback and browser text semantics.
 
-Heading text uses balanced wrapping and paragraphs use pretty wrapping. Ordinary links have underline thickness (1.5px) and offset (5px). Real recognition-table headers are functional labels; they do not establish a decorative eyebrow component.
+Heading text uses balanced wrapping and paragraphs use pretty wrapping. Text can wrap within long words when needed to prevent overflow. Ordinary links have underline thickness (1.5px) and offset (5px). Real recognition-table headers are functional labels; they do not establish a decorative eyebrow component.
 
 ## Layout
 
@@ -168,7 +168,7 @@ The hero has its own vertical rhythm: header minimum height (88px); hero top/bot
 
 - **Tablet, max-width (1000px):** project visual/story columns stack, except text-only project bodies; diagrams cap at (640px). Main heading, experience, and contact pairs become equal columns. Education, certifications, and leadership become two columns with their heading spanning both.
 - **Mobile, max-width (600px):** header minimum height becomes (80px), navigation expands below the wordmark, primary content grids become single-column, and project controls stack. Filters wrap with a (6px) gap and horizontal padding (12px). The portrait occupies (76%) width and caps at (390px) height. Education, certification, and leadership groups use top spacing (56px).
-- **Recognition on mobile:** the semantic table remains a table in HTML, while rows render as a two-column grid (52px / remaining width). Column headings remain accessible but visually clipped; result copy occupies the second column.
+- **Recognition on mobile:** the semantic table remains a table in HTML, while rows render as a two-column grid (3.25rem / remaining width). The year column scales with text size, overrides the desktop percentage width, and keeps its four digits together. Column headings remain accessible but visually clipped; result copy occupies the second column.
 
 Project graphics retain an aspect ratio of (16 / 11). The portrait uses (3 / 4), object fit `cover`, and focal position (50% 24%). At desktop it caps at (580px) height.
 
@@ -188,17 +188,17 @@ Controls and content fields use square corners. Native button borders are remove
 
 ### Primary action
 
-A solid, square link button carries the hero action. It uses the primary component tokens, body-size type at weight (550), minimum height (52px), and an icon gap (42px), reduced to (32px) on mobile. Fine-pointer hover uses soft cobalt; active press scales to (0.97). Transform transitions use (160ms) with the shared ease-out curve; background transitions use (160ms ease).
+A solid, square link button carries the hero action. It uses the primary component tokens, body-size type at weight (550), minimum height (52px), and an icon gap (42px), reduced to (32px) on mobile. Fine-pointer hover uses soft cobalt. All links acknowledge active press with opacity (0.76); the primary action also scales to (0.97) when motion is allowed. Transform transitions use (160ms) with the shared ease-out curve; background transitions use (160ms ease). A secondary résumé download sits in the same wrapping action group, with visible PDF type and size. The introduction also carries the owner's five Dean's List semesters.
 
 ### Filter controls
 
-Square buttons form a labelled group. Each has minimum height (44px); selection is exposed through `aria-pressed` and shown with cobalt fill and sand text. Unselected fine-pointer hover uses chalk; active press scales to (0.97). The live count uses `role="status"`, polite announcements, atomic updates, and tabular numbers. Filters are initially hidden and become available with JavaScript; native project content remains available without it.
+Square buttons form a labelled group. Each has minimum height (44px); selection is exposed through `aria-pressed` and shown with cobalt fill and sand text. Unselected fine-pointer hover uses chalk; active press uses opacity (0.76) and scales to (0.97) only when motion is allowed. The live count uses `role="status"`, polite announcements, atomic updates, and tabular numbers. Filters are initially hidden and become available with JavaScript; native project content remains available without it.
 
 ### Project disclosure index
 
-Each project is native `details`/`summary`, with title, description, metadata, and an explicit View/Close state. The first three start open. Desktop summaries use columns (remaining width / 210px / 46px), a (28px) gap, and the summary token padding. Tablet columns become (remaining width / 175px / 44px) with (20px) gaps and padding (28px 22px). Mobile summaries use (remaining width / 32px), padding (24px 18px), metadata below the title, and the state control spanning those rows.
+Each project is native `details`/`summary`, with title, description, metadata, and explicit Show details/Hide details states paired with a chevron. Only SmartShopper starts open; readers may open others independently, and resizing preserves their choices. Its commercialization award appears in the summary, before the diagram. Desktop summaries use columns (remaining width / 210px / auto), a (28px) gap, and the summary token padding. Tablet columns become (remaining width / 175px / auto) with (20px) gaps and padding (28px 22px). Mobile summaries use (remaining width / 44px), padding (24px 18px), metadata below the title, and the chevron spanning those rows. The text state labels stay accessible but are visually clipped on mobile.
 
-Open bodies use columns (1fr / 0.85fr), padding (8px 28px 36px), and a fluid gap (28px–64px). Mobile bodies use padding (0 18px 28px). Alternate records use chalk. Fine-pointer hover underlines the title (2px thick, 7px offset). Expansion uses native behavior without a height animation. Deep links reveal the target and reset a filter that would conceal it.
+Open bodies use columns (1fr / 0.85fr), padding (8px 28px 36px), and a fluid gap (28px–64px). Mobile bodies use padding (0 18px 28px). Alternate records use chalk. Fine-pointer hover underlines the title (2px thick, 7px offset). Pressing a summary immediately changes its background to deeper sand. The chevron rotates over (160ms) when motion is allowed, and switches immediately for keyboard focus or reduced motion. Expansion uses native behavior without a height animation. Deep links reveal the target and reset a filter that would conceal it. SmartShopper and the fragrance platform include the owner's supplied source repository links.
 
 ### Text links
 
@@ -216,13 +216,13 @@ A semantic caption, scoped column headers, and scoped row headers preserve relat
 
 ### Contact field
 
-Sand email text occupies two lines on cobalt. Link content includes an explicit full-address accessible label. The arrow moves (5px right, 5px up) on fine-pointer hover with a (200ms) ease-out transform. Supplemental links wrap on desktop and stack on mobile; the footer remains within this closing field.
+Sand email text starts on two lines on cobalt and reflows when larger text needs more space. Link content includes an explicit full-address accessible label. Its arrow is inline, with a fluid left margin (12px–36px); it moves (5px right, 5px up) on fine-pointer hover only when motion is allowed, with a (200ms) ease-out transform. Supplemental links wrap on desktop and stack on mobile; the footer remains within this closing field.
 
 ### Focus and motion
 
 All links, buttons, and summaries use a `:focus-visible` outline (3px solid current color, 6px offset). The skip link moves into view on focus, and its target main region accepts programmatic focus. Touch actions use `manipulation`; hover decoration is restricted to `(hover: hover) and (pointer: fine)`.
 
-The shared easing is `cubic-bezier(0.23, 1, 0.32, 1)`. With no reduced-motion preference, the two name lines arrive from (75%) vertical translation over (800ms), with a (100ms) delay on the second. One-time diagram/email entrances take (480ms) with (12px) vertical movement; experience detail takes (420ms) with (10px) horizontal movement; the portrait takes (520ms) from scale (1.015). Content entrances start at opacity (0.9). They are observed at an intersection threshold (0.12), skipped during keyboard navigation, and leave content visible before JavaScript runs. Reduced motion suppresses those entrances and smooth scrolling; a changed preference cancels running animations. Short control-state transitions remain as implemented.
+The shared easing is `cubic-bezier(0.23, 1, 0.32, 1)`. With no reduced-motion preference, the two name lines arrive from (75%) vertical translation over (800ms), with a (100ms) delay on the second. One-time diagram/email entrances take (480ms) with (12px) vertical movement; experience detail takes (420ms) with (10px) horizontal movement; the portrait takes (520ms) from scale (1.015). Content entrances start at opacity (0.9). They are observed at an intersection threshold (0.12), skipped during keyboard navigation, and leave content visible before JavaScript runs. Reduced motion suppresses those entrances, smooth scrolling, press scaling, and arrow travel; a changed preference cancels running animations. Immediate opacity/background feedback and static disclosure indicators remain available.
 
 ## Do's and Don'ts
 

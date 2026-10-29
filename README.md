@@ -15,7 +15,7 @@ npm run build
 npm run test:visual -- --production
 ```
 
-The build copies public assets into `dist/`. The browser check exercises 1440, 768, 390, and 320px layouts, category filtering, project disclosures, keyboard navigation, the mobile menu, reduced motion, no-JavaScript behavior, direct local-file use, and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
+The build copies public assets into `dist/`. The browser check exercises 1440, 768, 390, and 320px layouts, first-screen résumé access, category filtering, independent project disclosures, keyboard navigation, the mobile menu, reduced-motion press/hover feedback, 200% root text sizing, no-JavaScript behavior, direct local-file use, and the résumé PDF. Screenshots and results are saved under `output/playwright/` and excluded from Git.
 
 `CHROME_PATH` can select an existing Chromium executable. The checked-in `.npmrc` disables executable symlinks for compatibility with Windows-mounted workspaces.
 
@@ -24,6 +24,8 @@ The build copies public assets into `dist/`. The browser check exercises 1440, 7
 The supplied `SAR_Resume_V6.pdf` informs the project, experience, skills, and education content. The portfolio uses the owner’s later correction of **five Dean’s List semesters**; the downloadable PDF is the original supplied V6 document.
 
 The three architecture graphics illustrate documented project flows. The portrait is the original project asset. Font licensing is included under `assets/fonts/`.
+
+SmartShopper and the fragrance platform link to the source repositories supplied by the owner. Only SmartShopper is expanded on arrival; opening further projects and resizing the page preserve the reader's choices.
 
 ## Deployment
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T11:51:03.145845Z",
+  "generatedAt": "2026-10-29T14:01:10.054120Z",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
@@ -83,7 +83,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Name Display",
-        "purpose": "Two compressed name lines; 82% width, 15.8vw size on mobile."
+        "purpose": "Compressed name lines with root-relative and viewport sizing; 82% width, calc(0.76rem + 12vw) on mobile, wrapping at larger text sizes."
       },
       "headline": {
         "displayName": "Section Headline",
@@ -107,7 +107,7 @@
       },
       "contact-display": {
         "displayName": "Email Display",
-        "purpose": "Two-line email, 105% width on desktop and 82% on mobile."
+        "purpose": "Email begins on two lines and wraps at larger text sizes; 105% width on desktop and 82% on mobile."
       }
     },
     "shadows": [],
@@ -120,7 +120,7 @@
       {
         "name": "control-state",
         "value": "160ms",
-        "purpose": "Button/filter transform and background-color feedback; transform uses ease-out, background uses ease."
+        "purpose": "Button/filter transform and background-color feedback; scaling only with no reduced-motion preference. Press opacity and summary background feedback remain immediate."
       },
       {
         "name": "name-arrive",
@@ -150,7 +150,12 @@
       {
         "name": "contact-arrow-hover",
         "value": "200ms",
-        "purpose": "Fine-pointer hover translates the email arrow by 5px right and 5px up."
+        "purpose": "Fine-pointer hover translates the email arrow by 5px right and 5px up only when motion is allowed."
+      },
+      {
+        "name": "disclosure-chevron",
+        "value": "160ms",
+        "purpose": "Reversible disclosure indicator rotation when motion is allowed; immediate for keyboard focus and reduced motion."
       }
     ],
     "breakpoints": [
@@ -175,7 +180,7 @@
       "refersTo": "button-primary",
       "description": "The square hero link with an inline SVG arrow; pointer-hover and press states match the page.",
       "html": "<a class=\"ds-button\" href=\"#projects\">Explore my work <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></a>",
-      "css": ".ds-button { display: inline-flex; min-height: 52px; align-items: center; justify-content: space-between; gap: 42px; padding: 14px 20px; background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); text-decoration: none; font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; border: 0; border-radius: 0; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), background-color 160ms ease; } .ds-button .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-button:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-button:active { transform: scale(0.97); } @media (hover: hover) and (pointer: fine) { .ds-button:hover { background: var(--soft-ink, #304e91); } } @media (max-width: 600px) { .ds-button { gap: 32px; } }"
+      "css": ".ds-button { display: inline-flex; min-height: 52px; align-items: center; justify-content: space-between; gap: 42px; padding: 14px 20px; background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); text-decoration: none; font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; border: 0; border-radius: 0; user-select: none; touch-action: manipulation; transition: transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)), background-color 160ms ease; } .ds-button .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-button:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-button:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-button:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-button:hover { background: var(--soft-ink, #304e91); } } @media (max-width: 600px) { .ds-button { gap: 32px; } }"
     },
     {
       "name": "Unselected Filter",
@@ -183,7 +188,7 @@
       "refersTo": "filter",
       "description": "An unselected project-discipline button; the page script manages its pressed state and live result count.",
       "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"false\">AI &amp; machine learning</button>",
-      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { transform: scale(0.97); } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
+      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-filter:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
     },
     {
       "name": "Selected Filter",
@@ -191,22 +196,22 @@
       "refersTo": "filter-selected",
       "description": "The explicit selected state of the same project filter.",
       "html": "<button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">All projects</button>",
-      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { transform: scale(0.97); } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
+      "css": ".ds-filter { min-height: 44px; padding: 10px 14px; border: 0; border-radius: 0; background: transparent; color: var(--ink, #062b8a); font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; cursor: pointer; user-select: none; touch-action: manipulation; transition: background-color 160ms ease, transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-filter[aria-pressed=\"true\"] { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); } .ds-filter:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-filter:active { opacity: 0.76; } @media (prefers-reduced-motion: no-preference) { .ds-filter:active { transform: scale(0.97); } } @media (hover: hover) and (pointer: fine) { .ds-filter:not([aria-pressed=\"true\"]):hover { background: var(--paper, #e9e7e1); } } @media (max-width: 600px) { .ds-filter { padding-inline: 12px; } }"
     },
     {
       "name": "Section Navigation",
       "kind": "nav",
       "description": "In-page navigation showing the current location underline; menu behavior remains in the page script.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#projects\" aria-current=\"location\">Work</a><a href=\"#experience\">Experience</a><a href=\"#about\">About</a><a class=\"ds-nav-contact\" href=\"#contact\">Contact <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a></nav>",
-      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; color: var(--ink, #062b8a); } .ds-nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; text-decoration: none; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-nav a[aria-current=\"location\"] { text-decoration: underline; } .ds-nav .ds-nav-contact { font-weight: 650; } .ds-nav .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-nav a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-nav a:hover { text-decoration: underline; } } @media (max-width: 600px) { .ds-nav { gap: 8px 16px; justify-content: space-between; } .ds-nav a { font-size: 1rem; } }"
+      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; color: var(--ink, #062b8a); } .ds-nav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font: 400 var(--text-small, 0.875rem)/1.55 Archivo, sans-serif; text-decoration: none; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-nav a[aria-current=\"location\"] { text-decoration: underline; } .ds-nav .ds-nav-contact { font-weight: 650; } .ds-nav .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-nav a:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-nav a:hover { text-decoration: underline; } } @media (max-width: 600px) { .ds-nav { gap: 8px 16px; justify-content: space-between; } .ds-nav a { font-size: 1rem; } } .ds-nav a:active { opacity: 0.76; }"
     },
     {
       "name": "Project Disclosure",
       "kind": "custom",
       "refersTo": "project-summary",
-      "description": "A native expandable project record with explicit View/Close states; this compact specimen samples the real content.",
-      "html": "<details class=\"ds-project\" open><summary><div class=\"ds-project-name\"><h3>SmartShopper</h3><p>AI-powered personal shopper</p></div><p class=\"ds-project-meta\">Final year project<span>January 2026</span></p><span class=\"ds-project-toggle\"><span class=\"ds-when-closed\">View</span><span class=\"ds-when-open\">Close</span></span></summary><div class=\"ds-project-body\">A Chrome extension that recommends products directly on Shopee and Lazada product pages.</div></details>",
-      "css": ".ds-project { background: var(--ground, #e6dbc7); color: var(--ink, #062b8a); font: 400 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; } .ds-project > summary { display: grid; grid-template-columns: minmax(0, 1fr) 210px 46px; gap: 28px; align-items: center; padding: 30px 28px; list-style: none; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-project > summary::-webkit-details-marker { display: none; } .ds-project > summary:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-project h3 { margin: 0; font-size: clamp(1.75rem, 0.9rem + 2.3vw, 3.25rem); font-stretch: 85%; font-weight: 600; letter-spacing: -0.025em; line-height: 1.08; text-wrap: balance; } .ds-project-name p { margin: 10px 0 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta { margin: 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta span { display: block; margin-top: 3px; } .ds-project-toggle { display: inline-flex; width: 44px; min-height: 44px; align-items: center; justify-content: center; font-size: var(--text-small, 0.875rem); text-decoration: underline; text-underline-offset: 4px; } .ds-project-toggle .ds-when-open, .ds-project[open] .ds-when-closed { display: none; } .ds-project[open] .ds-when-open { display: inline; } .ds-project-body { padding: 8px 28px 36px; max-width: 65ch; } .ds-project:not([open]) > .ds-project-body { display: none; } @media (hover: hover) and (pointer: fine) { .ds-project > summary:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; } } @media (max-width: 1000px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 175px 44px; gap: 20px; padding: 28px 22px; } .ds-project-body { padding-inline: 22px; } } @media (max-width: 600px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 32px; gap: 12px; padding: 24px 18px; } .ds-project h3 { font-size: 1.375rem; } .ds-project-meta { grid-column: 1; } .ds-project-meta span { display: inline; margin-left: 10px; } .ds-project-toggle { grid-column: 2; grid-row: 1 / 3; width: 32px; } .ds-project-body { padding: 0 18px 28px; } }"
+      "description": "Native independently expandable project record with immediate press feedback and a state chevron; only SmartShopper starts open on the page.",
+      "html": "<details class=\"ds-project\" open><summary><div class=\"ds-project-name\"><h3>SmartShopper</h3><p>AI-powered personal shopper</p><p class=\"ds-project-highlight\">2nd Place, Best Commercialization</p></div><p class=\"ds-project-meta\">Final year project<span>January 2026</span></p><span class=\"ds-project-toggle\"><span class=\"ds-when-closed\">Show details</span><span class=\"ds-when-open\">Hide details</span><svg class=\"ds-disclosure-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><div class=\"ds-project-body\">A Chrome extension that recommends products directly on Shopee and Lazada product pages.</div></details>",
+      "css": ".ds-project { background: var(--ground, #e6dbc7); color: var(--ink, #062b8a); font: 400 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; } .ds-project > summary { display: grid; grid-template-columns: minmax(0, 1fr) 210px auto; gap: 28px; align-items: center; padding: 30px 28px; list-style: none; cursor: pointer; user-select: none; touch-action: manipulation; } .ds-project > summary::-webkit-details-marker { display: none; } .ds-project > summary:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } .ds-project h3 { margin: 0; font-size: clamp(1.75rem, 0.9rem + 2.3vw, 3.25rem); font-stretch: 85%; font-weight: 600; letter-spacing: -0.025em; line-height: 1.08; text-wrap: balance; } .ds-project-name p { margin: 10px 0 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta { margin: 0; font-size: var(--text-small, 0.875rem); } .ds-project-meta span { display: block; margin-top: 3px; } .ds-project-toggle { display: inline-flex; min-height: 44px; align-items: center; justify-content: end; gap: 8px; font-size: var(--text-small, 0.875rem); white-space: nowrap; } .ds-project-toggle .ds-when-open, .ds-project[open] .ds-when-closed { display: none; } .ds-project[open] .ds-when-open { display: inline; } .ds-project-body { padding: 8px 28px 36px; max-width: 65ch; } .ds-project:not([open]) > .ds-project-body { display: none; } @media (hover: hover) and (pointer: fine) { .ds-project > summary:hover h3 { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; } } @media (max-width: 1000px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 175px auto; gap: 20px; padding: 28px 22px; } .ds-project-body { padding-inline: 22px; } } @media (max-width: 600px) { .ds-project > summary { grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; padding: 24px 18px; } .ds-project h3 { font-size: 1.375rem; } .ds-project-meta { grid-column: 1; } .ds-project-meta span { display: inline; margin-left: 10px; } .ds-project-toggle { grid-column: 2; grid-row: 1 / 3; width: 44px; justify-content: center; } .ds-project-body { padding: 0 18px 28px; } } .ds-project { overflow-wrap: anywhere; } .ds-project > summary:active { background: var(--surface, #ddd0b9); } .ds-project .ds-project-highlight { font-weight: 650; } .ds-disclosure-icon { width: 18px; height: 18px; flex: 0 0 18px; } .ds-project[open] .ds-disclosure-icon { transform: rotate(180deg); } @media (prefers-reduced-motion: no-preference) { .ds-disclosure-icon { transition: transform 160ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-project > summary:focus-visible .ds-disclosure-icon { transition: none; } } @media (max-width: 600px) { .ds-project-toggle .ds-when-closed, .ds-project-toggle .ds-when-open { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }"
     },
     {
       "name": "Text Link",
@@ -214,15 +219,15 @@
       "refersTo": "text-link",
       "description": "An underlined supporting link with its outgoing inline SVG icon.",
       "html": "<a class=\"ds-text-link\" href=\"https://github.com/amanalhaddad\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Find me on GitHub, opens in a new tab\">Find me on GitHub <svg class=\"ds-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></a>",
-      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink, #062b8a); font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-text-link .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-text-link:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-text-link:hover { text-decoration-thickness: 3px; } }"
+      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink, #062b8a); font: 550 var(--text-body, clamp(1rem, 0.96rem + 0.16vw, 1.125rem))/1.55 Archivo, sans-serif; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px; touch-action: manipulation; } .ds-text-link .ds-icon { width: 22px; height: 22px; flex: 0 0 22px; } .ds-text-link:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-text-link:hover { text-decoration-thickness: 3px; } } .ds-text-link:active { opacity: 0.76; }"
     },
     {
       "name": "Contact Email",
       "kind": "custom",
       "refersTo": "contact-email",
-      "description": "The oversized two-line email on a cobalt field with a restrained pointer-hover arrow movement.",
-      "html": "<div class=\"ds-contact\"><a class=\"ds-email\" href=\"mailto:aman.alhaddad@gmail.com\" aria-label=\"Email aman.alhaddad@gmail.com\"><span>aman.alhaddad</span><span>@gmail.com<svg class=\"ds-contact-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span></a></div>",
-      "css": ".ds-contact { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); padding: 88px var(--gutter, clamp(20px, 2.25vw, 40px)) max(24px, env(safe-area-inset-bottom)); } .ds-email { display: block; color: inherit; font: 500 clamp(42px, 9.8vw, 155px)/0.98 Archivo, sans-serif; font-stretch: 105%; letter-spacing: -0.035em; text-decoration: none; touch-action: manipulation; } .ds-email > span { display: flex; align-items: center; gap: 36px; } .ds-email .ds-contact-arrow { width: 0.68em; height: 0.68em; stroke-width: 1.1; transition: transform 200ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-email:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (hover: hover) and (pointer: fine) { .ds-email:hover .ds-contact-arrow { transform: translate(5px, -5px); } } @media (max-width: 600px) { .ds-contact { padding-top: 72px; } .ds-email { font-size: clamp(2.625rem, 1rem + 4.8vw, 5.5rem); font-stretch: 82%; } .ds-email > span { gap: 20px; } }"
+      "description": "Oversized email that reflows at larger text sizes, with an inline arrow and optional fine-pointer hover movement.",
+      "html": "<div class=\"ds-contact\"><a class=\"ds-email\" href=\"mailto:aman.alhaddad@gmail.com\" aria-label=\"Email aman.alhaddad@gmail.com\"><span>aman.<wbr>alhaddad</span><span>@gmail.<wbr>com<svg class=\"ds-contact-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\"/></svg></span></a></div>",
+      "css": ".ds-contact { background: var(--ink, #062b8a); color: var(--ground, #e6dbc7); padding: 88px var(--gutter, clamp(20px, 2.25vw, 40px)) max(24px, env(safe-area-inset-bottom)); } .ds-email { display: block; color: inherit; font: 500 clamp(42px, 9.8vw, 155px)/0.98 Archivo, sans-serif; font-stretch: 105%; letter-spacing: -0.035em; text-decoration: none; touch-action: manipulation; } .ds-email > span { display: block; overflow-wrap: anywhere; } .ds-email .ds-contact-arrow { display: inline-block; width: 0.68em; height: 0.68em; margin-inline-start: clamp(12px, 2.5vw, 36px); stroke-width: 1.1; } .ds-email:focus-visible { outline: 3px solid currentColor; outline-offset: 6px; } @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) { .ds-email .ds-contact-arrow { transition: transform 200ms var(--ease-out, cubic-bezier(0.23, 1, 0.32, 1)); } .ds-email:hover .ds-contact-arrow { transform: translate(5px, -5px); } } @media (max-width: 600px) { .ds-contact { padding-top: 72px; } .ds-email { font-size: clamp(2.625rem, 1rem + 4.8vw, 5.5rem); font-stretch: 82%; } } .ds-email:active { opacity: 0.76; }"
     }
   ],
   "narrative": {

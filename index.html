@@ -24,6 +24,7 @@
     <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
     <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
     <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   </svg>
 
   <header class="site-header" id="top">
@@ -45,8 +46,11 @@
       <div class="hero-bottom">
         <p class="hero-intro">AI & data engineer building pipelines and recommendation systems.</p>
         <div class="hero-context">
-          <p>Former intern at Khazanah Nasional Berhad.<br>Computer Science graduate, IIUM.</p>
-          <a class="button" href="#projects">Explore my work <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+          <p>Former intern at Khazanah Nasional Berhad.<br>Computer Science graduate, IIUM.<br>Dean’s List, 5 semesters.</p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore my work <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+            <a class="text-link hero-resume" href="assets/SAR_Resume_V6.pdf" download><span>Download résumé<span class="file-note">PDF, 606 KB</span></span><svg class="icon" aria-hidden="true"><use href="#icon-download"/></svg></a>
+          </div>
         </div>
       </div>
     </section>
@@ -69,14 +73,13 @@
       <div class="project-list">
         <details class="project" id="project-shopper" data-category="ai" open>
           <summary>
-            <div class="project-name"><h3>SmartShopper</h3><p>AI-powered personal shopper</p></div>
+            <div class="project-name"><h3>SmartShopper</h3><p>AI-powered personal shopper</p><p class="project-highlight">2nd Place, Best Commercialization</p></div>
             <p class="project-meta">Final year project<span>January 2026</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle SmartShopper details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body">
             <figure class="project-visual"><img src="assets/smartshopper.png" width="1600" height="1100" alt="SmartShopper architecture: Shopee and Lazada product pages connect to GTR-T5 embeddings, FAISS vector search, and personalized recommendations."><figcaption>Semantic retrieval for shopping recommendations.</figcaption></figure>
             <div class="project-story">
-              <p class="project-result">2nd Place, Best Commercialization</p>
               <p>A Chrome extension that recommends products directly on Shopee and Lazada product pages.</p>
               <ul>
                 <li>Built the FastAPI and MongoDB backend, using GTR-T5 embeddings and FAISS for semantic recommendations.</li>
@@ -84,15 +87,16 @@
                 <li>Delivered the extension and recommendation backend as an integrated final year project.</li>
               </ul>
               <p class="project-stack">Python, FastAPI, MongoDB, GTR-T5, FAISS, Chrome Extension</p>
+              <a class="text-link project-source" href="https://github.com/amanalhaddad/Ai-Powered-Personal-Shopper-Backenda" target="_blank" rel="noopener noreferrer">View backend source <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
             </div>
           </div>
         </details>
 
-        <details class="project" id="project-fragrance" data-category="web" open>
+        <details class="project" id="project-fragrance" data-category="web">
           <summary>
             <div class="project-name"><h3>Fragrance platform</h3><p>E-commerce & scent recommendations</p></div>
             <p class="project-meta">Independent project<span>October 2026 – present</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle fragrance platform details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body">
             <figure class="project-visual"><img src="assets/fragrance-platform.png" width="1600" height="1100" loading="lazy" alt="Fragrance recommendation flow: English or Malay preferences are ranked against budget, available stock, and excluded fragrance notes."><figcaption>Recommendations grounded in shopping constraints.</figcaption></figure>
@@ -105,15 +109,16 @@
                 <li>Added Neon and S3-compatible image storage with WebP processing. Verified workflows across multiple local test runs.</li>
               </ul>
               <p class="project-stack">Next.js, React, TypeScript, Tailwind CSS, PostgreSQL, Prisma, Neon, Playwright</p>
+              <a class="text-link project-source" href="https://github.com/amanalhaddad/Gaffaly.my" target="_blank" rel="noopener noreferrer">View platform source <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
             </div>
           </div>
         </details>
 
-        <details class="project" id="project-lakehouse" data-category="data" open>
+        <details class="project" id="project-lakehouse" data-category="data">
           <summary>
             <div class="project-name"><h3>Investment lakehouse</h3><p>Financial data engineering</p></div>
             <p class="project-meta">Khazanah Nasional<span>March – September 2026</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle investment lakehouse details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body">
             <figure class="project-visual"><img src="assets/investment-lakehouse.png" width="1600" height="1100" loading="lazy" alt="Medallion lakehouse architecture: financial filings move through Bronze, Silver, and Gold layers for downstream machine learning."><figcaption>From raw filings to analytical datasets.</figcaption></figure>
@@ -134,7 +139,7 @@
           <summary>
             <div class="project-name"><h3>Financial NLP</h3><p>Sentiment, risk clustering & LLM evaluation</p></div>
             <p class="project-meta">Khazanah Nasional<span>March – September 2026</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle financial NLP details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body text-only">
             <p class="project-statement">Making unstructured reports useful to investment research.</p>
@@ -153,7 +158,7 @@
           <summary>
             <div class="project-name"><h3>Lung cancer classification</h3><p>Hybrid machine learning ensemble</p></div>
             <p class="project-meta">Academic project<span>January 2025</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle lung cancer classification details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body text-only">
             <p class="project-statement">94% classification accuracy in the project evaluation.</p>
@@ -165,7 +170,7 @@
           <summary>
             <div class="project-name"><h3>Supply chain analytics</h3><p>Predictive & diagnostic analysis</p></div>
             <p class="project-meta">Academic project<span>July 2025</span></p>
-            <span class="project-toggle"><span class="when-closed">View</span><span class="when-open">Close</span><span class="sr-only">Toggle supply chain analytics details</span></span>
+            <span class="project-toggle"><span class="when-closed">Show details</span><span class="when-open">Hide details</span><svg class="icon disclosure-icon" aria-hidden="true"><use href="#icon-chevron"/></svg></span>
           </summary>
           <div class="project-body text-only">
             <p class="project-statement">Understanding the factors behind profit and delivery risk.</p>
@@ -244,7 +249,7 @@
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-top"><h2 id="contact-title">Get in touch</h2><p>I’m looking for junior roles in AI engineering, data engineering, and data science.</p></div>
-      <a class="contact-email" href="mailto:aman.alhaddad@gmail.com" aria-label="Email aman.alhaddad@gmail.com"><span>aman.alhaddad</span><span>@gmail.com<svg class="contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-up-right"/></svg></span></a>
+      <a class="contact-email" href="mailto:aman.alhaddad@gmail.com" aria-label="Email aman.alhaddad@gmail.com"><span>aman.<wbr>alhaddad</span><span>@gmail.<wbr>com<svg class="contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-up-right"/></svg></span></a>
       <div class="contact-links">
         <a href="tel:+60194004221">+60 19 400 4221 <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg></a>
         <a href="https://github.com/amanalhaddad" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#icon-up-right"/></svg><span class="sr-only"> (opens in a new tab)</span></a>

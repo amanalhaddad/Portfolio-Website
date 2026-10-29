@@ -24,11 +24,13 @@ Primary audience inferred from the résumé: recruiters and engineering teams hi
 - User correction: Dean’s List was awarded for five semesters. This supersedes the older four-semester count in the supplied PDF for portfolio content.
 - `AmanImage.jpg`: existing portrait, preserved without modification.
 - Existing public contact information and GitHub profile in the original page.
+- Owner-supplied project repositories: `amanalhaddad/Ai-Powered-Personal-Shopper-Backenda` for SmartShopper's backend and `amanalhaddad/Gaffaly.my` for the fragrance platform. The owner confirmed the academic projects are not on GitHub.
 - Three authored architecture diagrams illustrate documented workflows. They are not screenshots of the applications.
 
 ## Capabilities and Constraints
 
 - Six expandable project summaries, category filtering, experience, biography, education, technical skills, certifications, awards, leadership, contact links, and résumé download.
+- SmartShopper starts expanded; other disclosures remain the reader's choice. The hero includes a secondary résumé action and five Dean's List semesters. Large text reflows, and reduced motion retains press feedback without movement.
 - Essential content and native project expansion work without JavaScript. Filtering progressively enhances the static list.
 - No invented benchmarks, customer claims, private company screenshots, or live application URLs.
 - Preserve the résumé’s scope for 94% classification accuracy and the fragrance platform’s recorded local test results.
