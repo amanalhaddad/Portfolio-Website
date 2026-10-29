@@ -1,0 +1,15 @@
+.git
+node_modules
+.taste-skill
+.impeccable
+output
+scripts/*
+!scripts/build.mjs
+dist
+package.json
+package-lock.json
+PRODUCT.md
+DESIGN.md
+README.md
+DEPLOY.md
+.npmrc

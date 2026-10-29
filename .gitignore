@@ -1,0 +1,9 @@
+# Ignore specific project images
+images.png
+node_modules/
+dist/
+.vercel/
+.taste-skill/
+.impeccable/review/
+output/
+.playwright/
