@@ -136,6 +136,39 @@ try {
     await motionPage.goto(baseURL);
     await motionPage.evaluate(() => document.fonts.ready);
     await motionPage.waitForTimeout(1800);
+    await motionPage.evaluate(() => {
+      window.revealStarts = 0;
+      const heading = document.querySelector('#work-title');
+      heading.addEventListener('animationstart', event => {
+        if (event.target === heading && event.animationName === 'content-arrive') window.revealStarts += 1;
+      });
+    });
+    const revealHeading = motionPage.locator('#work-title');
+    const enterWork = () => revealHeading.evaluate(element => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
+    const leaveWork = async top => {
+      await motionPage.evaluate(top => window.scrollTo({ top, behavior: 'instant' }), top);
+      await motionPage.waitForFunction(() => {
+        const rect = document.querySelector('#work-title').getBoundingClientRect();
+        return rect.bottom < 0 || rect.top > innerHeight;
+      });
+      await motionPage.waitForTimeout(80);
+    };
+    await enterWork();
+    await motionPage.waitForFunction(() => window.revealStarts === 1);
+    await motionPage.waitForTimeout(750);
+    assert.equal(await motionPage.evaluate(() => window.revealStarts), 1, 'A reveal should not loop while its content stays visible');
+    await leaveWork(0);
+    await enterWork();
+    await motionPage.waitForFunction(() => window.revealStarts === 2);
+    await leaveWork(await motionPage.locator('#skills').evaluate(element => element.offsetTop));
+    await enterWork();
+    await motionPage.waitForFunction(() => window.revealStarts === 3);
+    await leaveWork(0);
+    await enterWork();
+    await motionPage.waitForFunction(() => window.revealStarts === 4);
+    report.checks.push('Scroll reveals replay after leaving in either direction, including interrupted reveals, without looping in view');
+    await motionPage.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+    await motionPage.waitForTimeout(300);
     const badge = motionPage.locator('.lanyard-card');
     assert.equal(await badge.isEnabled(), true, 'The local Motion library should enhance the badge');
     const readX = () => badge.evaluate(el => new DOMMatrixReadOnly(getComputedStyle(el).transform).m41);
@@ -232,6 +265,13 @@ try {
     await reduced.goto(baseURL);
     assert.equal(await reduced.evaluate(() => document.getAnimations().filter(animation => animation.playState === 'running').length), 0);
     assert.equal(await reduced.locator('.logo-track').evaluate(el => getComputedStyle(el).animationName), 'none');
+    for (let pass = 0; pass < 2; pass += 1) {
+      await reduced.locator('#work-title').evaluate(element => element.scrollIntoView({ block: 'center', behavior: 'instant' }));
+      await reduced.waitForTimeout(80);
+      assert.equal(await reduced.locator('#work-title').evaluate(element => element.getAnimations().length), 0, 'Reduced motion stays static on repeat visits');
+      await reduced.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+      await reduced.waitForTimeout(80);
+    }
     const reducedAction = reduced.locator('.hero .button');
     const actionBox = await reducedAction.boundingBox();
     await reduced.mouse.move(actionBox.x + actionBox.width / 2, actionBox.y + actionBox.height / 2);

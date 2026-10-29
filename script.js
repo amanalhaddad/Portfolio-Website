@@ -23,6 +23,7 @@
     if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') setMenu(false, true);
   });
   document.addEventListener('pointerdown', () => { keyboardNavigation = false; });
+  document.addEventListener('wheel', () => { keyboardNavigation = false; }, { passive: true });
   mobileQuery.addEventListener('change', () => setMenu(false));
 
   const controls = document.querySelector('.project-controls');
@@ -101,16 +102,26 @@
     for (const { section } of sections) if (section) observer.observe(section);
     observer.observe(hero);
 
+    const visibleEntrances = new WeakSet();
     const entrances = new IntersectionObserver(entries => {
       for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        entrances.unobserve(entry.target);
+        if (!entry.isIntersecting) {
+          visibleEntrances.delete(entry.target);
+          entry.target.classList.remove('is-entering');
+          continue;
+        }
+        if (entry.intersectionRatio < .08 || visibleEntrances.has(entry.target)) continue;
+        visibleEntrances.add(entry.target);
         if (reducedMotion.matches || keyboardNavigation) continue;
         entry.target.classList.add('is-entering');
-        entry.target.addEventListener('animationend', () => entry.target.classList.remove('is-entering'), { once: true });
       }
-    }, { threshold: .08 });
-    document.querySelectorAll('.section-heading h2, .section-heading > p, .about > h2, .project-visual, .experience-role, .experience-detail, .experience-photo, .portrait, .about-copy, .education, .skill-list > div, .certifications > h3, .certificate, .awards-table, .leadership, .contact-top, .contact-email').forEach(target => entrances.observe(target));
+    }, { threshold: [0, .08] });
+    document.querySelectorAll('.section-heading h2, .section-heading > p, .about > h2, .project-visual, .experience-role, .experience-detail, .experience-photo, .portrait, .about-copy, .education, .skill-list > div, .certifications > h3, .certificate, .awards-table, .leadership, .contact-top, .contact-email').forEach(target => {
+      target.addEventListener('animationend', event => {
+        if (event.target === target) target.classList.remove('is-entering');
+      });
+      entrances.observe(target);
+    });
   }
 
   const rail = document.querySelector('.tools-marquee');

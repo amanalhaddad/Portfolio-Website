@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-29T17:13:47.639233+00:00",
+  "generatedAt": "2026-10-29T17:27:16.789835+00:00",
   "title": "Design System: Syed Abdul Rahman Al-Haddad Portfolio",
   "extensions": {
     "colorMeta": {
@@ -247,17 +247,17 @@
       {
         "name": "content-arrive",
         "value": "600ms",
-        "purpose": "Once-only opacity .8 to 1 and translateY(22px) to rest. Keyboard and reduced motion skip."
+        "purpose": "Opacity .8 to 1 and translateY(22px) to rest. Replays at 8% visibility after a complete viewport exit. No looping or edge jitter; keyboard and reduced motion skip."
       },
       {
         "name": "media-arrive",
         "value": "600ms",
-        "purpose": "Once-only project-media clip inset(0 0 20% 0) and translateY(16px) to rest, with ease-in-out."
+        "purpose": "Project-media clip inset(0 0 20% 0) and translateY(16px) to rest, with ease-in-out. Replays after a complete viewport exit and return."
       },
       {
         "name": "portrait-arrive",
         "value": "600ms",
-        "purpose": "Once-only opacity .85, scale(.96), rotate(-2deg) to rest, with ease-out."
+        "purpose": "Opacity .85, scale(.96), rotate(-2deg) to rest, with ease-out. Replays after a complete viewport exit and return."
       },
       {
         "name": "pointer-disclosure",
@@ -326,9 +326,9 @@
       ],
       "review": ".impeccable/review/lanyard-finish-review.md",
       "browserReport": "output/playwright/report.json",
-      "scope": "Initial redesign browser evidence covers 1440, 1280, 768, 390, and 320px viewports plus 18 interaction groups. The initial ship disposition covers the corrected provenance wording. The subsequent owner-requested pause-button removal passed production build, JavaScript syntax, and source/reference checks; its browser rerun was blocked by local-server and Chromium sandbox permissions.",
+      "scope": "Current production browser checks pass at 1440, 1280, 768, 390, and 320px across 19 interaction groups, including repeating reveals and hover-only logo pausing. Observer runtime checks cover edge stability, cleanup, and keyboard/wheel input. The initial finish-review ship disposition covers the corrected provenance wording; it is not seed or detector validation.",
       "limitations": "Concept-seed and detector attempts exited 127 under the protected-cache constraint. No successful Impeccable seed/roll/check-seed, detector, approved image comp, or actual-phone hardware test is claimed. The separate Taste draw has no Impeccable seed authority.",
-      "followUpVerification": "output/playwright/hover-only-verification.json"
+      "followUpVerification": "output/playwright/replay-observer-check.json"
     }
   },
   "components": [
